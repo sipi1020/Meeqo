@@ -16,6 +16,13 @@
 		385667801AD9891D004E1F9B /* MeeqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856677F1AD9891D004E1F9B /* MeeqoTests.swift */; };
 		7279B8151AE168BB00F48A9F /* meeqo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8141AE168BB00F48A9F /* meeqo.png */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
+		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
+		7279B81F1AE170FE00F48A9F /* bedroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81A1AE170FE00F48A9F /* bedroom.png */; };
+		7279B8201AE170FE00F48A9F /* disco.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81B1AE170FE00F48A9F /* disco.png */; };
+		7279B8211AE170FE00F48A9F /* playingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81C1AE170FE00F48A9F /* playingroom.png */; };
+		7279B8221AE170FE00F48A9F /* kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81D1AE170FE00F48A9F /* kitchen.png */; };
+		7279B8231AE170FE00F48A9F /* fitnessroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81E1AE170FE00F48A9F /* fitnessroom.png */; };
+		7279B8251AE1716E00F48A9F /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8241AE1716E00F48A9F /* house.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,13 @@
 		3856677F1AD9891D004E1F9B /* MeeqoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeqoTests.swift; sourceTree = "<group>"; };
 		7279B8141AE168BB00F48A9F /* meeqo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeqo.png; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
+		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		7279B81A1AE170FE00F48A9F /* bedroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bedroom.png; sourceTree = "<group>"; };
+		7279B81B1AE170FE00F48A9F /* disco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disco.png; sourceTree = "<group>"; };
+		7279B81C1AE170FE00F48A9F /* playingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playingroom.png; sourceTree = "<group>"; };
+		7279B81D1AE170FE00F48A9F /* kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitchen.png; sourceTree = "<group>"; };
+		7279B81E1AE170FE00F48A9F /* fitnessroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fitnessroom.png; sourceTree = "<group>"; };
+		7279B8241AE1716E00F48A9F /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				7279B8141AE168BB00F48A9F /* meeqo.png */,
+				7279B81A1AE170FE00F48A9F /* bedroom.png */,
+				7279B81B1AE170FE00F48A9F /* disco.png */,
+				7279B81C1AE170FE00F48A9F /* playingroom.png */,
+				7279B81D1AE170FE00F48A9F /* kitchen.png */,
+				7279B81E1AE170FE00F48A9F /* fitnessroom.png */,
+				7279B8241AE1716E00F48A9F /* house.png */,
 				385667661AD9891D004E1F9B /* AppDelegate.swift */,
 				3856676B1AD9891D004E1F9B /* ViewController.swift */,
 				3856676D1AD9891D004E1F9B /* Main.storyboard */,
@@ -92,6 +112,7 @@
 				385667681AD9891D004E1F9B /* Meeqo.xcdatamodeld */,
 				385667641AD9891D004E1F9B /* Supporting Files */,
 				7279B8161AE168FE00F48A9F /* MeeqoView.swift */,
+				7279B8181AE170D900F48A9F /* RoomView.swift */,
 			);
 			path = Meeqo;
 			sourceTree = "<group>";
@@ -202,9 +223,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3856676F1AD9891D004E1F9B /* Main.storyboard in Resources */,
+				7279B8201AE170FE00F48A9F /* disco.png in Resources */,
+				7279B8251AE1716E00F48A9F /* house.png in Resources */,
+				7279B81F1AE170FE00F48A9F /* bedroom.png in Resources */,
 				385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */,
 				385667711AD9891D004E1F9B /* Images.xcassets in Resources */,
+				7279B8211AE170FE00F48A9F /* playingroom.png in Resources */,
 				7279B8151AE168BB00F48A9F /* meeqo.png in Resources */,
+				7279B8221AE170FE00F48A9F /* kitchen.png in Resources */,
+				7279B8231AE170FE00F48A9F /* fitnessroom.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +251,7 @@
 			files = (
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* ViewController.swift in Sources */,
+				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
 				3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */,
 			);
