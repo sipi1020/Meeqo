@@ -17,11 +17,15 @@ class MeeqoView: UIView {
     override func drawRect(rect: CGRect) {
         
         var meeqoImage = UIImage(named: "meeqo")
-        var meeqoImageView = UIImageView(frame: CGRect(x: frame.width / 8,y: frame.width / 4,width: frame.width / 4 * 3,height: frame.width / 4 * 3))
+        
+        
+        var meeqoImageView = UIImageView(frame: CGRect(x: frame.width / 10 ,y: frame.width / 6 ,width: frame.width / 10 * 8,height: frame.width / 10 * 8))
+        
         meeqoImageView.image = meeqoImage
-        var progressBar = UIProgressView(frame: CGRect(x: 0, y: frame.width / 16, width: frame.width, height: 50))
-        progressBar.progress = 0.8
+        var progressBar = UIProgressView(frame: CGRect(x: frame.width / 10, y: frame.width / 16, width: frame.width / 10 * 8, height: 50))
+        progressBar.progress = 1
         progressBar.progressViewStyle = .Bar
+        
         
         self.addSubview(meeqoImageView)
         self.addSubview(progressBar)
