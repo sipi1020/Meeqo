@@ -14,6 +14,8 @@
 		385667711AD9891D004E1F9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385667701AD9891D004E1F9B /* Images.xcassets */; };
 		385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385667721AD9891D004E1F9B /* LaunchScreen.xib */; };
 		385667801AD9891D004E1F9B /* MeeqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856677F1AD9891D004E1F9B /* MeeqoTests.swift */; };
+		7279B8151AE168BB00F48A9F /* meeqo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8141AE168BB00F48A9F /* meeqo.png */; };
+		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		385667791AD9891D004E1F9B /* MeeqoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeqoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3856677E1AD9891D004E1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3856677F1AD9891D004E1F9B /* MeeqoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeqoTests.swift; sourceTree = "<group>"; };
+		7279B8141AE168BB00F48A9F /* meeqo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeqo.png; sourceTree = "<group>"; };
+		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		385667631AD9891D004E1F9B /* Meeqo */ = {
 			isa = PBXGroup;
 			children = (
+				7279B8141AE168BB00F48A9F /* meeqo.png */,
 				385667661AD9891D004E1F9B /* AppDelegate.swift */,
 				3856676B1AD9891D004E1F9B /* ViewController.swift */,
 				3856676D1AD9891D004E1F9B /* Main.storyboard */,
@@ -86,6 +91,7 @@
 				385667721AD9891D004E1F9B /* LaunchScreen.xib */,
 				385667681AD9891D004E1F9B /* Meeqo.xcdatamodeld */,
 				385667641AD9891D004E1F9B /* Supporting Files */,
+				7279B8161AE168FE00F48A9F /* MeeqoView.swift */,
 			);
 			path = Meeqo;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				3856676F1AD9891D004E1F9B /* Main.storyboard in Resources */,
 				385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */,
 				385667711AD9891D004E1F9B /* Images.xcassets in Resources */,
+				7279B8151AE168BB00F48A9F /* meeqo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* ViewController.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
 				3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */,
@@ -411,6 +419,7 @@
 				385667851AD9891D004E1F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		385667861AD9891D004E1F9B /* Build configuration list for PBXNativeTarget "MeeqoTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				385667881AD9891D004E1F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
