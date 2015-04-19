@@ -17,6 +17,7 @@
 		389EF4F91AE3096E00BD496B /* shoping_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 389EF4F81AE3096E00BD496B /* shoping_cart.png */; };
 		389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EF4FA1AE33B4100BD496B /* StatusViewController.swift */; };
 		5FD3EA911AE18C20009A010C /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD3EA901AE18C20009A010C /* Challenge.swift */; };
+		7273FCCA1AE4453F00CF7C9F /* RawDataObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */; };
 		7279B8151AE168BB00F48A9F /* meeqo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8141AE168BB00F48A9F /* meeqo.png */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
 		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
@@ -53,6 +54,7 @@
 		389EF4F81AE3096E00BD496B /* shoping_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoping_cart.png; sourceTree = "<group>"; };
 		389EF4FA1AE33B4100BD496B /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		5FD3EA901AE18C20009A010C /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawDataObjects.swift; sourceTree = "<group>"; };
 		7279B8141AE168BB00F48A9F /* meeqo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeqo.png; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
 		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,9 @@
 		385667631AD9891D004E1F9B /* Meeqo */ = {
 			isa = PBXGroup;
 			children = (
+				7273FCCD1AE44BFC00CF7C9F /* ViewControllers */,
+				7273FCCC1AE44BBC00CF7C9F /* Views */,
+				7273FCCB1AE44B1E00CF7C9F /* Model */,
 				389EF4F81AE3096E00BD496B /* shoping_cart.png */,
 				7279B8141AE168BB00F48A9F /* meeqo.png */,
 				7279B81A1AE170FE00F48A9F /* bedroom.png */,
@@ -111,17 +116,12 @@
 				7279B81D1AE170FE00F48A9F /* kitchen.png */,
 				7279B81E1AE170FE00F48A9F /* fitnessroom.png */,
 				7279B8241AE1716E00F48A9F /* house.png */,
-				5FD3EA901AE18C20009A010C /* Challenge.swift */,
 				385667661AD9891D004E1F9B /* AppDelegate.swift */,
-				3856676B1AD9891D004E1F9B /* MainViewController.swift */,
 				3856676D1AD9891D004E1F9B /* Main.storyboard */,
 				385667701AD9891D004E1F9B /* Images.xcassets */,
 				385667721AD9891D004E1F9B /* LaunchScreen.xib */,
 				385667681AD9891D004E1F9B /* Meeqo.xcdatamodeld */,
 				385667641AD9891D004E1F9B /* Supporting Files */,
-				7279B8161AE168FE00F48A9F /* MeeqoView.swift */,
-				7279B8181AE170D900F48A9F /* RoomView.swift */,
-				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
 			);
 			path = Meeqo;
 			sourceTree = "<group>";
@@ -149,6 +149,33 @@
 				3856677E1AD9891D004E1F9B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7273FCCB1AE44B1E00CF7C9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FD3EA901AE18C20009A010C /* Challenge.swift */,
+				7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7273FCCC1AE44BBC00CF7C9F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7279B8181AE170D900F48A9F /* RoomView.swift */,
+				7279B8161AE168FE00F48A9F /* MeeqoView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7273FCCD1AE44BFC00CF7C9F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3856676B1AD9891D004E1F9B /* MainViewController.swift */,
+				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +227,7 @@
 				TargetAttributes = {
 					385667601AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5TZCP2M943;
+						DevelopmentTeam = 5B8GS4JTM8;
 					};
 					385667781AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
@@ -265,6 +292,7 @@
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
+				7273FCCA1AE4453F00CF7C9F /* RawDataObjects.swift in Sources */,
 				389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */,
 				3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */,
 			);
