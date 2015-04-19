@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="184" width="600" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitnessroom.png" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-2a-9Ah">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fitnessroomFull" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-2a-9Ah">
                                 <rect key="frame" x="120" y="64" width="120" height="120"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -33,7 +33,7 @@
                                     <outletCollection property="gestureRecognizers" destination="aXf-vY-97x" appends="YES" id="PtY-ga-vss"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playingroom.png" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-jh-2jA">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playingroomFull" translatesAutoresizingMaskIntoConstraints="NO" id="nUp-jh-2jA">
                                 <rect key="frame" x="240" y="64" width="120" height="120"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -43,7 +43,7 @@
                                     <outletCollection property="gestureRecognizers" destination="2Tf-a8-qxe" appends="YES" id="n33-0T-dNP"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen.png" translatesAutoresizingMaskIntoConstraints="NO" id="FWR-v8-0iP">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchenFull" translatesAutoresizingMaskIntoConstraints="NO" id="FWR-v8-0iP">
                                 <rect key="frame" x="360" y="64" width="120" height="120"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -53,7 +53,7 @@
                                     <outletCollection property="gestureRecognizers" destination="q8d-PM-a9G" appends="YES" id="Og8-yZ-egi"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bedroom.png" translatesAutoresizingMaskIntoConstraints="NO" id="N8k-5f-Dg7">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bedroomFull" translatesAutoresizingMaskIntoConstraints="NO" id="N8k-5f-Dg7">
                                 <rect key="frame" x="480" y="64" width="120" height="120"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -63,7 +63,7 @@
                                     <outletCollection property="gestureRecognizers" destination="W6U-RS-FAl" appends="YES" id="5oG-jK-jcj"/>
                                 </connections>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disco.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q0g-R6-us3">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discoFull" translatesAutoresizingMaskIntoConstraints="NO" id="Q0g-R6-us3">
                                 <rect key="frame" x="0.0" y="64" width="120" height="120"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -200,13 +200,14 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hir-9v-aZL">
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hir-9v-aZL">
                                                     <rect key="frame" x="68" y="21" width="491" height="2"/>
                                                 </progressView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="Hir-9v-aZL" secondAttribute="centerY" id="42b-V4-1tj"/>
                                                 <constraint firstItem="XqQ-SF-vkL" firstAttribute="leading" secondItem="yne-yd-n3m" secondAttribute="leadingMargin" constant="10" id="Crz-tX-c9B"/>
+                                                <constraint firstItem="Hir-9v-aZL" firstAttribute="leading" secondItem="XqQ-SF-vkL" secondAttribute="trailing" constant="10" id="Gdb-tk-sNe"/>
                                                 <constraint firstAttribute="centerY" secondItem="XqQ-SF-vkL" secondAttribute="centerY" id="NQ5-0w-etr"/>
                                                 <constraint firstItem="Hir-9v-aZL" firstAttribute="top" secondItem="XqQ-SF-vkL" secondAttribute="bottom" constant="-11" id="dej-Un-ygO"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Hir-9v-aZL" secondAttribute="trailing" id="jGM-aK-dcw"/>
@@ -331,10 +332,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bedroom.png" width="800" height="800"/>
-        <image name="disco.png" width="800" height="800"/>
-        <image name="fitnessroom.png" width="800" height="800"/>
-        <image name="kitchen.png" width="800" height="800"/>
-        <image name="playingroom.png" width="800" height="800"/>
+        <image name="bedroomFull" width="400" height="400"/>
+        <image name="discoFull" width="400" height="400"/>
+        <image name="fitnessroomFull" width="400" height="400"/>
+        <image name="kitchenFull" width="400" height="400"/>
+        <image name="playingroomFull" width="400" height="400"/>
     </resources>
 </document>
