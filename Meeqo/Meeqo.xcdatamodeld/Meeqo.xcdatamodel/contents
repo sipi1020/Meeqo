@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Meeqo" syncable="YES">
+    <entity name="Meeqo" representedClassName="Meeqo" syncable="YES">
         <attribute name="entertainment" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="food" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="sleep" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="position" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeeqoPosition" inverseName="meeqo" inverseEntity="MeeqoPosition" syncable="YES"/>
     </entity>
-    <entity name="MeeqoInventory" syncable="YES">
+    <entity name="MeeqoInventory" representedClassName="MeeqoInventory" syncable="YES">
         <attribute name="ball" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
         <attribute name="bear" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
-        <attribute name="cake" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="cake" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="danceFloor" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
-        <attribute name="icecream" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
-        <attribute name="lollipop" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="icecream" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lollipop" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="rope" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="sleepingBear" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="soundSystem" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
@@ -21,20 +21,20 @@
         <attribute name="videoGame" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
         <attribute name="weights" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
-    <entity name="MeeqoPosition" syncable="YES">
+    <entity name="MeeqoPosition" representedClassName="MeeqoPosition" syncable="YES">
         <attribute name="roomNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="x" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="y" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="meeqo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meeqo" inverseName="position" inverseEntity="Meeqo" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="coins" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="facebookID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MeeqoInventory" positionX="88" positionY="-135" width="128" height="238"/>
         <element name="Meeqo" positionX="-63" positionY="72" width="128" height="105"/>
+        <element name="MeeqoInventory" positionX="88" positionY="-135" width="128" height="240"/>
         <element name="MeeqoPosition" positionX="270" positionY="72" width="128" height="105"/>
         <element name="User" positionX="142" positionY="270" width="128" height="90"/>
     </elements>

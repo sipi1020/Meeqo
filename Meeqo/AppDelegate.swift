@@ -13,10 +13,57 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    class var sharedAppDelegate:AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //TODO load the basic objects after facebook login
+        
+        let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+        
+        let user = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: moc) as! NSManagedObject
+        user.setValue("Viki", forKey: "name")
+        user.setValue(100, forKey: "coins")
+        user.setValue("12635712", forKey: "facebookID")
+        saveContext()
+        
+        /*let inventoryEntity: AnyObject =  NSEntityDescription.insertNewObjectForEntityForName("MeeqoInventory",
+            inManagedObjectContext:
+            moc)
+        
+        let inventory = MeeqoInventory(entity: entity as! NSEntityDescription,
+            insertIntoManagedObjectContext:moc)
+        inventory.ball = false
+        inventory.bear = false
+        inventory.danceFloor = false
+        inventory.rope = false
+        inventory.sleepingBear = false
+        inventory.soundSystem = false
+        inventory.trambulin = false
+        inventory.videoGame = false
+        inventory.weights = false
+        inventory.treadmill = false
+        
+        inventory.cake = NSNumber(int: 1)
+        inventory.lollipop = NSNumber(int: 1)
+        inventory.icecream = NSNumber(int: 2)
+        */
+        
+        /*let meeqoEntity =  NSEntityDescription.entityForName("Meeqo",
+            inManagedObjectContext:
+            moc)
+        
+        let user = Meeqo(entity: entity!,
+            insertIntoManagedObjectContext:moc)
+        user.name = "Viki"
+        user.coins = 100
+        user.facebookID = "1242342341231"
+        AppDelegate.sharedAppDelegate.saveContext()*/
+        
         return true
     }
 

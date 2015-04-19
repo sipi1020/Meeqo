@@ -20,3 +20,7 @@ class Challenges {
         challenges.append(Challenge(name: "Eating", coin: 13, description: "Eat at least one chocolate bar!"))
     }
 }
+
+class ItemData {
+    static let CAKE_PRICE = 10
+}

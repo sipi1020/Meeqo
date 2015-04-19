@@ -27,6 +27,12 @@
 		7279B8221AE170FE00F48A9F /* kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81D1AE170FE00F48A9F /* kitchen.png */; };
 		7279B8231AE170FE00F48A9F /* fitnessroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81E1AE170FE00F48A9F /* fitnessroom.png */; };
 		7279B8251AE1716E00F48A9F /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8241AE1716E00F48A9F /* house.png */; };
+		7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8D1AE4518A00257E7C /* ItemManager.swift */; };
+		7285CC901AE452EC00257E7C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8F1AE452EC00257E7C /* UserManager.swift */; };
+		7285CC921AE4582100257E7C /* Meeqo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC911AE4582100257E7C /* Meeqo.swift */; };
+		7285CC941AE4582200257E7C /* MeeqoInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC931AE4582200257E7C /* MeeqoInventory.swift */; };
+		7285CC961AE4582200257E7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC951AE4582200257E7C /* User.swift */; };
+		7285CC981AE4582200257E7C /* MeeqoPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC971AE4582200257E7C /* MeeqoPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,12 @@
 		7279B81D1AE170FE00F48A9F /* kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitchen.png; sourceTree = "<group>"; };
 		7279B81E1AE170FE00F48A9F /* fitnessroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fitnessroom.png; sourceTree = "<group>"; };
 		7279B8241AE1716E00F48A9F /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
+		7285CC8D1AE4518A00257E7C /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		7285CC8F1AE452EC00257E7C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		7285CC911AE4582100257E7C /* Meeqo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeqo.swift; sourceTree = "<group>"; };
+		7285CC931AE4582200257E7C /* MeeqoInventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoInventory.swift; sourceTree = "<group>"; };
+		7285CC951AE4582200257E7C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7285CC971AE4582200257E7C /* MeeqoPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 		385667631AD9891D004E1F9B /* Meeqo */ = {
 			isa = PBXGroup;
 			children = (
+				7273FCCE1AE44D8300CF7C9F /* Logic */,
 				7273FCCD1AE44BFC00CF7C9F /* ViewControllers */,
 				7273FCCC1AE44BBC00CF7C9F /* Views */,
 				7273FCCB1AE44B1E00CF7C9F /* Model */,
@@ -156,6 +169,10 @@
 			children = (
 				5FD3EA901AE18C20009A010C /* Challenge.swift */,
 				7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */,
+				7285CC971AE4582200257E7C /* MeeqoPosition.swift */,
+				7285CC951AE4582200257E7C /* User.swift */,
+				7285CC931AE4582200257E7C /* MeeqoInventory.swift */,
+				7285CC911AE4582100257E7C /* Meeqo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -176,6 +193,15 @@
 				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7273FCCE1AE44D8300CF7C9F /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				7285CC8D1AE4518A00257E7C /* ItemManager.swift */,
+				7285CC8F1AE452EC00257E7C /* UserManager.swift */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,14 +313,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7285CC981AE4582200257E7C /* MeeqoPosition.swift in Sources */,
+				7285CC961AE4582200257E7C /* User.swift in Sources */,
+				7285CC941AE4582200257E7C /* MeeqoInventory.swift in Sources */,
 				5FD3EA911AE18C20009A010C /* Challenge.swift in Sources */,
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
+				7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
 				7273FCCA1AE4453F00CF7C9F /* RawDataObjects.swift in Sources */,
 				389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */,
+				7285CC901AE452EC00257E7C /* UserManager.swift in Sources */,
 				3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */,
+				7285CC921AE4582100257E7C /* Meeqo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,10 +451,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Meeqo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -430,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Meeqo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
