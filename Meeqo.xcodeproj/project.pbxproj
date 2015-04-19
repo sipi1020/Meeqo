@@ -14,6 +14,7 @@
 		385667711AD9891D004E1F9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385667701AD9891D004E1F9B /* Images.xcassets */; };
 		385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385667721AD9891D004E1F9B /* LaunchScreen.xib */; };
 		385667801AD9891D004E1F9B /* MeeqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856677F1AD9891D004E1F9B /* MeeqoTests.swift */; };
+		389EF4F91AE3096E00BD496B /* shoping_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 389EF4F81AE3096E00BD496B /* shoping_cart.png */; };
 		7279B8151AE168BB00F48A9F /* meeqo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8141AE168BB00F48A9F /* meeqo.png */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
 		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
@@ -47,6 +48,7 @@
 		385667791AD9891D004E1F9B /* MeeqoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeeqoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3856677E1AD9891D004E1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3856677F1AD9891D004E1F9B /* MeeqoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeqoTests.swift; sourceTree = "<group>"; };
+		389EF4F81AE3096E00BD496B /* shoping_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoping_cart.png; sourceTree = "<group>"; };
 		7279B8141AE168BB00F48A9F /* meeqo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meeqo.png; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
 		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		385667631AD9891D004E1F9B /* Meeqo */ = {
 			isa = PBXGroup;
 			children = (
+				389EF4F81AE3096E00BD496B /* shoping_cart.png */,
 				7279B8141AE168BB00F48A9F /* meeqo.png */,
 				7279B81A1AE170FE00F48A9F /* bedroom.png */,
 				7279B81B1AE170FE00F48A9F /* disco.png */,
@@ -191,6 +194,7 @@
 				TargetAttributes = {
 					385667601AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5TZCP2M943;
 					};
 					385667781AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
@@ -229,6 +233,7 @@
 				385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */,
 				385667711AD9891D004E1F9B /* Images.xcassets in Resources */,
 				7279B8211AE170FE00F48A9F /* playingroom.png in Resources */,
+				389EF4F91AE3096E00BD496B /* shoping_cart.png in Resources */,
 				7279B8151AE168BB00F48A9F /* meeqo.png in Resources */,
 				7279B8221AE170FE00F48A9F /* kitchen.png in Resources */,
 				7279B8231AE170FE00F48A9F /* fitnessroom.png in Resources */,
@@ -378,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Meeqo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Meeqo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

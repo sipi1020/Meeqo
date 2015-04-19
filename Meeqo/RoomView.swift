@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable
+
 class RoomView: UIView {
     
     var rooms : [UIImage]
@@ -29,22 +29,18 @@ class RoomView: UIView {
     override func drawRect(rect: CGRect) {
         var roomImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         roomImageView.image = rooms[currentRoom]
+        roomImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.addSubview(roomImageView)
         
     }
     
-    func goUp() {
-        if currentRoom < 5 {
-            currentRoom++
+    func changeRoom(roomNumber : Int) {
+        if roomNumber < 5 && roomNumber >= 0 {
+            currentRoom = roomNumber
             setNeedsDisplay()
         }
     }
-    func goDown() {
-        if currentRoom > 0 {
-            currentRoom--
-            setNeedsDisplay()
-        }
-    }
+    
     
 
 }

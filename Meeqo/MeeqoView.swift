@@ -8,12 +8,19 @@
 
 import UIKit
 
-@IBDesignable
+
 class MeeqoView: UIView {
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    // An empty implementation adversely affects performance during mation.
     override func drawRect(rect: CGRect) {
         
         var meeqoImage = UIImage(named: "meeqo")
