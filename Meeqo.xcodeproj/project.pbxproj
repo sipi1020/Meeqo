@@ -19,12 +19,6 @@
 		7273FCCA1AE4453F00CF7C9F /* RawDataObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
 		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
-		7279B81F1AE170FE00F48A9F /* bedroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81A1AE170FE00F48A9F /* bedroom.png */; };
-		7279B8201AE170FE00F48A9F /* disco.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81B1AE170FE00F48A9F /* disco.png */; };
-		7279B8211AE170FE00F48A9F /* playingroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81C1AE170FE00F48A9F /* playingroom.png */; };
-		7279B8221AE170FE00F48A9F /* kitchen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81D1AE170FE00F48A9F /* kitchen.png */; };
-		7279B8231AE170FE00F48A9F /* fitnessroom.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B81E1AE170FE00F48A9F /* fitnessroom.png */; };
-		7279B8251AE1716E00F48A9F /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = 7279B8241AE1716E00F48A9F /* house.png */; };
 		7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8D1AE4518A00257E7C /* ItemManager.swift */; };
 		7285CC901AE452EC00257E7C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8F1AE452EC00257E7C /* UserManager.swift */; };
 		7285CC921AE4582100257E7C /* Meeqo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC911AE4582100257E7C /* Meeqo.swift */; };
@@ -60,12 +54,6 @@
 		7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawDataObjects.swift; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
 		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
-		7279B81A1AE170FE00F48A9F /* bedroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bedroom.png; sourceTree = "<group>"; };
-		7279B81B1AE170FE00F48A9F /* disco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disco.png; sourceTree = "<group>"; };
-		7279B81C1AE170FE00F48A9F /* playingroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playingroom.png; sourceTree = "<group>"; };
-		7279B81D1AE170FE00F48A9F /* kitchen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitchen.png; sourceTree = "<group>"; };
-		7279B81E1AE170FE00F48A9F /* fitnessroom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fitnessroom.png; sourceTree = "<group>"; };
-		7279B8241AE1716E00F48A9F /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
 		7285CC8D1AE4518A00257E7C /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		7285CC8F1AE452EC00257E7C /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7285CC911AE4582100257E7C /* Meeqo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeqo.swift; sourceTree = "<group>"; };
@@ -241,7 +229,7 @@
 				TargetAttributes = {
 					385667601AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5TZCP2M943;
+						DevelopmentTeam = 5B8GS4JTM8;
 					};
 					385667781AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
