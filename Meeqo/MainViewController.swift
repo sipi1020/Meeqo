@@ -21,12 +21,23 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         // Do any additional setup after loading the view, typically from a nib.
         //
         createMeeqo()
+        createMeeqo()
+        createMeeqo()
+        createMeeqo()
         
+    }
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    roomView.setNeedsDisplay()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func adaptivePresentationStyleForPresentationController(
+        controller: UIPresentationController) -> UIModalPresentationStyle {
+            return .None
     }
     
     func createMeeqo(){
