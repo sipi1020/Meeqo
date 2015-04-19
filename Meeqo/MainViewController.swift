@@ -42,7 +42,25 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     }
     
     func selectMeeqo(sender: UITapGestureRecognizer){
-        performSegueWithIdentifier("showStatusSegue", sender: self)
+        /*var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        var statusViewController = storyboard.instantiateViewControllerWithIdentifier("StatusViewController") as! StatusViewController
+        var segue = UIStoryboardPopoverSegue(identifier: "showStatusSegue", source: self, destination: statusViewController)
+        
+        performSegueWithIdentifier("showStatusSegue", sender: self)*/
+        
+        
+        var popoverContent = self.storyboard?.instantiateViewControllerWithIdentifier("StatusViewController") as! UIViewController
+        var nav = UINavigationController(rootViewController: popoverContent)
+        nav.modalPresentationStyle = UIModalPresentationStyle.Popover
+        var popover = nav.popoverPresentationController
+        popoverContent.preferredContentSize = CGSizeMake(400,400)
+        popover!.delegate = self
+        popover!.sourceView = sender.view
+        popover!.sourceRect = CGRectMake(0,0,10,10)
+        
+        self.presentViewController(nav, animated: true, completion: nil)
+        
+        
         /*var navigationController = self.navigationController
         var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         var statusViewController = storyboard.instantiateViewControllerWithIdentifier("StatusViewController") as! StatusViewController
