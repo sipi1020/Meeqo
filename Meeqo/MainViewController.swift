@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     
     @IBOutlet var rooms: [UIImageView]!
@@ -34,9 +34,35 @@ class ViewController: UIViewController {
         newMeeqo.opaque = false
         
         self.view.addSubview(newMeeqo)
-        var gestureRecognizer = UIPanGestureRecognizer(target:self, action: "dragMeeqo:")
-        newMeeqo.addGestureRecognizer(gestureRecognizer)
+        var panGestureRecognizer = UIPanGestureRecognizer(target:self, action: "dragMeeqo:")
+        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "selectMeeqo:")
+        newMeeqo.addGestureRecognizer(panGestureRecognizer)
+        newMeeqo.addGestureRecognizer(tapGestureRecognizer)
         newMeeqo.userInteractionEnabled = true
+    }
+    
+    func selectMeeqo(sender: UITapGestureRecognizer){
+        performSegueWithIdentifier("showStatusSegue", sender: self)
+        /*var navigationController = self.navigationController
+        var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        var statusViewController = storyboard.instantiateViewControllerWithIdentifier("StatusViewController") as! StatusViewController
+        statusViewController.modalPresentationStyle = .Popover
+        statusViewController.preferredContentSize = CGSizeMake(400, 400)
+        
+        let popoverStatusViewController = statusViewController.popoverPresentationController
+        popoverPresentationController?.permittedArrowDirections = .Any
+        popoverPresentationController?.delegate = self
+        popoverPresentationController?.sourceView = sender.view
+        popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: sender.view!.frame.width, height: sender.view!.frame.height)
+        if sender.state == .Ended{ presentViewController(statusViewController, animated: true, completion: nil)
+        }*/
+        
+        
+        //navigationController?.presentViewController(statusViewController, animated: true, completion: nil)
+    }
+    
+    func prepareForPopoverPresentation(popoverPresentationController: UIPopoverPresentationController){
+        
     }
     
     func dragMeeqo(sender: UIPanGestureRecognizer){
