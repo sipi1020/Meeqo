@@ -19,6 +19,7 @@ class StatusViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,14 +92,27 @@ class StatusViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        var desinationVC = segue.destinationViewController as! increaseStatusViewController
+        if segue.identifier == "foodSegue" {
+            desinationVC.tag = 0
+        }
+        if segue.identifier == "playSegue" {
+            desinationVC.tag = 1
+        }
+        if segue.identifier == "sleepSegue" {
+            desinationVC.tag = 2
+        }
+        if segue.identifier == "moveSegue" {
+            desinationVC.tag = 3
+        
+        }
+        
     }
-    */
+
 
 }

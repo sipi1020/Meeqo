@@ -188,6 +188,7 @@
 			children = (
 				3856676B1AD9891D004E1F9B /* MainViewController.swift */,
 				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
+				38DDD21F1AE82BD20029A17E /* increaseStatusViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
