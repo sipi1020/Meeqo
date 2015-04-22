@@ -12,7 +12,7 @@ import CoreData
 
 class ItemManager {
     static func buyCake() -> Bool {
-        if UserManager.spendMoney(ItemData.CAKE_PRICE) {
+        if UserRepository.spendMoney(ItemData.CAKE_PRICE) {
             let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
             let entity =  NSEntityDescription.entityForName("MeeqoInventory",
                 inManagedObjectContext:

@@ -20,10 +20,19 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //
-        createMeeqo()
-        createMeeqo()
-        createMeeqo()
-        createMeeqo()
+        
+        let repo = MeeqoRepository()
+        var m = repo.getMeeqos()[0]
+        m.position.x = 150
+        m.updateMe()
+        repo.create("piros")
+        repo.remove(repo.getMeeqos()[0])
+        println("You have \(repo.getMeeqos().count) Meeqos")
+        
+        
+        for i in 1...3 {
+            createMeeqo()
+        }
         
     }
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
@@ -105,6 +114,18 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         }
     }
     
+    func meeqoToMeeqoView(meeqo: Meeqo) -> MeeqoView {
+        var newMeeqo = MeeqoView(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2 + 100, width: 100, height: 100))
+        newMeeqo.opaque = false
+        
+        var panGestureRecognizer = UIPanGestureRecognizer(target:self, action: "dragMeeqo:")
+        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "selectMeeqo:")
+        newMeeqo.addGestureRecognizer(panGestureRecognizer)
+        newMeeqo.addGestureRecognizer(tapGestureRecognizer)
+        newMeeqo.userInteractionEnabled = true
+        
+        return newMeeqo
+    }
     
     @IBAction func showDisco(sender: UITapGestureRecognizer) {
         roomView.changeRoom(0)

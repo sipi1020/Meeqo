@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Meeqo" representedClassName="Meeqo" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="entertainment" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="food" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="sleep" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="position" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeeqoPosition" inverseName="meeqo" inverseEntity="MeeqoPosition" syncable="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="meeqos" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="MeeqoInventory" representedClassName="MeeqoInventory" syncable="YES">
         <attribute name="ball" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
@@ -32,12 +32,11 @@
         <attribute name="coins" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="facebookID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="meeqos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meeqo" inverseName="user" inverseEntity="Meeqo" syncable="YES"/>
     </entity>
     <elements>
         <element name="Meeqo" positionX="-63" positionY="72" width="128" height="120"/>
         <element name="MeeqoInventory" positionX="88" positionY="-135" width="128" height="240"/>
         <element name="MeeqoPosition" positionX="270" positionY="72" width="128" height="105"/>
-        <element name="User" positionX="142" positionY="270" width="128" height="105"/>
+        <element name="User" positionX="142" positionY="270" width="128" height="90"/>
     </elements>
 </model>

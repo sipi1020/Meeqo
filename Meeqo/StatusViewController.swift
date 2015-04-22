@@ -12,7 +12,8 @@ class StatusViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var img = UIImage(named: "blabla")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
