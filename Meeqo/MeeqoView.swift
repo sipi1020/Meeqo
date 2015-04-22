@@ -23,7 +23,7 @@ class MeeqoView: UIView {
     // An empty implementation adversely affects performance during mation.
     override func drawRect(rect: CGRect) {
         
-        var meeqoImage = UIImage(named: "meeqo")
+        var meeqoImage = UIImage(named: "szivarvany")
 
         var meeqoImageView = UIImageView(frame: CGRect(x: frame.width / 10 ,y: frame.width / 6 ,width: frame.width / 10 * 8,height: frame.width / 10 * 8))
         
