@@ -12,17 +12,30 @@ import UIKit
 class RoomView: UIView {
     
     var rooms : [UIImage]
-    var house : UIImage
+    var discoItemImages : [UIImage]
+    var fitnessItemImages : [UIImage]
+    var playingroomItemImages : [UIImage]
+    var kitchenItemImages : [UIImage]
+    var bedroomItemImages : [UIImage]
     var currentRoom = 2
     
     override init(frame: CGRect) {
         self.rooms = [UIImage(named: "disco")!,UIImage(named: "fitnessroom")!,UIImage(named: "playingroom")!,UIImage(named: "kitchen")!,UIImage(named: "bedroom")! ]
-        self.house = UIImage(named: "house")!
+        self.discoItemImages=[UIImage(named: "dancefloor")!,UIImage(named: "soundsystem")!]
+        self.fitnessItemImages = [UIImage(named: "rope")!,UIImage(named: "treadmill")!,UIImage(named: "weight")!]
+        self.playingroomItemImages = [UIImage(named: "ball")!,UIImage(named: "bear")!,UIImage(named: "trambulin")!,UIImage(named: "videogame")!]
+        self.kitchenItemImages = [UIImage(named: "cake")!,UIImage(named: "icecream")!,UIImage(named: "lollipop")!]
+        self.bedroomItemImages = [UIImage(named: "sleepingbear")!]
+        
         super.init(frame: frame)
     }
     required init(coder aDecoder: NSCoder) {
         self.rooms = [UIImage(named: "disco")!,UIImage(named: "fitnessroom")!,UIImage(named: "playingroom")!,UIImage(named: "kitchen")!,UIImage(named: "bedroom")! ]
-        self.house = UIImage(named: "house")!
+        self.discoItemImages=[UIImage(named: "dancefloor")!,UIImage(named: "soundsystem")!]
+        self.fitnessItemImages = [UIImage(named: "rope")!,UIImage(named: "treadmill")!,UIImage(named: "weights")!]
+        self.playingroomItemImages = [UIImage(named: "balls")!,UIImage(named: "bear")!,UIImage(named: "trambulin")!,UIImage(named: "videogame")!]
+        self.kitchenItemImages = [UIImage(named: "cake")!,UIImage(named: "icecream")!,UIImage(named: "lollipop")!]
+        self.bedroomItemImages = [UIImage(named: "sleepingbear")!]
         super.init(coder: aDecoder)
     }
     
