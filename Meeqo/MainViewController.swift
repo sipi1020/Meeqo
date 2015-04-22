@@ -72,22 +72,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         self.presentViewController(nav, animated: true, completion: nil)
         
         
-        /*var navigationController = self.navigationController
-        var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        var statusViewController = storyboard.instantiateViewControllerWithIdentifier("StatusViewController") as! StatusViewController
-        statusViewController.modalPresentationStyle = .Popover
-        statusViewController.preferredContentSize = CGSizeMake(400, 400)
-        
-        let popoverStatusViewController = statusViewController.popoverPresentationController
-        popoverPresentationController?.permittedArrowDirections = .Any
-        popoverPresentationController?.delegate = self
-        popoverPresentationController?.sourceView = sender.view
-        popoverPresentationController?.sourceRect = CGRect(x: 0, y: 0, width: sender.view!.frame.width, height: sender.view!.frame.height)
-        if sender.state == .Ended{ presentViewController(statusViewController, animated: true, completion: nil)
-        }*/
-        
-        
-        //navigationController?.presentViewController(statusViewController, animated: true, completion: nil)
+  
     }
     
     func prepareForPopoverPresentation(popoverPresentationController: UIPopoverPresentationController){

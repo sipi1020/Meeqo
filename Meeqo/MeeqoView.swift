@@ -24,8 +24,7 @@ class MeeqoView: UIView {
     override func drawRect(rect: CGRect) {
         
         var meeqoImage = UIImage(named: "meeqo")
-        
-        
+
         var meeqoImageView = UIImageView(frame: CGRect(x: frame.width / 10 ,y: frame.width / 6 ,width: frame.width / 10 * 8,height: frame.width / 10 * 8))
         
         meeqoImageView.image = meeqoImage
