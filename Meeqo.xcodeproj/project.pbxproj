@@ -15,6 +15,7 @@
 		385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385667721AD9891D004E1F9B /* LaunchScreen.xib */; };
 		385667801AD9891D004E1F9B /* MeeqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856677F1AD9891D004E1F9B /* MeeqoTests.swift */; };
 		389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EF4FA1AE33B4100BD496B /* StatusViewController.swift */; };
+		38DDD2201AE82BD20029A17E /* increaseStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DDD21F1AE82BD20029A17E /* increaseStatusViewController.swift */; };
 		5FD3EA911AE18C20009A010C /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD3EA901AE18C20009A010C /* Challenge.swift */; };
 		7273FCCA1AE4453F00CF7C9F /* RawDataObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
@@ -50,6 +51,7 @@
 		3856677E1AD9891D004E1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3856677F1AD9891D004E1F9B /* MeeqoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeqoTests.swift; sourceTree = "<group>"; };
 		389EF4FA1AE33B4100BD496B /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		38DDD21F1AE82BD20029A17E /* increaseStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = increaseStatusViewController.swift; sourceTree = "<group>"; };
 		5FD3EA901AE18C20009A010C /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		7273FCC91AE4453F00CF7C9F /* RawDataObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawDataObjects.swift; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				3856676B1AD9891D004E1F9B /* MainViewController.swift */,
 				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
+				38DDD21F1AE82BD20029A17E /* increaseStatusViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
 				7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
+				38DDD2201AE82BD20029A17E /* increaseStatusViewController.swift in Sources */,
 				7273FCCA1AE4453F00CF7C9F /* RawDataObjects.swift in Sources */,
 				389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */,
 				7285CC901AE452EC00257E7C /* UserManager.swift in Sources */,
