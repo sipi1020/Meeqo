@@ -10,8 +10,18 @@ import Foundation
 
 class RepositoryFactory {
     static let userRepository = UserRepository()
+    static let itemRepository = ItemRepository()
+    static let meeqoRepository = MeeqoRepository()
     
     static func getUserRepository() -> IUserRepository {
         return userRepository
+    }
+    
+    static func getMeeqoRepository() -> MeeqoRepository {
+        return meeqoRepository
+    }
+    
+    static func getItemRepository() -> ItemRepository {
+        return itemRepository 
     }
 }
