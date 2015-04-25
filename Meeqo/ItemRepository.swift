@@ -7,3 +7,67 @@
 //
 
 import Foundation
+import CoreData
+
+
+class ItemRepository : IItemRepository {
+    private var meeqoInventory:MeeqoInventory?
+    
+    init() {
+        
+    }
+
+    func getInventory() -> MeeqoInventory {
+        let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+        println("2")
+        
+        var error: NSError?
+        let fetchRequest = NSFetchRequest(entityName:"MeeqoInventory")
+        println("1")
+        if let invs = moc.executeFetchRequest(fetchRequest, error: &error) as? [MeeqoInventory] {
+            println("1")
+            if invs.count > 0 {
+                meeqoInventory = invs[0]
+                return invs[0]
+            }
+            println("There is no registered user")
+        } else {
+            println("Could not fetch \(error)")
+        }
+        createNewInventory()
+        return meeqoInventory!
+    }
+    
+    func updateCurrentInventory() {
+        if let i = meeqoInventory {
+            let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+            moc.refreshObject(i, mergeChanges: true)
+            AppDelegate.sharedAppDelegate.saveContext()
+        }
+    }
+    
+    func createNewInventory() {
+        let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+        println("2")
+        var error: NSError?
+        let fetchRequest = NSFetchRequest(entityName:"User")
+        println("1")
+        if let users = moc.executeFetchRequest(fetchRequest, error: &error) as? [User] {
+            println("1")
+            for u in users {
+                moc.deleteObject(u)
+            }
+            println("There is no registered user")
+        } else {
+            println("Could not fetch \(error)")
+        }
+        meeqoInventory = RepositoryHelper.getBasicInventory()
+        
+        let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext: moc)
+        
+        let u = User(entity: entity!, insertIntoManagedObjectContext: moc)
+        
+        //TODO: set params of U
+        AppDelegate.sharedAppDelegate.saveContext()
+    }
+}

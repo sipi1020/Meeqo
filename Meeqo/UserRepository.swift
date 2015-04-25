@@ -9,16 +9,67 @@
 import Foundation
 import CoreData
 
-class UserRepository {
-    private var user = User()
+class UserRepository : IUserRepository {
+    private var user:User?
     
     init() {
         
     }
     
-    static var user:User?
+    func getUser() -> User {
+        let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+        println("2")
+        
+        var error: NSError?
+        let fetchRequest = NSFetchRequest(entityName:"User")
+        println("1")
+        if let users = moc.executeFetchRequest(fetchRequest, error: &error) as? [User] {
+            println("1")
+            if users.count > 0 {
+                user = users[0]
+                return users[0]
+            }
+            println("There is no registered user")
+        } else {
+            println("Could not fetch \(error)")
+        }
+        createNewUser()
+        return user!
+    }
     
-    class func getUserCoinCount() -> Int {
+    func updateCurrentUser() {
+        if let u = user {
+            let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+            moc.refreshObject(u, mergeChanges: true)
+            AppDelegate.sharedAppDelegate.saveContext()
+        }
+    }
+    
+    func createNewUser() {
+        let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
+        println("2")
+        var error: NSError?
+        let fetchRequest = NSFetchRequest(entityName:"User")
+        println("1")
+        if let users = moc.executeFetchRequest(fetchRequest, error: &error) as? [User] {
+            println("1")
+            for u in users {
+                moc.deleteObject(u)
+            }
+            println("There is no registered user")
+        } else {
+            println("Could not fetch \(error)")
+        }
+        user = RepositoryHelper.getBasicUser()
+        
+        let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext: moc)
+        
+        let u = User(entity: entity!, insertIntoManagedObjectContext: moc)
+        
+        //TODO: set params of U
+        AppDelegate.sharedAppDelegate.saveContext()
+    }
+   /* class func getUserCoinCount() -> Int {
         if let u = user {
             return Int(u.coins)
         } else {
@@ -69,5 +120,5 @@ class UserRepository {
             //set new coin count
             return true
         }
-    }
+    }*/
 }
