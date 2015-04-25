@@ -61,13 +61,26 @@ class ItemRepository : IItemRepository {
         } else {
             println("Could not fetch \(error)")
         }
-        meeqoInventory = RepositoryHelper.getBasicInventory()
         
-        let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext: moc)
+        let entity =  NSEntityDescription.entityForName("MeeqoInventory", inManagedObjectContext: moc)
         
-        let u = User(entity: entity!, insertIntoManagedObjectContext: moc)
+        let i = MeeqoInventory(entity: entity!, insertIntoManagedObjectContext: moc)
+        i.ball = true
+        i.bear = false
+        i.cake = false
+        i.danceFloor = false
+        i.icecream = false
+        i.lollipop = false
+        i.rope = false
+        i.sleepingBear = false
+        i.soundSystem = false
+        i.trambulin = false
+        i.treadmill = false
+        i.videoGame = false
+        i.weights = false
         
         //TODO: set params of U
         AppDelegate.sharedAppDelegate.saveContext()
+        meeqoInventory = i
     }
 }

@@ -29,10 +29,22 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         repo.remove(repo.getMeeqos()[0])
         println("You have \(repo.getMeeqos().count) Meeqos")
         
+        let itemRepo = RepositoryFactory.getItemRepository()
         
         for i in 1...3 {
             createMeeqo()
         }
+        
+        println("Repo: \(itemRepo.getInventory().weights)")
+        itemRepo.getInventory().weights = true
+        
+        
+        itemRepo.updateCurrentInventory()
+        println("Repo: ball \(itemRepo.getInventory().ball)")
+        
+        
+        //itemRepo.getInventory().ball = true
+        //itemRepo.updateCurrentInventory()
         
     }
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

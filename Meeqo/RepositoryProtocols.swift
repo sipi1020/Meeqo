@@ -13,6 +13,7 @@ protocol IUserRepository {
     func getUser() -> User
     func updateCurrentUser()
     func createNewUser()
+    func spendMoney(price: Int) -> Bool
 }
 
 protocol IMeeqoRepository {
