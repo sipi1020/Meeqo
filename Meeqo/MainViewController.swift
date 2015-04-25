@@ -22,10 +22,10 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         //
         
         let repo = MeeqoRepository()
+        repo.create("piros")
         var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
-        repo.create("piros")
         repo.remove(repo.getMeeqos()[0])
         println("You have \(repo.getMeeqos().count) Meeqos")
         
