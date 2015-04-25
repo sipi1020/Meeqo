@@ -11,7 +11,7 @@ import CoreData
 
 
 class ItemManager {
-    static func buyCake() -> Bool {
+  /*  static func buyCake() -> Bool {
         if UserRepository.spendMoney(ItemData.CAKE_PRICE) {
             let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
             let entity =  NSEntityDescription.entityForName("MeeqoInventory",
@@ -24,5 +24,5 @@ class ItemManager {
         } else {
             return false
         }
-    }
+    }*/
 }

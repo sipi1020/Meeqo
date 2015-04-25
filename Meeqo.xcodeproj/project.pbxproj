@@ -30,6 +30,8 @@
 		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
 		7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8D1AE4518A00257E7C /* ItemManager.swift */; };
 		7285CC901AE452EC00257E7C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8F1AE452EC00257E7C /* UserRepository.swift */; };
+		729266371AE85586005E6FA1 /* increaseStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266361AE85586005E6FA1 /* increaseStatusViewController.swift */; };
+		729266391AEBF92E005E6FA1 /* RepositoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266381AEBF92E005E6FA1 /* RepositoryHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		7285CC8D1AE4518A00257E7C /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		7285CC8F1AE452EC00257E7C /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		729266361AE85586005E6FA1 /* increaseStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = increaseStatusViewController.swift; sourceTree = "<group>"; };
+		729266381AEBF92E005E6FA1 /* RepositoryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				7265DAB91AE8449C0043B2E8 /* ItemRepository.swift */,
 				7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */,
 				7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */,
+				729266381AEBF92E005E6FA1 /* RepositoryHelper.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				7265DAA31AE81DC60043B2E8 /* MeeqoRepository.swift in Sources */,
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,
+				729266391AEBF92E005E6FA1 /* RepositoryHelper.swift in Sources */,
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
 				7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,

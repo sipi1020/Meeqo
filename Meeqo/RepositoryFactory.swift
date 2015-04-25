@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class RepositoryFactory {
+    static let userRepository = UserRepository()
+    
+    static func getUserRepository() -> IUserRepository {
+        return userRepository
+    }
+}

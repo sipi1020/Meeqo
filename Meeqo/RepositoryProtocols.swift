@@ -11,7 +11,8 @@ import Foundation
 
 protocol IUserRepository {
     func getUser() -> User
-    func setCurrentUser()
+    func updateCurrentUser()
+    func createNewUser()
 }
 
 protocol IMeeqoRepository {
@@ -22,6 +23,6 @@ protocol IMeeqoRepository {
 
 protocol IItemRepository {
     func getInventory() -> MeeqoInventory
-    func updateItems()
-    func setInventory(inventory: MeeqoInventory)
+    func updateCurrentInventory()
+    func createNewInventory()
 }
