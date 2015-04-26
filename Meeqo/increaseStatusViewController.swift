@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class increaseStatusViewController: UITableViewController {
+class increaseStatusViewController: UITableViewController,UITableViewDelegate {
     
     var tag : Int = 0
     var foodImages = [UIImage]()
@@ -20,8 +21,9 @@ class increaseStatusViewController: UITableViewController {
     var foodOrToyNameLabel : UILabel!
     var roomNameLabel : UILabel!
     var foodOrToyCountLabel : UILabel!
+    var meeqoID : NSManagedObjectID!
+    var mainVC : MainViewController!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -115,6 +117,23 @@ class increaseStatusViewController: UITableViewController {
         }
         // Configure the cell...
         
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        if tag == 3 {
+            var meeqoRepo = RepositoryFactory.getMeeqoRepository()
+            var meeqos = meeqoRepo.getMeeqos()
+            for meeqo in meeqos {
+                if meeqo.objectID == meeqoID {
+                    meeqo.position.roomNumber = indexPath.row
+                }
+            }
+            var navVC = self.navigationController
+            navVC?.dismissViewControllerAnimated(false, completion: nil)
+            mainVC.removeMeeqoViews()
+            mainVC.roomView.changeRoom(indexPath.row)
+            mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
+        }
     }
     
     /*

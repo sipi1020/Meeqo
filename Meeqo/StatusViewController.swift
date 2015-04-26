@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class StatusViewController: UITableViewController {
+    
+    var meeqoID : NSManagedObjectID!
+    var mainVC : MainViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         var img = UIImage(named: "blabla")
-        
+    
+        print(meeqoID)
+        print( " in statusvc")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -98,17 +104,22 @@ class StatusViewController: UITableViewController {
     //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var desinationVC = segue.destinationViewController as! increaseStatusViewController
+        desinationVC.meeqoID = self.meeqoID
         if segue.identifier == "foodSegue" {
             desinationVC.tag = 0
+            desinationVC.mainVC = self.mainVC
         }
         if segue.identifier == "playSegue" {
             desinationVC.tag = 1
+            desinationVC.mainVC = self.mainVC
         }
         if segue.identifier == "sleepSegue" {
             desinationVC.tag = 2
+            desinationVC.mainVC = self.mainVC
         }
         if segue.identifier == "moveSegue" {
             desinationVC.tag = 3
+            desinationVC.mainVC = self.mainVC
         
         }
         
