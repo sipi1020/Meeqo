@@ -26,6 +26,29 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         // Do any additional setup after loading the view, typically from a nib.
         //
+        
+        /*let repo = MeeqoRepository()
+        repo.create("piros")
+        var m = repo.getMeeqos()[0]
+        m.position.x = 150
+        m.updateMe()
+        repo.remove(repo.getMeeqos()[0])
+        println("You have \(repo.getMeeqos().count) Meeqos")
+        
+        let itemRepo = RepositoryFactory.getItemRepository()
+        
+        
+        println("Repo: \(itemRepo.getInventory().weights)")
+        itemRepo.getInventory().weights = true
+        
+        
+        itemRepo.updateCurrentInventory()
+        println("Repo: ball \(itemRepo.getInventory().ball)")
+        */
+        
+        //itemRepo.getInventory().ball = true
+        //itemRepo.updateCurrentInventory()
+        
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         removeMeeqoViews()
         loadMeeqosToRoom(roomView.currentRoom)
