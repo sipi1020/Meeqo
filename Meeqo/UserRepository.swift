@@ -60,13 +60,14 @@ class UserRepository : IUserRepository {
         } else {
             println("Could not fetch \(error)")
         }
-        user = RepositoryHelper.getBasicUser()
         
         let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext: moc)
         
         let u = User(entity: entity!, insertIntoManagedObjectContext: moc)
+        u.name = "Viki"
+        u.facebookID = "123456789"
+        u.coins = 100
         
-        //TODO: set params of U
         AppDelegate.sharedAppDelegate.saveContext()
     }
    /* class func getUserCoinCount() -> Int {
@@ -112,13 +113,14 @@ class UserRepository : IUserRepository {
         }
     }
 
-    
-    class func spendMoney(price: Int) -> Bool {
-        if getUserCoinCount() < price {
+    */
+    func spendMoney(price: Int) -> Bool {
+        if Int(getUser().coins) < price {
+            getUser().coins = Int(getUser().coins) - price
             return false
         } else {
             //set new coin count
             return true
         }
-    }*/
+    }
 }

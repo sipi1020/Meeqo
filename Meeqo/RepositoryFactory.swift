@@ -22,6 +22,6 @@ class RepositoryFactory {
     }
     
     static func getItemRepository() -> ItemRepository {
-        return itemRepository 
+        return itemRepository
     }
 }

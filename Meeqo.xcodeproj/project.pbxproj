@@ -31,7 +31,8 @@
 		7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8D1AE4518A00257E7C /* ItemManager.swift */; };
 		7285CC901AE452EC00257E7C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8F1AE452EC00257E7C /* UserRepository.swift */; };
 		729266371AE85586005E6FA1 /* increaseStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266361AE85586005E6FA1 /* increaseStatusViewController.swift */; };
-		729266391AEBF92E005E6FA1 /* RepositoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266381AEBF92E005E6FA1 /* RepositoryHelper.swift */; };
+		7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663A1AEC5701005E6FA1 /* UserManager.swift */; };
+		7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +74,8 @@
 		7285CC8D1AE4518A00257E7C /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		7285CC8F1AE452EC00257E7C /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		729266361AE85586005E6FA1 /* increaseStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = increaseStatusViewController.swift; sourceTree = "<group>"; };
-		729266381AEBF92E005E6FA1 /* RepositoryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryHelper.swift; sourceTree = "<group>"; };
+		7292663A1AEC5701005E6FA1 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +167,6 @@
 				7265DAB91AE8449C0043B2E8 /* ItemRepository.swift */,
 				7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */,
 				7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */,
-				729266381AEBF92E005E6FA1 /* RepositoryHelper.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -186,6 +187,7 @@
 			children = (
 				7279B8181AE170D900F48A9F /* RoomView.swift */,
 				7279B8161AE168FE00F48A9F /* MeeqoView.swift */,
+				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -195,7 +197,6 @@
 			children = (
 				386E67DA1AE8576500EBC1ED /* increaseStatusViewController.swift */,
 				3856676B1AD9891D004E1F9B /* MainViewController.swift */,
-				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -204,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				7285CC8D1AE4518A00257E7C /* ItemManager.swift */,
+				7292663A1AEC5701005E6FA1 /* UserManager.swift */,
+				7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -312,9 +315,9 @@
 				386E67DB1AE8576500EBC1ED /* increaseStatusViewController.swift in Sources */,
 				7265DAB51AE82FD30043B2E8 /* MeeqoPosition.swift in Sources */,
 				7265DAA31AE81DC60043B2E8 /* MeeqoRepository.swift in Sources */,
+				7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */,
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,
-				729266391AEBF92E005E6FA1 /* RepositoryHelper.swift in Sources */,
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
 				7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
@@ -328,6 +331,7 @@
 				7265DAA51AE81E6D0043B2E8 /* MoqData.swift in Sources */,
 				7265DABA1AE8449C0043B2E8 /* ItemRepository.swift in Sources */,
 				7265DAB71AE830A80043B2E8 /* Raw.swift in Sources */,
+				7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */,
 				7265DABF1AE851200043B2E8 /* RepositoryProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
