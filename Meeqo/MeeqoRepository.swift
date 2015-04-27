@@ -44,14 +44,12 @@ class MeeqoRepository : IMeeqoRepository {
         m.sleep = 100
         m.food = 100
         m.color = color
-        
-        
         AppDelegate.sharedAppDelegate.saveContext()
         let pentity =  NSEntityDescription.entityForName("MeeqoPosition",inManagedObjectContext: moc)
         let p = MeeqoPosition(entity: pentity!, insertIntoManagedObjectContext: moc)
         p.x = 100
         p.y = 100
-        p.roomNumber = 4
+        p.roomNumber = 2
         
         m.position = p
         /*let m = NSEntityDescription.insertNewObjectForEntityForName("Meeqo", inManagedObjectContext: moc) as! Meeqo
@@ -62,6 +60,7 @@ class MeeqoRepository : IMeeqoRepository {
         AppDelegate.sharedAppDelegate.saveContext()
         meeqos = getMeeqosFromDatabase()
     }
+    
     
     func remove(meeqo: Meeqo) {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!

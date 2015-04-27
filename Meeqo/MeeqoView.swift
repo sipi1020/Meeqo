@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
 
 class MeeqoView: UIView {
+    var meeqoID : NSManagedObjectID!
+    var color : String!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    init(frame: CGRect, color: String, id: NSManagedObjectID) {
+        self.color = color
+        self.meeqoID = id
+        super.init(frame: frame)
+    
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -22,9 +32,14 @@ class MeeqoView: UIView {
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during mation.
     override func drawRect(rect: CGRect) {
+        var meeqoImage : UIImage
+        if(color == nil){
+        meeqoImage = UIImage(named: "szivarvany")!
+        }
+        else{
+          meeqoImage = UIImage(named: color)!
+        }
         
-        var meeqoImage = UIImage(named: "szivarvany")
-
         var meeqoImageView = UIImageView(frame: CGRect(x: frame.width / 10 ,y: frame.width / 6 ,width: frame.width / 10 * 8,height: frame.width / 10 * 8))
         
         meeqoImageView.image = meeqoImage
