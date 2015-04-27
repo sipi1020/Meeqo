@@ -23,3 +23,4 @@ class ItemData {
     static let VIDEO_GAMES_PRICE:Int = 100
     static let WEIGHTS_PRICE:Int = 100
 }
+

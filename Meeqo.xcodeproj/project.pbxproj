@@ -32,6 +32,7 @@
 		729266371AE85586005E6FA1 /* increaseStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266361AE85586005E6FA1 /* increaseStatusViewController.swift */; };
 		7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663A1AEC5701005E6FA1 /* UserManager.swift */; };
 		7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */; };
+		729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266431AED2780005E6FA1 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		729266361AE85586005E6FA1 /* increaseStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = increaseStatusViewController.swift; sourceTree = "<group>"; };
 		7292663A1AEC5701005E6FA1 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeManager.swift; sourceTree = "<group>"; };
+		729266431AED2780005E6FA1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		385667631AD9891D004E1F9B /* Meeqo */ = {
 			isa = PBXGroup;
 			children = (
+				729266431AED2780005E6FA1 /* SwiftyJSON.swift */,
 				7265DAB81AE843960043B2E8 /* Repositories */,
 				7273FCCE1AE44D8300CF7C9F /* Logic */,
 				7273FCCD1AE44BFC00CF7C9F /* ViewControllers */,
@@ -313,6 +316,7 @@
 				729266371AE85586005E6FA1 /* increaseStatusViewController.swift in Sources */,
 				7265DAB51AE82FD30043B2E8 /* MeeqoPosition.swift in Sources */,
 				7265DAA31AE81DC60043B2E8 /* MeeqoRepository.swift in Sources */,
+				729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */,
 				7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */,
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,

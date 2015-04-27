@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         itemRepo.updateCurrentInventory()
         println("Repo: ball \(itemRepo.getInventory().ball)")
         
-        
+        UserManager.saveCurrentUserToTheServer()
         //itemRepo.getInventory().ball = true
         //itemRepo.updateCurrentInventory()
         

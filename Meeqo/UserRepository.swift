@@ -67,7 +67,7 @@ class UserRepository : IUserRepository {
         u.name = "Viki"
         u.facebookID = "123456789"
         u.coins = 100
-        
+        user = u
         AppDelegate.sharedAppDelegate.saveContext()
     }
    /* class func getUserCoinCount() -> Int {
