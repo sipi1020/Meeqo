@@ -27,8 +27,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         // Do any additional setup after loading the view, typically from a nib.
         //
         
-        /*let repo = MeeqoRepository()
-        repo.create("piros")
+        meeqoRepo = RepositoryFactory.getMeeqoRepository()
+        
+        
+        
+        /*repo.create("piros")
         var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
@@ -44,12 +47,17 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         itemRepo.updateCurrentInventory()
         println("Repo: ball \(itemRepo.getInventory().ball)")
-        */
         
+        UserManager.saveCurrentUserToTheServer()
         //itemRepo.getInventory().ball = true
         //itemRepo.updateCurrentInventory()
         
-        meeqoRepo = RepositoryFactory.getMeeqoRepository()
+        */
+        
+        //createMeeqo("piros")
+        
+        
+        
         removeMeeqoViews()
         loadMeeqosToRoom(roomView.currentRoom)
     }

@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+
 @objc(User)
 class User: NSManagedObject {
 
@@ -16,4 +17,21 @@ class User: NSManagedObject {
     @NSManaged var facebookID: String
     @NSManaged var name: String
 
+}
+
+class UserModel {
+    let user:User
+    let meeqos:[Meeqo]
+    let inventory:MeeqoInventory
+    
+    init(user: User, meeqos: [Meeqo], inventory: MeeqoInventory) {
+        self.user = user
+        self.meeqos = meeqos
+        self.inventory = inventory
+    }
+    
+    func toJson() -> String {
+        var json = "{}"
+        return json
+    }
 }

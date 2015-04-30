@@ -33,6 +33,11 @@
 		7285CC901AE452EC00257E7C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8F1AE452EC00257E7C /* UserRepository.swift */; };
 		7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663A1AEC5701005E6FA1 /* UserManager.swift */; };
 		7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */; };
+		729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266431AED2780005E6FA1 /* SwiftyJSON.swift */; };
+		72DF72E81AF2DB3D00506503 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72E71AF2DB3D00506503 /* Challenge.swift */; };
+		72DF72EA1AF2DEA600506503 /* ChallengeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72E91AF2DEA600506503 /* ChallengeRepository.swift */; };
+		72DF72EC1AF2E0C100506503 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72EB1AF2E0C100506503 /* UserModel.swift */; };
+		72DF72EE1AF2E4A500506503 /* MeeqoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72ED1AF2E4A500506503 /* MeeqoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		7285CC8F1AE452EC00257E7C /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		7292663A1AEC5701005E6FA1 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeManager.swift; sourceTree = "<group>"; };
+		729266431AED2780005E6FA1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		72DF72E71AF2DB3D00506503 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		72DF72E91AF2DEA600506503 /* ChallengeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeRepository.swift; sourceTree = "<group>"; };
+		72DF72EB1AF2E0C100506503 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		72DF72ED1AF2E4A500506503 /* MeeqoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,7 @@
 		385667631AD9891D004E1F9B /* Meeqo */ = {
 			isa = PBXGroup;
 			children = (
+				729266431AED2780005E6FA1 /* SwiftyJSON.swift */,
 				7265DAB81AE843960043B2E8 /* Repositories */,
 				7273FCCE1AE44D8300CF7C9F /* Logic */,
 				7273FCCD1AE44BFC00CF7C9F /* ViewControllers */,
@@ -168,6 +179,7 @@
 				7265DAB91AE8449C0043B2E8 /* ItemRepository.swift */,
 				7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */,
 				7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */,
+				72DF72E91AF2DEA600506503 /* ChallengeRepository.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -179,6 +191,8 @@
 				7265DAB21AE82FD30043B2E8 /* Meeqo.swift */,
 				7265DAB01AE82FD30043B2E8 /* User.swift */,
 				7265DAAE1AE82FD30043B2E8 /* MeeqoInventory.swift */,
+				72DF72E71AF2DB3D00506503 /* Challenge.swift */,
+				72DF72EB1AF2E0C100506503 /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 				7285CC8D1AE4518A00257E7C /* ItemManager.swift */,
 				7292663A1AEC5701005E6FA1 /* UserManager.swift */,
 				7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */,
+				72DF72ED1AF2E4A500506503 /* MeeqoManager.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -319,10 +334,12 @@
 				7265DAB51AE82FD30043B2E8 /* MeeqoPosition.swift in Sources */,
 				38751DC71AF2DA75009E1A48 /* ShopViewController.swift in Sources */,
 				7265DAA31AE81DC60043B2E8 /* MeeqoRepository.swift in Sources */,
+				729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */,
 				7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */,
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
+				72DF72EC1AF2E0C100506503 /* UserModel.swift in Sources */,
 				7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
 				389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */,
@@ -337,6 +354,9 @@
 				7265DAB71AE830A80043B2E8 /* Raw.swift in Sources */,
 				7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */,
 				7265DABF1AE851200043B2E8 /* RepositoryProtocols.swift in Sources */,
+				72DF72E81AF2DB3D00506503 /* Challenge.swift in Sources */,
+				72DF72EA1AF2DEA600506503 /* ChallengeRepository.swift in Sources */,
+				72DF72EE1AF2E4A500506503 /* MeeqoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
