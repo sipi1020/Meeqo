@@ -15,6 +15,10 @@ class ItemManager {
     static let itemRepo = RepositoryFactory.getItemRepository()
     static let meeqoRepo = RepositoryFactory.getMeeqoRepository()
     
+    static func getMeeqoInventory() -> MeeqoInventory {
+        return itemRepo.getInventory()
+    }
+    
     static func buyCake() -> Bool {
             if  userRepo.spendMoney(ItemData.CAKE_PRICE) {
                 itemRepo.getInventory().cake = Int(itemRepo.getInventory().cake) + 1
