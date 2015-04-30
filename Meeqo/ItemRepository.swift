@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class ItemRepository : IItemRepository {
@@ -46,6 +47,16 @@ class ItemRepository : IItemRepository {
         }
     }
     
+    static func getFoodIcons() -> [UIImage]{
+        var images = [UIImage(named: "cake")!,UIImage(named: "icecream")!,UIImage(named: "lollipop")! ]
+        return images
+    }
+    
+    static func getToyIcons() -> [UIImage]{
+        var images = [UIImage(named: "ball_icon")!,UIImage(named: "bear_icon")!,UIImage(named: "dancefloor_icon")! ,UIImage(named: "rope_icon")!,UIImage(named: "sleepingbear_icon")!,UIImage(named: "soundsystem_icon")!,UIImage(named: "trambulin_icon")!,UIImage(named: "treadmill_icon")!,UIImage(named: "videogame_icon")!,UIImage(named: "weights_icon")!]
+        return images
+    }
+    
     func createNewInventory() {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
         println("2")
@@ -67,10 +78,10 @@ class ItemRepository : IItemRepository {
         let i = MeeqoInventory(entity: entity!, insertIntoManagedObjectContext: moc)
         i.ball = true
         i.bear = false
-        i.cake = false
+        i.cake = 0
         i.danceFloor = false
-        i.icecream = false
-        i.lollipop = false
+        i.icecream = 0
+        i.lollipop = 0
         i.rope = false
         i.sleepingBear = false
         i.soundSystem = false

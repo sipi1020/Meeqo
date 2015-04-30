@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class MeeqoRepository : IMeeqoRepository {
     private var meeqos = []
@@ -60,6 +61,23 @@ class MeeqoRepository : IMeeqoRepository {
         AppDelegate.sharedAppDelegate.saveContext()
         meeqos = getMeeqosFromDatabase()
     }
+    
+    static func getMeeqoIcons() -> [UIImage]{
+        var images = [UIImage(named: "narancs")!,UIImage(named: "lila")!,UIImage(named: "rozsaszin")! ,UIImage(named: "zold")!, UIImage(named: "kek")!,UIImage(named: "fekete")!,UIImage(named: "piros")! ,UIImage(named: "szivarvany")!]
+        return images
+    }
+    
+    static func getMeeqoColorName() -> [String] {
+        var colors = ["narancs","lila","rozsaszin","zold","kek","fekete","piros","szivarvany"]
+        return colors
+    }
+    
+    static func getMeeqoColorTitle() -> [String] {
+        var colors = ["Orange","Purple","Pink","Green","Blue","Black","Red","Rainbow"]
+        return colors
+        
+    }
+    
     
     
     func remove(meeqo: Meeqo) {
