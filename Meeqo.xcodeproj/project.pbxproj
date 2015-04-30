@@ -33,6 +33,7 @@
 		7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663A1AEC5701005E6FA1 /* UserManager.swift */; };
 		7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */; };
 		729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266431AED2780005E6FA1 /* SwiftyJSON.swift */; };
+		72DF72E81AF2DB3D00506503 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72E71AF2DB3D00506503 /* Challenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		7292663A1AEC5701005E6FA1 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeManager.swift; sourceTree = "<group>"; };
 		729266431AED2780005E6FA1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		72DF72E71AF2DB3D00506503 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				7265DAB21AE82FD30043B2E8 /* Meeqo.swift */,
 				7265DAB01AE82FD30043B2E8 /* User.swift */,
 				7265DAAE1AE82FD30043B2E8 /* MeeqoInventory.swift */,
+				72DF72E71AF2DB3D00506503 /* Challenge.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				7265DAB71AE830A80043B2E8 /* Raw.swift in Sources */,
 				7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */,
 				7265DABF1AE851200043B2E8 /* RepositoryProtocols.swift in Sources */,
+				72DF72E81AF2DB3D00506503 /* Challenge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

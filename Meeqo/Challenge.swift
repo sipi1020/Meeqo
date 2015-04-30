@@ -2,7 +2,7 @@
 //  Challenge.swift
 //  Meeqo
 //
-//  Created by Patrik on 4/17/15.
+//  Created by Livvit on 30/04/15.
 //  Copyright (c) 2015 MyITSolver. All rights reserved.
 //
 
@@ -12,19 +12,21 @@ class Challenge {
     let name:NSString
     let coin:Int
     let description:NSString
-    var completed = false
+    let level = 1.0
+    let completed = false
     
-    init(name: NSString, coin:Int, description:NSString) {
+    init(name: NSString, coin:Int, description: NSString) {
         self.name = name
         self.coin = coin
         self.description = description
     }
+    
 }
 
-class TimeChallenge : Challenge {
-    let timeInSecond:Int
-    init(name: NSString, coin:Int, description:NSString, timeInSecond:Int) {
-        self.timeInSecond = timeInSecond
+class TimeChallenge: Challenge {
+    let timeInSeconds:Int
+    init(name: NSString, coin:Int, description: NSString, time: Int) {
         super.init(name: name, coin: coin, description: description)
+        self.timeInSeconds = time
     }
 }
