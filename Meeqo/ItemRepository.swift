@@ -12,7 +12,7 @@ import UIKit
 
 
 class ItemRepository : IItemRepository {
-    private var meeqoInventory:MeeqoInventory?
+    private var meeqoInventory: MeeqoInventory?
     
     init() {
         
@@ -47,15 +47,7 @@ class ItemRepository : IItemRepository {
         }
     }
     
-    static func getFoodIcons() -> [UIImage]{
-        var images = [UIImage(named: "cake")!,UIImage(named: "icecream")!,UIImage(named: "lollipop")! ]
-        return images
-    }
-    
-    static func getToyIcons() -> [UIImage]{
-        var images = [UIImage(named: "ball_icon")!,UIImage(named: "bear_icon")!,UIImage(named: "dancefloor_icon")! ,UIImage(named: "rope_icon")!,UIImage(named: "sleepingbear_icon")!,UIImage(named: "soundsystem_icon")!,UIImage(named: "trambulin_icon")!,UIImage(named: "treadmill_icon")!,UIImage(named: "videogame_icon")!,UIImage(named: "weights_icon")!]
-        return images
-    }
+
     
     func createNewInventory() {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!

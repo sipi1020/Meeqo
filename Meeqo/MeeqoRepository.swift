@@ -62,20 +62,11 @@ class MeeqoRepository : IMeeqoRepository {
         meeqos = getMeeqosFromDatabase()
     }
     
-    static func getMeeqoIcons() -> [UIImage]{
-        var images = [UIImage(named: "narancs")!,UIImage(named: "lila")!,UIImage(named: "rozsaszin")! ,UIImage(named: "zold")!, UIImage(named: "kek")!,UIImage(named: "fekete")!,UIImage(named: "piros")! ,UIImage(named: "szivarvany")!]
-        return images
-    }
     
-    static func getMeeqoColorName() -> [String] {
-        var colors = ["narancs","lila","rozsaszin","zold","kek","fekete","piros","szivarvany"]
-        return colors
-    }
     
-    static func getMeeqoColorTitle() -> [String] {
-        var colors = ["Orange","Purple","Pink","Green","Blue","Black","Red","Rainbow"]
+    static func getMeeqoPrices() -> [Int] {
+        var colors = [ItemData.ORANGE_MEEQO_PRICE,ItemData.PURPLE_MEEQO_PRICE,ItemData.PINK_MEEQO_PRICE,ItemData.GREEN_MEEQO_PRICE,ItemData.BLUE_MEEQO_PRICE,ItemData.BLACK_MEEQO_PRICE,ItemData.RED_MEEQO_PRICE,ItemData.RAINBOW_MEEQO_PRICE]
         return colors
-        
     }
     
     

@@ -13,10 +13,10 @@ class ShopViewController: UITableViewController {
     var itemRepo :ItemRepository!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemRepo = RepositoryFactory.getItemRepository()
-
+        itemRepo = ItemManager.itemRepo
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,18 +40,30 @@ class ShopViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
+        switch section {
+        case 0:
+            return ItemManager.getFoodTitles().count
+        case 1:
+            return ItemManager.getToyTitles().count
+        case 2:
+            return MeeqoManager.getMeeqoTitles().count
+        default:
+            break
+            
+        }
+        
         return 0
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("shopCell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
