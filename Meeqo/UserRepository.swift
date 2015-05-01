@@ -36,7 +36,7 @@ class UserRepository : IUserRepository {
         createNewUser()
         return user!
     }
-    
+
     func updateCurrentUser() {
         if let u = user {
             let moc = AppDelegate.sharedAppDelegate.managedObjectContext!

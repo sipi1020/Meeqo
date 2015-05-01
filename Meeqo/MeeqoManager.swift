@@ -14,6 +14,20 @@ class MeeqoManager {
     static let itemRepo = RepositoryFactory.getItemRepository()
     static let meeqoRepo = RepositoryFactory.getMeeqoRepository()
     
+    static func sleepMeeqo(meeqo: Meeqo) {
+        meeqo.sleep = Int(meeqo.sleep) + MeeqoConstans.SLEEP_INCREASE
+        meeqo.updateMe()
+    }
+    
+    static func eatMeeqo(meeqo: Meeqo, foodValue: Int) {
+        meeqo.food = Int(meeqo.food) + foodValue
+        meeqo.updateMe()
+    }
+    
+    static func playMeeqo(meeqo: Meeqo, playValue: Int) {
+        meeqo.entertainment = Int(meeqo.entertainment) + playValue
+        meeqo.updateMe()
+    }
     static func buyMeeqo(color: String) -> Bool {
         switch color {
         case "szivarvany":

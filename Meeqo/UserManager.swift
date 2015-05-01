@@ -16,6 +16,13 @@ class UserManager {
     
     static var urlSession: NSURLSession!
     
+    static func completedChallengeToday() -> Bool {
+        let user = userRepo.getUser()
+        var completed = false
+        
+        //TODO implement method
+        return completed
+    }
     static func downloadUserDataToDatabase(facebookId: NSString) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         let url = NSURL(string: "http://atleast.aut.bme.hu/ait-ios/messenger/messages")
@@ -59,6 +66,31 @@ class UserManager {
         
         postTask.resume()*/
     }
+    static func updateMeeqoData() {
+        
+    }
+    private static func getSpentHours(date: NSDate) -> Int {
+        let user = userRepo.getUser()
+        var spentHours = 0
+        
+        return 1
+        
+        /*
+        //TDOD implement method
+        
+        if spentHours <= 0 {
+            return 0
+        }
+        if spentHours > 120 {
+            return 120
+        }
+        
+        user.lastUpdatedMeeqos = date
+        userRepo.updateCurrentUser()
+        
+        return spentHours */
+    }
+    
     static func getCurrentUser() -> User {
         return userRepo.getUser()
     }
