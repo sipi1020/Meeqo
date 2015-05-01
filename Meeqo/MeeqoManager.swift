@@ -7,13 +7,14 @@
 //
 
 import Foundation
-
+import UIKit
 
 class MeeqoManager {
     static let userRepo = RepositoryFactory.getUserRepository()
     static let itemRepo = RepositoryFactory.getItemRepository()
     static let meeqoRepo = RepositoryFactory.getMeeqoRepository()
     
+   
     static func getMeeqoIcons() -> [UIImage]{
         var images = [UIImage(named: "narancs")!,UIImage(named: "lila")!,UIImage(named: "rozsaszin")! ,UIImage(named: "zold")!, UIImage(named: "kek")!,UIImage(named: "fekete")!,UIImage(named: "piros")! ,UIImage(named: "szivarvany")!]
         return images
@@ -29,8 +30,7 @@ class MeeqoManager {
         return colors
         
     }
-    
-    static func buyMeeqo(color: NSString) {
+     static func buyMeeqo(color: String) -> Bool {
         switch color {
         case "szivarvany":
             return buyMeeqo(color, price: ItemData.RAINBOW_MEEQO_PRICE)
