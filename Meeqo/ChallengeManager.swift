@@ -9,10 +9,11 @@
 import Foundation
 
 class ChallengeManager {
-    func getRandomChallenge() {
-        
+    static func getRandomChallenge() -> Challenge? {
+        let num = arc4random_uniform(UInt32(Challenges.challenges.count - 1))
+        return Challenges.challenges[Int(num)]
     }
-    func updateChallengeDataBaseFromServer() {
+    static func updateChallengeDataBaseFromServer() {
         
     }
 }

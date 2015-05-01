@@ -26,7 +26,8 @@ class Challenge {
 class TimeChallenge: Challenge {
     let timeInSeconds:Int
     init(name: NSString, coin:Int, description: NSString, time: Int) {
-        super.init(name: name, coin: coin, description: description)
         self.timeInSeconds = time
+        
+        super.init(name: name, coin: coin, description: description)
     }
 }
