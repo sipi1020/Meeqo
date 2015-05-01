@@ -34,3 +34,10 @@ class ItemData {
     static let RAINBOW_MEEQO_PRICE = 2000
 }
 
+class Challenges {
+    static let challenges = [
+        Challenge(name: "Running", coin: 22, description: "Run 1 mile today"),
+        Challenge(name: "Pushup", coin: 20, description: "Make 20 pushups!")
+    ]
+}
+

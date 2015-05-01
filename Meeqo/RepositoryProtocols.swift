@@ -27,3 +27,6 @@ protocol IItemRepository {
     func updateCurrentInventory()
     func createNewInventory()
 }
+
+protocol IChallengeRepository {
+}
