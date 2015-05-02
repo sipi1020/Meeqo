@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 class MeeqoManager {
     static let userRepo = RepositoryFactory.getUserRepository()

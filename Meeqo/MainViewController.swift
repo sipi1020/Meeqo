@@ -231,6 +231,10 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         loadMeeqosToRoom(4)
     }
     
+    @IBAction func createMeeqoButton(sender: AnyObject) {
+        createMeeqo("piros")
+        loadMeeqosToRoom(roomView.currentRoom)
+    }
 
 }
 

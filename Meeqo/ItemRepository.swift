@@ -8,10 +8,11 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 class ItemRepository : IItemRepository {
-    private var meeqoInventory:MeeqoInventory?
+    private var meeqoInventory: MeeqoInventory?
     
     init() {
         
@@ -46,6 +47,8 @@ class ItemRepository : IItemRepository {
         }
     }
     
+
+    
     func createNewInventory() {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
         println("2")
@@ -67,10 +70,10 @@ class ItemRepository : IItemRepository {
         let i = MeeqoInventory(entity: entity!, insertIntoManagedObjectContext: moc)
         i.ball = true
         i.bear = false
-        i.cake = false
+        i.cake = 0
         i.danceFloor = false
-        i.icecream = false
-        i.lollipop = false
+        i.icecream = 0
+        i.lollipop = 0
         i.rope = false
         i.sleepingBear = false
         i.soundSystem = false

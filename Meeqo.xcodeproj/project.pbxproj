@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384E3A551AF2FE48008D7359 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E3A541AF2FE48008D7359 /* StatusViewController.swift */; };
 		385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385667661AD9891D004E1F9B /* AppDelegate.swift */; };
 		3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 385667681AD9891D004E1F9B /* Meeqo.xcdatamodeld */; };
 		3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856676B1AD9891D004E1F9B /* MainViewController.swift */; };
@@ -15,7 +16,7 @@
 		385667741AD9891D004E1F9B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385667721AD9891D004E1F9B /* LaunchScreen.xib */; };
 		385667801AD9891D004E1F9B /* MeeqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856677F1AD9891D004E1F9B /* MeeqoTests.swift */; };
 		386E67DB1AE8576500EBC1ED /* increaseStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386E67DA1AE8576500EBC1ED /* increaseStatusViewController.swift */; };
-		389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389EF4FA1AE33B4100BD496B /* StatusViewController.swift */; };
+		38751DC71AF2DA75009E1A48 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38751DC61AF2DA75009E1A48 /* ShopViewController.swift */; };
 		7265DAA31AE81DC60043B2E8 /* MeeqoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DAA21AE81DC60043B2E8 /* MeeqoRepository.swift */; };
 		7265DAA51AE81E6D0043B2E8 /* MoqData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DAA41AE81E6D0043B2E8 /* MoqData.swift */; };
 		7265DAAF1AE82FD30043B2E8 /* MeeqoInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DAAE1AE82FD30043B2E8 /* MeeqoInventory.swift */; };
@@ -50,7 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		380AA6711AED3DA500CF3AA2 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		384E3A541AF2FE48008D7359 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		385667611AD9891D004E1F9B /* Meeqo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meeqo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385667651AD9891D004E1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		385667661AD9891D004E1F9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +64,7 @@
 		3856677E1AD9891D004E1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3856677F1AD9891D004E1F9B /* MeeqoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeeqoTests.swift; sourceTree = "<group>"; };
 		386E67DA1AE8576500EBC1ED /* increaseStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = increaseStatusViewController.swift; sourceTree = "<group>"; };
-		389EF4FA1AE33B4100BD496B /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		38751DC61AF2DA75009E1A48 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		7265DAA21AE81DC60043B2E8 /* MeeqoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoRepository.swift; sourceTree = "<group>"; };
 		7265DAA41AE81E6D0043B2E8 /* MoqData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoqData.swift; sourceTree = "<group>"; };
 		7265DAAE1AE82FD30043B2E8 /* MeeqoInventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoInventory.swift; sourceTree = "<group>"; };
@@ -200,7 +201,6 @@
 			children = (
 				7279B8181AE170D900F48A9F /* RoomView.swift */,
 				7279B8161AE168FE00F48A9F /* MeeqoView.swift */,
-				389EF4FA1AE33B4100BD496B /* StatusViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -210,7 +210,8 @@
 			children = (
 				386E67DA1AE8576500EBC1ED /* increaseStatusViewController.swift */,
 				3856676B1AD9891D004E1F9B /* MainViewController.swift */,
-				380AA6711AED3DA500CF3AA2 /* StatusViewController.swift */,
+				384E3A541AF2FE48008D7359 /* StatusViewController.swift */,
+				38751DC61AF2DA75009E1A48 /* ShopViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +331,7 @@
 				72DF72F21AF2EEE900506503 /* User.swift in Sources */,
 				386E67DB1AE8576500EBC1ED /* increaseStatusViewController.swift in Sources */,
 				7265DAB51AE82FD30043B2E8 /* MeeqoPosition.swift in Sources */,
+				38751DC71AF2DA75009E1A48 /* ShopViewController.swift in Sources */,
 				7265DAA31AE81DC60043B2E8 /* MeeqoRepository.swift in Sources */,
 				729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */,
 				7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */,
@@ -339,10 +341,10 @@
 				72DF72EC1AF2E0C100506503 /* UserModel.swift in Sources */,
 				7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */,
 				385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */,
-				389EF4FB1AE33B4100BD496B /* StatusViewController.swift in Sources */,
 				7285CC901AE452EC00257E7C /* UserRepository.swift in Sources */,
 				7265DABC1AE850BB0043B2E8 /* RepositoryFactory.swift in Sources */,
 				3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */,
+				384E3A551AF2FE48008D7359 /* StatusViewController.swift in Sources */,
 				7265DAB31AE82FD30043B2E8 /* Meeqo.swift in Sources */,
 				7265DAAF1AE82FD30043B2E8 /* MeeqoInventory.swift in Sources */,
 				7265DAA51AE81E6D0043B2E8 /* MoqData.swift in Sources */,

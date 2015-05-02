@@ -37,7 +37,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         }
         println(tag)
         
-        RepositoryFactory.getMeeqoRepository().create("kek")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
