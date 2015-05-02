@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="shopCell" rowHeight="70" id="JMr-us-ZTq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="shopCell" rowHeight="70" id="JMr-us-ZTq">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JMr-us-ZTq" id="uti-pZ-DkK">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -46,13 +46,21 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odc-RK-Lbe">
+                                            <rect key="frame" x="268" y="24" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="UdS-8U-JTa" firstAttribute="leading" secondItem="YtB-d4-ykU" secondAttribute="trailing" constant="20" id="90U-od-q4Y"/>
                                         <constraint firstItem="YtB-d4-ykU" firstAttribute="top" secondItem="uti-pZ-DkK" secondAttribute="topMargin" id="9gE-lx-fIa"/>
+                                        <constraint firstItem="Rpp-ez-cNr" firstAttribute="leading" secondItem="odc-RK-Lbe" secondAttribute="trailing" constant="100" id="KlH-9R-erk"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="YtB-d4-ykU" secondAttribute="bottom" id="RD8-f0-AtO"/>
                                         <constraint firstAttribute="centerY" secondItem="UdS-8U-JTa" secondAttribute="centerY" id="URg-jy-cSq"/>
                                         <constraint firstItem="6Om-WX-SXJ" firstAttribute="leading" secondItem="Rpp-ez-cNr" secondAttribute="trailing" constant="100" id="Ylg-SX-HcA"/>
+                                        <constraint firstAttribute="centerY" secondItem="odc-RK-Lbe" secondAttribute="centerY" id="bar-5y-du3"/>
                                         <constraint firstAttribute="centerY" secondItem="Rpp-ez-cNr" secondAttribute="centerY" id="nCL-zi-5A3"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6Om-WX-SXJ" secondAttribute="trailing" constant="17" id="rOE-A4-rNL"/>
                                         <constraint firstItem="YtB-d4-ykU" firstAttribute="leading" secondItem="uti-pZ-DkK" secondAttribute="leadingMargin" id="xlC-wY-qB4"/>
@@ -66,6 +74,8 @@
                             <outlet property="delegate" destination="t8e-5c-63W" id="jMh-xi-ksM"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbb-fd-DuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
