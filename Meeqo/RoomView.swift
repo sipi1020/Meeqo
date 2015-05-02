@@ -18,6 +18,7 @@ class RoomView: UIView {
     var kitchenItemImages : [UIImage]
     var bedroomItemImages : [UIImage]
     var currentRoom = 2
+    var inventory : MeeqoInventory!
     
     override init(frame: CGRect) {
         self.rooms = [UIImage(named: "disco")!,UIImage(named: "fitnessroom")!,UIImage(named: "playingroom")!,UIImage(named: "kitchen")!,UIImage(named: "bedroom")! ]
@@ -26,7 +27,7 @@ class RoomView: UIView {
         self.playingroomItemImages = [UIImage(named: "ball")!,UIImage(named: "bear")!,UIImage(named: "trambulin")!,UIImage(named: "videogame")!]
         self.kitchenItemImages = [UIImage(named: "cake")!,UIImage(named: "icecream")!,UIImage(named: "lollipop")!]
         self.bedroomItemImages = [UIImage(named: "sleepingbear")!]
-        
+        self.inventory = ItemManager.getMeeqoInventory()
         super.init(frame: frame)
     }
     required init(coder aDecoder: NSCoder) {
@@ -36,6 +37,7 @@ class RoomView: UIView {
         self.playingroomItemImages = [UIImage(named: "balls")!,UIImage(named: "bear")!,UIImage(named: "trambulin")!,UIImage(named: "videogame")!]
         self.kitchenItemImages = [UIImage(named: "cake")!,UIImage(named: "icecream")!,UIImage(named: "lollipop")!]
         self.bedroomItemImages = [UIImage(named: "sleepingbear")!]
+        self.inventory = ItemManager.getMeeqoInventory()
         super.init(coder: aDecoder)
     }
     
@@ -44,6 +46,96 @@ class RoomView: UIView {
         roomImageView.image = rooms[currentRoom]
         roomImageView.contentMode = UIViewContentMode.ScaleAspectFill
         self.addSubview(roomImageView)
+        
+        switch currentRoom{
+        case 0:
+            if (inventory.soundSystem as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = discoItemImages[1]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.danceFloor as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = discoItemImages[0]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+        case 1:
+            if (inventory.treadmill as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = fitnessItemImages[1]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.weights as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = fitnessItemImages[2]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.rope as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = fitnessItemImages[0]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+        case 2:
+            if (inventory.trambulin as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = playingroomItemImages[2]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.ball as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = playingroomItemImages[0]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.videoGame as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = playingroomItemImages[3]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.bear as Bool) {
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = playingroomItemImages[1]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+        case 3:
+            if (inventory.cake as Int) > 0{
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = kitchenItemImages[0]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.lollipop as Int) > 0{
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = kitchenItemImages[2]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+            if (inventory.icecream as Int) > 0{
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = kitchenItemImages[1]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+        case 4:
+            if (inventory.sleepingBear as Bool){
+                var toyImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+                toyImageView.image = bedroomItemImages[0]
+                toyImageView.contentMode = UIViewContentMode.ScaleAspectFill
+                self.addSubview(toyImageView)
+            }
+          
+        default:
+            println("default case")
+            
+        }
         
     }
     

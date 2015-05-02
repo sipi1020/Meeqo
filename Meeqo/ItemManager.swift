@@ -147,12 +147,12 @@ class ItemManager {
         return false
     }
     static func getFoodIcons() -> [UIImage]{
-        var images = [UIImage(named: "lollipop")!,UIImage(named: "icecream")!,UIImage(named: "cake")! ]
+        var images = [UIImage(named: "lollipop_icon")!,UIImage(named: "icecream_icon")!,UIImage(named: "cake_icon")! ]
         return images
     }
     
     static func getToyIcons() -> [UIImage]{
-        var images = [UIImage(named: "ball_icon")!,UIImage(named: "rope_icon")!,UIImage(named: "weights_icon")! ,UIImage(named: "bear_icon")!,UIImage(named: "sleepingbear_icon")!,UIImage(named: "trambulin_icon")!,UIImage(named: "soundsystem_icon")!,UIImage(named: "treadmill_icon")!,UIImage(named: "dancefloor_icon")!,UIImage(named: "videogame_icon")!]
+        var images = [UIImage(named: "balls_icon")!,UIImage(named: "rope_icon")!,UIImage(named: "weights_icon")! ,UIImage(named: "bear_icon")!,UIImage(named: "sleepingbear_icon")!,UIImage(named: "trambulin_icon")!,UIImage(named: "soundsystem_icon")!,UIImage(named: "treadmill_icon")!,UIImage(named: "dancefloor_icon")!,UIImage(named: "videogame_icon")!]
         return images
     }
     
@@ -165,9 +165,10 @@ class ItemManager {
         var toys = [ItemData.BALL_PRICE,ItemData.ROPE_PRICE,ItemData.WEIGHTS_PRICE,ItemData.BEAR_PRICE,ItemData.SLEEPING_BEAR_PRICE,ItemData.TRAMBULIN_PRICE,ItemData.SOUND_SYSTEM_PRICE,ItemData.TREADMILL_PRICE,ItemData.DANCE_FLOOR_PRICE,ItemData.VIDEO_GAMES_PRICE]
         return toys
     }
+    
     static func getToyState () ->[Bool]{
         let meeqoInventory = ItemManager.getMeeqoInventory()
-        var toys = [meeqoInventory.ball as Bool, meeqoInventory.rope as Bool,meeqoInventory.weights as Bool,meeqoInventory.bear as Bool,meeqoInventory.sleepingBear as Bool,meeqoInventory.trambulin as Bool,meeqoInventory.soundSystem as Bool,meeqoInventory.treadmill as Bool,meeqoInventory.videoGame as Bool]
+        var toys = [meeqoInventory.ball as Bool, meeqoInventory.rope as Bool,meeqoInventory.weights as Bool,meeqoInventory.bear as Bool,meeqoInventory.sleepingBear as Bool,meeqoInventory.trambulin as Bool,meeqoInventory.soundSystem as Bool,meeqoInventory.danceFloor as Bool,meeqoInventory.treadmill as Bool,meeqoInventory.videoGame as Bool]
         return toys
     }
     

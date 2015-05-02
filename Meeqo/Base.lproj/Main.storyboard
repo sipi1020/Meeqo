@@ -10,8 +10,8 @@
         <!--Shop-->
         <scene sceneID="sIc-92-JeJ">
             <objects>
-                <tableViewController title="Shop" id="t8e-5c-63W" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eEH-gH-iBh">
+                <tableViewController title="Shop" id="t8e-5c-63W" customClass="ShopViewController" customModule="Meeqo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="eEH-gH-iBh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,7 +170,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Viki's home" id="6je-LN-CZI">
-                        <barButtonItem key="leftBarButtonItem" title="Challenge" id="Pyl-wn-21H"/>
+                        <barButtonItem key="leftBarButtonItem" title="Create Meeqo" id="Pyl-wn-21H">
+                            <connections>
+                                <action selector="createMeeqoButton:" destination="BYZ-38-t0r" id="HYt-JS-WTl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Go shopping" id="mqJ-JP-R1E">
                             <connections>
                                 <segue destination="t8e-5c-63W" kind="show" id="M3P-5F-VUt"/>
