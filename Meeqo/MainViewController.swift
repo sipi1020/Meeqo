@@ -29,10 +29,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         
+    
         
+        meeqoRepo.create("piros")
         
-        /*repo.create("piros")
-        var m = repo.getMeeqos()[0]
+        /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
         repo.remove(repo.getMeeqos()[0])

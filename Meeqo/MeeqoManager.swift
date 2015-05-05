@@ -14,6 +14,12 @@ class MeeqoManager {
     static let itemRepo = RepositoryFactory.getItemRepository()
     static let meeqoRepo = RepositoryFactory.getMeeqoRepository()
     
+   
+    static func getMeeqoIcons() -> [UIImage]{
+        var images = [UIImage(named: "narancs")!,UIImage(named: "lila")!,UIImage(named: "rozsaszin")! ,UIImage(named: "zold")!, UIImage(named: "kek")!,UIImage(named: "fekete")!,UIImage(named: "piros")! ,UIImage(named: "szivarvany")!]
+        return images
+    }
+    
     static func sleepMeeqo(meeqo: Meeqo) {
         meeqo.sleep = Int(meeqo.sleep) + MeeqoConstans.SLEEP_INCREASE
         meeqo.updateMe()
@@ -23,11 +29,27 @@ class MeeqoManager {
         meeqo.food = Int(meeqo.food) + foodValue
         meeqo.updateMe()
     }
+    static func getMeeqoColorName() -> [String] {
+        var colors = ["narancs","lila","rozsaszin","zold","kek","fekete","piros","szivarvany"]
+        return colors
+    }
     
     static func playMeeqo(meeqo: Meeqo, playValue: Int) {
         meeqo.entertainment = Int(meeqo.entertainment) + playValue
         meeqo.updateMe()
     }
+    static func getMeeqoPrices()->[Int] {
+        var prices = [ItemData.ORANGE_MEEQO_PRICE,ItemData.PURPLE_MEEQO_PRICE,ItemData.PINK_MEEQO_PRICE,ItemData.GREEN_MEEQO_PRICE,ItemData.BLUE_MEEQO_PRICE,ItemData.BLUE_MEEQO_PRICE,ItemData.RED_MEEQO_PRICE,ItemData.RAINBOW_MEEQO_PRICE]
+        return prices
+    }
+    
+    
+    static func getMeeqoTitles() -> [String] {
+        var colors = ["Orange","Purple","Pink","Green","Blue","Black","Red","Rainbow"]
+        return colors
+        
+    }
+    
     static func buyMeeqo(color: String) -> Bool {
         switch color {
         case "szivarvany":
