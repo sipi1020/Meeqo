@@ -13,10 +13,47 @@ class StatusViewController: UITableViewController {
     
     var meeqoID : NSManagedObjectID!
     var mainVC : MainViewController!
+    var meeqoRepo : MeeqoRepository!
 
+    @IBOutlet weak var happinessBar: UIProgressView!
+    @IBOutlet weak var happinessIcon: UIImageView!
+    
+    @IBOutlet weak var foodBar: UIProgressView!
+    @IBOutlet weak var entertainmentBar: UIProgressView!
+    
+    @IBOutlet weak var sleepBar: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var img = UIImage(named: "blabla")
+        
+        meeqoRepo = MeeqoManager.meeqoRepo
+        var meeqos = meeqoRepo.getMeeqos()
+        for meeqo in meeqos {
+            if meeqo.objectID == meeqoID {
+                meeqo.food = 30
+                meeqo.entertainment = 80
+                meeqo.sleep = 70
+                happinessBar.progress = ((Float(meeqo.entertainment) + Float(meeqo.food) + Float(meeqo.sleep))/3)/100
+                foodBar.progress = Float(meeqo.food)/100
+                sleepBar.progress = Float(meeqo.sleep)/100
+                entertainmentBar.progress = Float(meeqo.entertainment)/100
+            }
+            
+        }
+        if happinessBar.progress < 33/100 {
+            happinessIcon.image = UIImage(named: "sad_icon")
+        }
+        else if happinessBar.progress > 66/100 {
+            happinessIcon.image = UIImage(named: "happy_icon")
+        }
+        else {
+            happinessIcon.image = UIImage(named: "indifferent_icon")
+        }
+
+        
+        
+        
     
         print(meeqoID)
         print( " in statusvc")
@@ -79,7 +116,7 @@ class StatusViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

@@ -86,7 +86,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
        var meeqos = meeqoRepo.getMeeqos()
         for meeqo in meeqos{
             if ( meeqo.position.roomNumber == roomNum){
-                createMeeqoViewInPosition(Double(meeqo.position.x), y: Double(meeqo.position.y),color: meeqo.color, id: meeqo.objectID)
+                createMeeqoViewInPosition(Double(meeqo.position.x), y: Double(meeqo.position.y),color: meeqo.color,happiness: (Float(meeqo.entertainment) + Float(meeqo.food) + Float(meeqo.sleep))/3 ,id: meeqo.objectID)
             }
         }
     }
@@ -108,6 +108,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         }
     }
     
+    
     func createMeeqo(color: String){
         meeqoRepo.create(color)
         var meeqos = meeqoRepo.getMeeqos()
@@ -117,8 +118,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         saveMeeqosPosition()
     }
     
-    func createMeeqoViewInPosition(x: Double, y: Double, color: String, id: NSManagedObjectID){
-        var newMeeqo = MeeqoView(frame: CGRect(x: x, y: y, width: 100, height: 100),color: color, id: id)
+    func createMeeqoViewInPosition(x: Double, y: Double, color: String,happiness: Float, id: NSManagedObjectID){
+        var newMeeqo = MeeqoView(frame: CGRect(x: x, y: y, width: 100, height: 100),color: color,happiness:happiness, id: id)
         newMeeqo.opaque = false
         self.view.addSubview(newMeeqo)
         var panGestureRecognizer = UIPanGestureRecognizer(target:self, action: "dragMeeqo:")
@@ -129,8 +130,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     
-    func createMeeqoView(color: String, id: NSManagedObjectID){
-        var newMeeqo = MeeqoView(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2 + 100, width: 100, height: 100),color: color, id: id)
+    func createMeeqoView(color: String,happiness: Float, id: NSManagedObjectID){
+        var newMeeqo = MeeqoView(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2 + 100, width: 100, height: 100),color: color,happiness: happiness, id: id)
         newMeeqo.opaque = false
         self.view.addSubview(newMeeqo)
         var panGestureRecognizer = UIPanGestureRecognizer(target:self, action: "dragMeeqo:")
@@ -232,10 +233,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         loadMeeqosToRoom(4)
     }
     
-    @IBAction func createMeeqoButton(sender: AnyObject) {
-        createMeeqo("piros")
-        loadMeeqosToRoom(roomView.currentRoom)
-    }
+
 
 }
 

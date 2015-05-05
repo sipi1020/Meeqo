@@ -23,19 +23,24 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
     var foodOrToyCountLabel : UILabel!
     var meeqoID : NSManagedObjectID!
     var mainVC : MainViewController!
+    var thisMeeqo : Meeqo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         roomImages = [UIImage(named: "discoFull")!,UIImage(named: "fitnessroomFull")!,UIImage(named: "playingroomFull")!,UIImage(named: "kitchenFull")!,UIImage(named: "bedroomFull")! ]
-        for i in 0...3{
-            foodImages.append(UIImage(named: "food_icon")!)
-        }
-        for i in 0...8{
-            toyImages.append(UIImage(named: "play_icon")!)
-        }
+        foodImages = ItemManager.getFoodIcons()
+        toyImages = ItemManager.getToyIcons()
         println(tag)
+        
+        var meeqos = MeeqoManager.getMeeqos()
+        for meeqo in meeqos {
+            if meeqo.objectID == meeqoID {
+                self.thisMeeqo = meeqo
+            }
+            
+        }
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -88,6 +93,10 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
             foodOrToyNameLabel = view.viewWithTag(2) as! UILabel
             foodOrToyCountLabel = view.viewWithTag(3) as! UILabel
             foodOrToyImageView.image = foodImages[indexPath.row]
+            foodOrToyNameLabel.text = ItemManager.getFoodTitles()[indexPath.row]
+            foodOrToyCountLabel.text = ("\(ItemManager.getFoodCount()[indexPath.row]) X")
+         var eatButton = view.viewWithTag(4) as! UIButton
+         eatButton.addTarget(self, action: "eatTap:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.selectionStyle = .None
             return cell
             
@@ -97,10 +106,22 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
             foodOrToyNameLabel = view.viewWithTag(2) as! UILabel
             foodOrToyCountLabel = view.viewWithTag(3) as! UILabel
             foodOrToyImageView.image = toyImages[indexPath.row]
+            foodOrToyNameLabel.text = ItemManager.getToyTitles()[indexPath.row]
+            if ItemManager.getToyState()[indexPath.row] {
+                foodOrToyCountLabel.text = "✓"
+            }
+            else {
+                foodOrToyCountLabel.text = "x"
+            }
+            var playButton = view.viewWithTag(4) as! UIButton
+            playButton.addTarget(self, action: "playTap:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.selectionStyle = .None
             return cell
         case 2:
             var cell = tableView.dequeueReusableCellWithIdentifier("sleepCell", forIndexPath: indexPath) as! UITableViewCell
+            var sleepButton = view.viewWithTag(6) as! UIButton
+            sleepButton.addTarget(self, action:
+                "sleepTap:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.selectionStyle = .None
             return cell
             
@@ -136,6 +157,90 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
             mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
         }
     }
+    
+    
+    func eatTap( sender: UIButton){
+        var cell = sender.superview?.superview as! UITableViewCell
+        var table = cell.superview?.superview as! UITableView
+        var indexPath = table.indexPathForCell(cell)
+        switch indexPath?.row{
+        default:
+            break
+        }
+        ateFoodAlert()
+        mainVC.removeMeeqoViews()
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
+ 
+        thisMeeqo.updateMe()
+    }
+    
+    func playTap( sender: UIButton){
+        var cell = sender.superview?.superview as! UITableViewCell
+        var table = cell.superview?.superview as! UITableView
+        var indexPath = table.indexPathForCell(cell)
+        switch indexPath?.row{
+        default:
+            break
+        }
+        playedAlert()
+        mainVC.removeMeeqoViews()
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
+
+        thisMeeqo.updateMe()
+        
+    }
+    func sleepTap( sender: UIButton){
+        var cell = sender.superview?.superview as! UITableViewCell
+        var table = cell.superview?.superview as! UITableView
+        var indexPath = table.indexPathForCell(cell)
+        switch indexPath?.row{
+        default:
+            break
+        }
+        sleptAlert()
+        mainVC.removeMeeqoViews()
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
+
+        thisMeeqo.updateMe()
+    }
+    
+    func notEnoughFoodAlert(){
+        var alert = UIAlertController(title:"No food!" , message: "You don't have even one piece of this type of food. Visit the shop! ", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    func noToyAlert(){
+        var alert = UIAlertController(title:"I can't play!" , message: "I really-really want to play, but you haven't bought this item", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func ateFoodAlert(){
+        var alert = UIAlertController(title:"Yummy" , message: "Hunger: \(thisMeeqo.food) %", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
+
+    func playedAlert(){
+        var alert = UIAlertController(title:"That was fun!" , message: "Entertainment: \(thisMeeqo.entertainment) %", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    func sleptAlert(){
+        var alert = UIAlertController(title:"Zzz..." , message: "Sleep: \(thisMeeqo.sleep) %", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
