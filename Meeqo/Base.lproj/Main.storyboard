@@ -27,12 +27,18 @@
                                                 <constraint firstAttribute="width" secondItem="YtB-d4-ykU" secondAttribute="height" multiplier="1:1" id="9PG-g3-rxD"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-WX-SXJ">
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-WX-SXJ">
                                             <rect key="frame" x="535" y="15" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="fEc-Qt-jtZ"/>
                                                 <constraint firstAttribute="width" constant="40" id="xiT-cH-1Gp"/>
                                             </constraints>
+                                            <state key="normal" title="Buy">
+                                                <color key="titleColor" red="0.050980392159999999" green="0.37254901959999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-ez-cNr">
                                             <rect key="frame" x="410" y="24" width="25" height="21"/>
@@ -49,7 +55,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odc-RK-Lbe">
                                             <rect key="frame" x="268" y="24" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -380,6 +386,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Meeqo's status" id="ilY-ll-OgO"/>
+                    <connections>
+                        <outlet property="entertainmentBar" destination="ctf-da-EvH" id="v9S-A1-XIB"/>
+                        <outlet property="foodBar" destination="0Ee-5f-mA9" id="Em0-vr-Ugd"/>
+                        <outlet property="happinessBar" destination="phb-3s-bDG" id="vEW-yO-p1q"/>
+                        <outlet property="happinessIcon" destination="rgU-Zq-4mY" id="0VP-Nv-GEN"/>
+                        <outlet property="sleepBar" destination="xUN-7K-sYf" id="jid-g2-bfD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEV-4F-ak5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -405,7 +418,7 @@
                                                 <constraint firstAttribute="width" secondItem="9np-9N-S47" secondAttribute="height" multiplier="1:1" id="fLx-l4-YgP"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wha-pn-VyY">
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wha-pn-VyY">
                                             <rect key="frame" x="535" y="15" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="dRV-Mi-Uoi"/>
@@ -413,7 +426,7 @@
                                             </constraints>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gJ-yp-ib7">
-                                            <rect key="frame" x="410" y="24" width="25" height="21"/>
+                                            <rect key="frame" x="470" y="24" width="25" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -427,7 +440,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="9np-9N-S47" secondAttribute="bottom" id="60g-Zh-2IV"/>
-                                        <constraint firstItem="wha-pn-VyY" firstAttribute="leading" secondItem="7gJ-yp-ib7" secondAttribute="trailing" constant="100" id="Ffe-VJ-zrg"/>
+                                        <constraint firstItem="wha-pn-VyY" firstAttribute="leading" secondItem="7gJ-yp-ib7" secondAttribute="trailing" constant="40" id="Ffe-VJ-zrg"/>
                                         <constraint firstItem="1M3-eA-5yv" firstAttribute="leading" secondItem="9np-9N-S47" secondAttribute="trailing" constant="20" id="OMf-Sx-KuE"/>
                                         <constraint firstAttribute="centerY" secondItem="1M3-eA-5yv" secondAttribute="centerY" id="RHH-Dp-IYO"/>
                                         <constraint firstAttribute="centerY" secondItem="7gJ-yp-ib7" secondAttribute="centerY" id="SNn-YC-QMh"/>
@@ -476,18 +489,12 @@
                                                 <constraint firstAttribute="width" secondItem="PvY-ij-w3I" secondAttribute="height" multiplier="1:1" id="R2p-fr-25t"/>
                                             </constraints>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-Sb-rEZ">
-                                            <rect key="frame" x="520" y="35" width="47" height="30"/>
-                                            <state key="normal" title="SLEEP">
+                                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-Sb-rEZ">
+                                            <rect key="frame" x="211" y="35" width="178" height="30"/>
+                                            <state key="normal" title="Say good night to Meeqo!">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say good night to Meeqo!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7w-ml-hHO">
-                                            <rect key="frame" x="111" y="39" width="199" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerX" secondItem="Gdo-Sb-rEZ" secondAttribute="centerX" id="3bL-EE-2aY"/>
@@ -495,13 +502,13 @@
                                         <constraint firstAttribute="centerY" secondItem="Gdo-Sb-rEZ" secondAttribute="centerY" id="RGf-o6-ir9"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="PvY-ij-w3I" secondAttribute="bottom" id="Rnr-it-F3f"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Gdo-Sb-rEZ" secondAttribute="trailing" constant="25" id="kDC-60-hEw"/>
-                                        <constraint firstAttribute="centerY" secondItem="T7w-ml-hHO" secondAttribute="centerY" id="lMH-z1-inL"/>
+                                        <constraint firstAttribute="centerX" secondItem="Gdo-Sb-rEZ" secondAttribute="centerX" id="nJ1-Ef-RLk"/>
                                         <constraint firstItem="PvY-ij-w3I" firstAttribute="top" secondItem="eeV-qO-4oO" secondAttribute="topMargin" id="qcj-Qc-SbP"/>
-                                        <constraint firstItem="T7w-ml-hHO" firstAttribute="leading" secondItem="PvY-ij-w3I" secondAttribute="trailing" constant="20" id="vb2-q7-sfc"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="3bL-EE-2aY"/>
+                                            <exclude reference="kDC-60-hEw"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

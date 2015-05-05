@@ -13,14 +13,16 @@ import CoreData
 class MeeqoView: UIView {
     var meeqoID : NSManagedObjectID!
     var color : String!
+    var happiness :Float!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    init(frame: CGRect, color: String, id: NSManagedObjectID) {
+    init(frame: CGRect, color: String,happiness: Float, id: NSManagedObjectID) {
         self.color = color
         self.meeqoID = id
+        self.happiness = happiness
         super.init(frame: frame)
     
     }
@@ -44,7 +46,7 @@ class MeeqoView: UIView {
         
         meeqoImageView.image = meeqoImage
         var progressBar = UIProgressView(frame: CGRect(x: frame.width / 10, y: frame.width / 16, width: frame.width / 10 * 8, height: 50))
-        progressBar.progress = 1
+        progressBar.progress = self.happiness / 100
         progressBar.progressViewStyle = .Bar
         
         
