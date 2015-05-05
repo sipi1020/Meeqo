@@ -167,6 +167,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         default:
             break
         }
+        ateFoodAlert()
  
         thisMeeqo.updateMe()
     }
@@ -179,6 +180,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         default:
             break
         }
+        playedAlert()
 
         thisMeeqo.updateMe()
         
@@ -203,6 +205,13 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func ateFoodAlert(){
+        var alert = UIAlertController(title:"Yummy" , message: "Hunger: \(thisMeeqo.food) %", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     
     func noToyAlert(){
         var alert = UIAlertController(title:"I can't play!" , message: "I really-really want to play, but you haven't bought this item", preferredStyle:UIAlertControllerStyle.Alert )
@@ -217,7 +226,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     func sleptAlert(){
-        var alert = UIAlertController(title:"Zzz..." , message: "Hunger: \(thisMeeqo.sleep) %", preferredStyle:UIAlertControllerStyle.Alert )
+        var alert = UIAlertController(title:"Zzz..." , message: "Sleep: \(thisMeeqo.sleep) %", preferredStyle:UIAlertControllerStyle.Alert )
         var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
