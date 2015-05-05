@@ -168,6 +168,8 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
             break
         }
         ateFoodAlert()
+        mainVC.removeMeeqoViews()
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
  
         thisMeeqo.updateMe()
     }
@@ -181,6 +183,8 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
             break
         }
         playedAlert()
+        mainVC.removeMeeqoViews()
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
 
         thisMeeqo.updateMe()
         
@@ -194,6 +198,8 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
             break
         }
         sleptAlert()
+        mainVC.removeMeeqoViews()
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
 
         thisMeeqo.updateMe()
     }
@@ -205,12 +211,6 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    func ateFoodAlert(){
-        var alert = UIAlertController(title:"Yummy" , message: "Hunger: \(thisMeeqo.food) %", preferredStyle:UIAlertControllerStyle.Alert )
-        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
-        alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
-    }
     
     
     func noToyAlert(){
@@ -219,6 +219,15 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
     }
+    
+    func ateFoodAlert(){
+        var alert = UIAlertController(title:"Yummy" , message: "Hunger: \(thisMeeqo.food) %", preferredStyle:UIAlertControllerStyle.Alert )
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+        
+    }
+
     func playedAlert(){
         var alert = UIAlertController(title:"That was fun!" , message: "Entertainment: \(thisMeeqo.entertainment) %", preferredStyle:UIAlertControllerStyle.Alert )
         var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: nil)

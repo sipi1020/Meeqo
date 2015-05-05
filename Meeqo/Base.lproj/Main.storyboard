@@ -90,7 +90,7 @@
         <!--Viki's home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Meeqo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="Meeqo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -191,7 +191,7 @@
                                 <segue destination="Geu-Ws-fSB" kind="show" id="j1P-eW-TpJ"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Go shopping" id="mqJ-JP-R1E">
+                        <barButtonItem key="rightBarButtonItem" title="Shopping" id="mqJ-JP-R1E">
                             <connections>
                                 <segue destination="t8e-5c-63W" kind="show" id="M3P-5F-VUt"/>
                             </connections>
@@ -536,12 +536,64 @@
                     <view key="view" contentMode="scaleToFill" id="eBq-ru-qqN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YJL-Vf-6tc">
+                                <rect key="frame" x="205" y="84" width="191" height="29"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2R-CX-D8B">
+                                <rect key="frame" x="205" y="122" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-q6-15f">
+                                <rect key="frame" x="206" y="183" width="188" height="30"/>
+                                <state key="normal" title="Give me my daily challenge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-xg-XQ9">
+                                <rect key="frame" x="56" y="239" width="488" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="dgX-KY-FLo"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb3-Nk-fNG">
+                                <rect key="frame" x="284" y="435" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="top" secondItem="hlu-q6-15f" secondAttribute="bottom" constant="26" id="4B3-FH-KOM"/>
+                            <constraint firstAttribute="centerX" secondItem="YJL-Vf-6tc" secondAttribute="centerX" id="93t-Xt-FeV"/>
+                            <constraint firstAttribute="centerX" secondItem="tb3-Nk-fNG" secondAttribute="centerX" id="Hva-Fy-RZJ"/>
+                            <constraint firstItem="tb3-Nk-fNG" firstAttribute="top" secondItem="yxf-xg-XQ9" secondAttribute="bottom" constant="36" id="T8d-vL-J1R"/>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="leading" secondItem="eBq-ru-qqN" secondAttribute="leadingMargin" constant="40" id="Xck-V6-5mk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yxf-xg-XQ9" secondAttribute="trailing" constant="40" id="Ze2-sL-gva"/>
+                            <constraint firstItem="hlu-q6-15f" firstAttribute="top" secondItem="W2R-CX-D8B" secondAttribute="bottom" constant="40" id="eBJ-rN-Hyg"/>
+                            <constraint firstAttribute="centerX" secondItem="hlu-q6-15f" secondAttribute="centerX" id="jBF-HL-ZnQ"/>
+                            <constraint firstItem="W2R-CX-D8B" firstAttribute="width" secondItem="YJL-Vf-6tc" secondAttribute="width" id="lg7-SD-kx3"/>
+                            <constraint firstItem="W2R-CX-D8B" firstAttribute="top" secondItem="YJL-Vf-6tc" secondAttribute="bottom" constant="10" id="o3h-iR-kqt"/>
+                            <constraint firstAttribute="centerX" secondItem="W2R-CX-D8B" secondAttribute="centerX" id="yny-ZY-E35"/>
+                            <constraint firstItem="YJL-Vf-6tc" firstAttribute="top" secondItem="zy5-pD-3QT" secondAttribute="bottom" constant="20" id="z0d-A9-2mS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVR-Nd-8Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="-382"/>
+            <point key="canvasLocation" x="1275" y="-436"/>
         </scene>
         <!--Facebook Login View Controller-->
         <scene sceneID="Qsj-Ru-hx9">
@@ -555,13 +607,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_button" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-8j-p5k">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_button" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-8j-p5k">
                                 <rect key="frame" x="196" y="350" width="388" height="100"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tBT-j7-A6u" appends="YES" id="KCa-zK-XwZ"/>
+                                </connections>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="POM-7s-oni">
                                 <rect key="frame" x="16" y="30" width="180" height="560"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Log in with your Facebook account to get your own Meeqo house and have fun with your little friends!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-5J-zgK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Log in with your Facebook account to get your own Meeqo house and have fun with your little friends!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-5J-zgK">
                                 <rect key="frame" x="196" y="250" width="388" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="261" id="F6B-JZ-5Lr"/>
@@ -600,8 +656,13 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKJ-Ca-7Nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tBT-j7-A6u">
+                    <connections>
+                        <action selector="loginTap:" destination="riz-op-6EH" id="49D-8y-e7n"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="483" y="-588"/>
+            <point key="canvasLocation" x="537" y="-430"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMq-zw-BI7">

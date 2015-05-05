@@ -10,4 +10,12 @@ import UIKit
 
 class FacebookLoginViewController: UIViewController {
 
+    @IBAction func loginTap(sender: AnyObject) {
+        println("Tapped")
+        var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+        var VC = storyboard.instantiateViewControllerWithIdentifier("mainVC") as! MainViewController
+        var navVC = UINavigationController(rootViewController: VC)
+        self.presentViewController(navVC, animated: true, completion: nil)
+        
+    }
 }
