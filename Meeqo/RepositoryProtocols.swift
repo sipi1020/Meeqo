@@ -14,6 +14,7 @@ protocol IUserRepository {
     func updateCurrentUser()
     func createNewUser()
     func spendMoney(price: Int) -> Bool
+    func setParamsOfUser(name: String, facebookId: String)
 }
 
 protocol IMeeqoRepository {

@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+@objc(Challenge)
 class Challenge {
     let name:NSString
     let coin:Int

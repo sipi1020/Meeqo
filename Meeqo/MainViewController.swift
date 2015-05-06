@@ -27,12 +27,14 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         // Do any additional setup after loading the view, typically from a nib.
         //
         
+        ItemManager.buyLollipop()
+        
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         
     
         
         meeqoRepo.create("piros")
-        
+        self.navigationController?.title = "\(UserManager.getCurrentUser().name)'s home"
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()

@@ -28,6 +28,7 @@
 		7265DABA1AE8449C0043B2E8 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DAB91AE8449C0043B2E8 /* ItemRepository.swift */; };
 		7265DABC1AE850BB0043B2E8 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */; };
 		7265DABF1AE851200043B2E8 /* RepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */; };
+		7267EF551AFA8B6F00704415 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7267EF541AFA8B6F00704415 /* FacebookSDK.framework */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
 		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
 		7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8D1AE4518A00257E7C /* ItemManager.swift */; };
@@ -35,10 +36,10 @@
 		7292663B1AEC5701005E6FA1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663A1AEC5701005E6FA1 /* UserManager.swift */; };
 		7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */; };
 		729266441AED2780005E6FA1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729266431AED2780005E6FA1 /* SwiftyJSON.swift */; };
+		72BBE2001AFAA6F000B957BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBE1FF1AFAA6F000B957BA /* User.swift */; };
 		72DF72E81AF2DB3D00506503 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72E71AF2DB3D00506503 /* Challenge.swift */; };
 		72DF72EC1AF2E0C100506503 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72EB1AF2E0C100506503 /* UserModel.swift */; };
 		72DF72EE1AF2E4A500506503 /* MeeqoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72ED1AF2E4A500506503 /* MeeqoManager.swift */; };
-		72DF72F21AF2EEE900506503 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72F11AF2EEE900506503 /* User.swift */; };
 		72DF72F41AF2F89700506503 /* ChallengeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DF72F31AF2F89700506503 /* ChallengeRepository.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,8 @@
 		7265DAB91AE8449C0043B2E8 /* ItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
 		7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocols.swift; sourceTree = "<group>"; };
+		7267EF531AFA872C00704415 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		7267EF541AFA8B6F00704415 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
 		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		7285CC8D1AE4518A00257E7C /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
@@ -85,10 +88,10 @@
 		7292663A1AEC5701005E6FA1 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		7292663C1AEC57B2005E6FA1 /* ChallengeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeManager.swift; sourceTree = "<group>"; };
 		729266431AED2780005E6FA1 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		72BBE1FF1AFAA6F000B957BA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72DF72E71AF2DB3D00506503 /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		72DF72EB1AF2E0C100506503 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		72DF72ED1AF2E4A500506503 /* MeeqoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoManager.swift; sourceTree = "<group>"; };
-		72DF72F11AF2EEE900506503 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72DF72F31AF2F89700506503 /* ChallengeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7267EF551AFA8B6F00704415 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				729266431AED2780005E6FA1 /* SwiftyJSON.swift */,
+				7267EF531AFA872C00704415 /* Bridging-Header.h */,
+				7267EF541AFA8B6F00704415 /* FacebookSDK.framework */,
 				7265DAB81AE843960043B2E8 /* Repositories */,
 				7273FCCE1AE44D8300CF7C9F /* Logic */,
 				7273FCCD1AE44BFC00CF7C9F /* ViewControllers */,
@@ -195,7 +201,7 @@
 				7265DAAE1AE82FD30043B2E8 /* MeeqoInventory.swift */,
 				72DF72E71AF2DB3D00506503 /* Challenge.swift */,
 				72DF72EB1AF2E0C100506503 /* UserModel.swift */,
-				72DF72F11AF2EEE900506503 /* User.swift */,
+				72BBE1FF1AFAA6F000B957BA /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -334,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72DF72F21AF2EEE900506503 /* User.swift in Sources */,
 				386E67DB1AE8576500EBC1ED /* increaseStatusViewController.swift in Sources */,
 				7265DAB51AE82FD30043B2E8 /* MeeqoPosition.swift in Sources */,
 				38751DC71AF2DA75009E1A48 /* ShopViewController.swift in Sources */,
@@ -343,6 +348,7 @@
 				7292663D1AEC57B2005E6FA1 /* ChallengeManager.swift in Sources */,
 				7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */,
 				3856676C1AD9891D004E1F9B /* MainViewController.swift in Sources */,
+				72BBE2001AFAA6F000B957BA /* User.swift in Sources */,
 				38DECC391AF855B100045304 /* FacebookLoginViewController.swift in Sources */,
 				7279B8191AE170D900F48A9F /* RoomView.swift in Sources */,
 				72DF72EC1AF2E0C100506503 /* UserModel.swift in Sources */,
@@ -489,9 +495,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Meeqo",
+				);
 				INFOPLIST_FILE = Meeqo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meeqo/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -502,9 +513,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Meeqo",
+				);
 				INFOPLIST_FILE = Meeqo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Meeqo/Bridging-Header.h";
 			};
 			name = Release;
 		};

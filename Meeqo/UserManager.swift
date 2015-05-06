@@ -97,4 +97,5 @@ class UserManager {
     static func addMoneyToCurrentUser(money: Int) {
         userRepo.getUser().coins = Int(userRepo.getUser().coins) + money
     }
+
 }
