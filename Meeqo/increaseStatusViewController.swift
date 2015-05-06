@@ -164,6 +164,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
         switch indexPath?.row{
+            
         default:
             break
         }

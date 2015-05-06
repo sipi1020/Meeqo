@@ -115,12 +115,12 @@ class UserRepository : IUserRepository {
 
     */
     func spendMoney(price: Int) -> Bool {
-        if Int(getUser().coins) < price {
+        if Int(getUser().coins) > price {
             getUser().coins = Int(getUser().coins) - price
-            return false
-        } else {
-            //set new coin count
+            updateCurrentUser()
             return true
+        } else {
+            return false
         }
     }
 }

@@ -27,7 +27,8 @@ class ShopViewController: UITableViewController {
     }
     
     func refreshMoneyLabel(){
-        self.navigationItem.rightBarButtonItem?.title = ("\(UserManager.getCurrentUser().coins) coins")
+        self.navigationItem.rightBarButtonItem?.title = ("\(Int(UserManager.getCurrentUser().coins)) coins")
+        println((UserManager.getCurrentUser().coins))
     }
     
     func getCoinsAlert(){
