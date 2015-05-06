@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383B40F31AFACA3A00303223 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383B40F21AFACA3A00303223 /* FacebookSDK.framework */; };
 		384E3A551AF2FE48008D7359 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384E3A541AF2FE48008D7359 /* StatusViewController.swift */; };
 		385667671AD9891D004E1F9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385667661AD9891D004E1F9B /* AppDelegate.swift */; };
 		3856676A1AD9891D004E1F9B /* Meeqo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 385667681AD9891D004E1F9B /* Meeqo.xcdatamodeld */; };
@@ -28,7 +29,6 @@
 		7265DABA1AE8449C0043B2E8 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DAB91AE8449C0043B2E8 /* ItemRepository.swift */; };
 		7265DABC1AE850BB0043B2E8 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */; };
 		7265DABF1AE851200043B2E8 /* RepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */; };
-		7267EF551AFA8B6F00704415 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7267EF541AFA8B6F00704415 /* FacebookSDK.framework */; };
 		7279B8171AE168FE00F48A9F /* MeeqoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8161AE168FE00F48A9F /* MeeqoView.swift */; };
 		7279B8191AE170D900F48A9F /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279B8181AE170D900F48A9F /* RoomView.swift */; };
 		7285CC8E1AE4518A00257E7C /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285CC8D1AE4518A00257E7C /* ItemManager.swift */; };
@@ -54,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383B40F21AFACA3A00303223 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		384E3A541AF2FE48008D7359 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		385667611AD9891D004E1F9B /* Meeqo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meeqo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385667651AD9891D004E1F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,7 +81,6 @@
 		7265DABB1AE850BB0043B2E8 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		7265DABE1AE851200043B2E8 /* RepositoryProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryProtocols.swift; sourceTree = "<group>"; };
 		7267EF531AFA872C00704415 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		7267EF541AFA8B6F00704415 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7279B8161AE168FE00F48A9F /* MeeqoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeeqoView.swift; sourceTree = "<group>"; };
 		7279B8181AE170D900F48A9F /* RoomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		7285CC8D1AE4518A00257E7C /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7267EF551AFA8B6F00704415 /* FacebookSDK.framework in Frameworks */,
+				383B40F31AFACA3A00303223 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +137,7 @@
 			children = (
 				729266431AED2780005E6FA1 /* SwiftyJSON.swift */,
 				7267EF531AFA872C00704415 /* Bridging-Header.h */,
-				7267EF541AFA8B6F00704415 /* FacebookSDK.framework */,
+				383B40F21AFACA3A00303223 /* FacebookSDK.framework */,
 				7265DAB81AE843960043B2E8 /* Repositories */,
 				7273FCCE1AE44D8300CF7C9F /* Logic */,
 				7273FCCD1AE44BFC00CF7C9F /* ViewControllers */,
@@ -288,7 +288,7 @@
 				TargetAttributes = {
 					385667601AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5B8GS4JTM8;
+						DevelopmentTeam = 5TZCP2M943;
 					};
 					385667781AD9891D004E1F9B = {
 						CreatedOnToolsVersion = 6.2;

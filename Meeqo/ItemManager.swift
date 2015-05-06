@@ -157,7 +157,7 @@ class ItemManager {
     }
     
     static func getToyTitles() -> [String]{
-        var toys = ["Balls","Rope","Weights","Teddy bear","Teddy bear for sleep","Trampoline","Sound system","Treadmill","Dancefloor","Video game"]
+        var toys = ["Balls","Rope","Weights","Teddy bear","Little bear","Trampoline","Sound system","Treadmill","Dancefloor","Video game"]
         return toys
     }
     
