@@ -29,6 +29,36 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         
+    
+        
+        meeqoRepo.create("piros")
+        
+        /*var m = repo.getMeeqos()[0]
+        m.position.x = 150
+        m.updateMe()
+        repo.remove(repo.getMeeqos()[0])
+        println("You have \(repo.getMeeqos().count) Meeqos")
+        
+        let itemRepo = RepositoryFactory.getItemRepository()
+        
+        
+        println("Repo: \(itemRepo.getInventory().weights)")
+        itemRepo.getInventory().weights = true
+        
+        
+        itemRepo.updateCurrentInventory()
+        println("Repo: ball \(itemRepo.getInventory().ball)")
+        
+        UserManager.saveCurrentUserToTheServer()
+        //itemRepo.getInventory().ball = true
+        //itemRepo.updateCurrentInventory()
+        
+        */
+        
+        //createMeeqo("piros")
+        
+        
+        
         removeMeeqoViews()
         loadMeeqosToRoom(roomView.currentRoom)
     }

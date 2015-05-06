@@ -14,6 +14,6 @@ class ChallengeManager {
         return Challenges.challenges[Int(num)]
     }
     static func updateChallengeDataBaseFromServer() {
-        
+        //TODO: implement method
     }
 }

@@ -8,6 +8,15 @@
 
 import Foundation
 
+class MeeqoConstans {
+    //not set
+    static let EAT_TIME_PERIOD = 1   //every hour decrees the eat property of meeqo
+    static let PLAY_TIME_PERIOD = 1
+    static let SLEEP_TIME_PERIOD = 1
+    
+    static let SLEEP_INCREASE = 1
+}
+
 class ItemData {
     static let CAKE_PRICE:Int = 30
     static let BEAR_PRICE:Int = 700
@@ -23,6 +32,20 @@ class ItemData {
     static let VIDEO_GAMES_PRICE:Int = 1500
     static let WEIGHTS_PRICE:Int = 500
     
+    //not set
+    static let CAKE_FOOD_VALUE:Int = 16
+    static let BEAR_FOOD_VALUE:Int = 100
+    static let BALL_FOOD_VALUE:Int = 100
+    static let DANCE_FLOOR_FOOD_VALUE:Int = 100
+    static let ICECREAM_FOOD_VALUE:Int = 8
+    static let LOLLIPOP_FOOD_VALUE:Int = 4
+    static let ROPE_FOOD_VALUE:Int = 100
+    static let SLEEPING_BEAR_FOOD_VALUE:Int = 100
+    static let SOUND_SYSTEM_FOOD_VALUE:Int = 100
+    static let TRAMBULIN_FOOD_VALUE:Int = 100
+    static let TREADMILL_FOOD_VALUE:Int = 100
+    static let VIDEO_GAMES_FOOD_VALUE:Int = 100
+    static let WEIGHTS_FOOD_VALUE:Int = 100
     
     static let ORANGE_MEEQO_PRICE = 400
     static let PURPLE_MEEQO_PRICE = 500
