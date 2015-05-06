@@ -67,7 +67,11 @@ class UserManager {
         postTask.resume()*/
     }
     static func updateMeeqoData() {
+        let meeqos = meeqoRepo.getMeeqos()
         
+        for meeqo in meeqos {
+            meeqo.sleep = Int(meeqo.sleep) - MeeqoConstans.SLEEP_DECREES_PER_HOUR
+        }
     }
     private static func getSpentHours(date: NSDate) -> Int {
         let user = userRepo.getUser()

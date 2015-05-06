@@ -36,8 +36,6 @@ class UserRepository : IUserRepository {
 
     func updateCurrentUser() {
         if let u = user {
-            println("Refreshing user")
-            println("User money: \(u.coins)")
             let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
             moc.refreshObject(u, mergeChanges: true)
             
@@ -47,12 +45,10 @@ class UserRepository : IUserRepository {
     
     func createNewUser() {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
-        println("2")
+        println("creating new user")
         var error: NSError?
         let fetchRequest = NSFetchRequest(entityName:"User")
-        println("1")
         if let users = moc.executeFetchRequest(fetchRequest, error: &error) as? [User] {
-            println("1")
             for u in users {
                 moc.deleteObject(u)
             }
@@ -115,6 +111,7 @@ class UserRepository : IUserRepository {
 
     */
     func setParamsOfUser(name: String, facebookId: String) {
+        println("Adding user data")
         let u = getUser()
         u.name = name
         u.facebookID = facebookId

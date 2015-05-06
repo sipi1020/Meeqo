@@ -31,11 +31,10 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         createMeeqo("kek")
+        println("Current user: \(UserManager.getCurrentUser().name)")
         
-    
-        
-        meeqoRepo.create("piros")
-        self.navigationController?.title = "\(UserManager.getCurrentUser().name)'s home"
+        self.title = "\(UserManager.getCurrentUser().name)'s home"
+       
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()

@@ -10,9 +10,9 @@ import Foundation
 
 class MeeqoConstans {
     //not set
-    static let EAT_TIME_PERIOD = 1   //every hour decrees the eat property of meeqo
-    static let PLAY_TIME_PERIOD = 1
-    static let SLEEP_TIME_PERIOD = 1
+    static let FOOD_DECREES_PER_HOUR = 1
+    static let PLAY_DECREES_PER_HOUR = 1
+    static let SLEEP_DECREES_PER_HOUR = 1
     
     static let SLEEP_INCREASE = 100
 }
@@ -55,6 +55,7 @@ class ItemData {
     static let BLUE_MEEQO_PRICE = 1000
     static let BLACK_MEEQO_PRICE = 1200
     static let RAINBOW_MEEQO_PRICE = 2000
+    
 }
 
 class Challenges {
