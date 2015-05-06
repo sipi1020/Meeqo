@@ -28,7 +28,7 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-WX-SXJ">
-                                            <rect key="frame" x="535" y="15" width="40" height="40"/>
+                                            <rect key="frame" x="542" y="15" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="fEc-Qt-jtZ"/>
                                                 <constraint firstAttribute="width" constant="40" id="xiT-cH-1Gp"/>
@@ -40,38 +40,66 @@
                                                 <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-ez-cNr">
-                                            <rect key="frame" x="410" y="24" width="25" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdS-8U-JTa">
-                                            <rect key="frame" x="81" y="24" width="81" height="21"/>
+                                            <rect key="frame" x="66" y="18" width="81" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odc-RK-Lbe">
-                                            <rect key="frame" x="268" y="24" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-ez-cNr">
+                                            <rect key="frame" x="66" y="40" width="33" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pieces" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odc-RK-Lbe">
+                                            <rect key="frame" x="480" y="24" width="52" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="UdS-8U-JTa" firstAttribute="leading" secondItem="YtB-d4-ykU" secondAttribute="trailing" constant="20" id="90U-od-q4Y"/>
+                                        <constraint firstItem="UdS-8U-JTa" firstAttribute="leading" secondItem="Rpp-ez-cNr" secondAttribute="leading" id="4F5-b7-549"/>
+                                        <constraint firstItem="odc-RK-Lbe" firstAttribute="leading" secondItem="YtB-d4-ykU" secondAttribute="trailing" constant="186" id="50Q-ef-S1F">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="230"/>
+                                        </constraint>
+                                        <constraint firstItem="UdS-8U-JTa" firstAttribute="leading" secondItem="YtB-d4-ykU" secondAttribute="trailing" constant="5" id="90U-od-q4Y"/>
                                         <constraint firstItem="YtB-d4-ykU" firstAttribute="top" secondItem="uti-pZ-DkK" secondAttribute="topMargin" id="9gE-lx-fIa"/>
-                                        <constraint firstItem="Rpp-ez-cNr" firstAttribute="leading" secondItem="odc-RK-Lbe" secondAttribute="trailing" constant="100" id="KlH-9R-erk"/>
+                                        <constraint firstItem="6Om-WX-SXJ" firstAttribute="leading" secondItem="odc-RK-Lbe" secondAttribute="trailing" constant="10" id="BRx-0x-JRN"/>
+                                        <constraint firstAttribute="centerY" secondItem="odc-RK-Lbe" secondAttribute="centerY" id="Iml-vs-x7C"/>
+                                        <constraint firstAttribute="centerY" secondItem="Rpp-ez-cNr" secondAttribute="centerY" id="Lux-s6-KJO"/>
+                                        <constraint firstItem="6Om-WX-SXJ" firstAttribute="leading" secondItem="Rpp-ez-cNr" secondAttribute="trailing" constant="184" id="P4i-36-2Yh">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                        </constraint>
                                         <constraint firstAttribute="bottomMargin" secondItem="YtB-d4-ykU" secondAttribute="bottom" id="RD8-f0-AtO"/>
-                                        <constraint firstAttribute="centerY" secondItem="UdS-8U-JTa" secondAttribute="centerY" id="URg-jy-cSq"/>
-                                        <constraint firstItem="6Om-WX-SXJ" firstAttribute="leading" secondItem="Rpp-ez-cNr" secondAttribute="trailing" constant="100" id="Ylg-SX-HcA"/>
-                                        <constraint firstAttribute="centerY" secondItem="odc-RK-Lbe" secondAttribute="centerY" id="bar-5y-du3"/>
-                                        <constraint firstAttribute="centerY" secondItem="Rpp-ez-cNr" secondAttribute="centerY" id="nCL-zi-5A3"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="6Om-WX-SXJ" secondAttribute="trailing" constant="17" id="rOE-A4-rNL"/>
+                                        <constraint firstAttribute="centerY" secondItem="UdS-8U-JTa" secondAttribute="centerY" id="Tce-lE-eOX"/>
+                                        <constraint firstItem="Rpp-ez-cNr" firstAttribute="top" secondItem="UdS-8U-JTa" secondAttribute="bottom" constant="1" id="bPT-uv-626"/>
+                                        <constraint firstItem="UdS-8U-JTa" firstAttribute="top" secondItem="uti-pZ-DkK" secondAttribute="topMargin" constant="10" id="p2e-CE-6lV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6Om-WX-SXJ" secondAttribute="trailing" constant="10" id="rOE-A4-rNL"/>
                                         <constraint firstItem="YtB-d4-ykU" firstAttribute="leading" secondItem="uti-pZ-DkK" secondAttribute="leadingMargin" id="xlC-wY-qB4"/>
                                         <constraint firstAttribute="centerY" secondItem="6Om-WX-SXJ" secondAttribute="centerY" id="yE6-6O-tfW"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Tce-lE-eOX"/>
+                                            <exclude reference="50Q-ef-S1F"/>
+                                            <exclude reference="Lux-s6-KJO"/>
+                                            <exclude reference="P4i-36-2Yh"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="constraints">
+                                            <exclude reference="4F5-b7-549"/>
+                                            <include reference="Tce-lE-eOX"/>
+                                            <exclude reference="p2e-CE-6lV"/>
+                                            <include reference="50Q-ef-S1F"/>
+                                            <include reference="Lux-s6-KJO"/>
+                                            <exclude reference="bPT-uv-626"/>
+                                            <exclude reference="BRx-0x-JRN"/>
+                                            <include reference="P4i-36-2Yh"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
