@@ -163,14 +163,35 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
-        switch indexPath?.row{
+        switch indexPath!.row{
+        case 0:
+            if !MeeqoManager.eatMeeqo(thisMeeqo, foodValue: ItemData.LOLLIPOP_FOOD_VALUE){
+                notEnoughFoodAlert()
+            }
+            else {
+                ateFoodAlert()
+            }
+            
+        case 1:
+            if !MeeqoManager.eatMeeqo(thisMeeqo, foodValue: ItemData.ICECREAM_FOOD_VALUE){
+                notEnoughFoodAlert()
+            }
+            else {
+                ateFoodAlert()
+            }
+        case 2:
+            if !MeeqoManager.eatMeeqo(thisMeeqo, foodValue: ItemData.CAKE_FOOD_VALUE){
+                notEnoughFoodAlert()
+            }
+            else {
+                ateFoodAlert()
+            }
         default:
             break
         }
-        ateFoodAlert()
+        
         mainVC.removeMeeqoViews()
         mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
- 
         thisMeeqo.updateMe()
     }
     
@@ -178,11 +199,80 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
-        switch indexPath?.row{
-        default:
+        switch indexPath!.row{
+        case 0:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.BALL_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 1:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.ROPE_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 2:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.WEIGHTS_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 3:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.BEAR_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 4:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.SLEEPING_BEAR_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 5:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.TRAMBULIN_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 6:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.SOUND_SYSTEM_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 7:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.TREADMILL_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 8:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.DANCE_FLOOR_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+        case 9:
+            if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.VIDEO_GAMES_FOOD_VALUE){
+                playedAlert()
+            }
+            else {
+                noToyAlert()
+            }
+                default:
             break
         }
-        playedAlert()
         mainVC.removeMeeqoViews()
         mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
 
@@ -193,7 +283,9 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
-        switch indexPath?.row{
+        switch indexPath!.row{
+        case 0:
+            MeeqoManager.sleepMeeqo(thisMeeqo)
         default:
             break
         }

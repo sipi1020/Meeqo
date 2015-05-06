@@ -14,7 +14,7 @@ class MeeqoConstans {
     static let PLAY_TIME_PERIOD = 1
     static let SLEEP_TIME_PERIOD = 1
     
-    static let SLEEP_INCREASE = 1
+    static let SLEEP_INCREASE = 100
 }
 
 class ItemData {
@@ -33,19 +33,19 @@ class ItemData {
     static let WEIGHTS_PRICE:Int = 500
     
     //not set
-    static let CAKE_FOOD_VALUE:Int = 16
-    static let BEAR_FOOD_VALUE:Int = 100
-    static let BALL_FOOD_VALUE:Int = 100
-    static let DANCE_FLOOR_FOOD_VALUE:Int = 100
-    static let ICECREAM_FOOD_VALUE:Int = 8
-    static let LOLLIPOP_FOOD_VALUE:Int = 4
-    static let ROPE_FOOD_VALUE:Int = 100
-    static let SLEEPING_BEAR_FOOD_VALUE:Int = 100
-    static let SOUND_SYSTEM_FOOD_VALUE:Int = 100
-    static let TRAMBULIN_FOOD_VALUE:Int = 100
-    static let TREADMILL_FOOD_VALUE:Int = 100
-    static let VIDEO_GAMES_FOOD_VALUE:Int = 100
-    static let WEIGHTS_FOOD_VALUE:Int = 100
+    static let CAKE_FOOD_VALUE:Int = 80
+    static let BEAR_FOOD_VALUE:Int = 45
+    static let BALL_FOOD_VALUE:Int = 30
+    static let DANCE_FLOOR_FOOD_VALUE:Int = 70
+    static let ICECREAM_FOOD_VALUE:Int = 50
+    static let LOLLIPOP_FOOD_VALUE:Int = 20
+    static let ROPE_FOOD_VALUE:Int = 35
+    static let SLEEPING_BEAR_FOOD_VALUE:Int = 50
+    static let SOUND_SYSTEM_FOOD_VALUE:Int = 60
+    static let TRAMBULIN_FOOD_VALUE:Int = 55
+    static let TREADMILL_FOOD_VALUE:Int = 65
+    static let VIDEO_GAMES_FOOD_VALUE:Int = 75
+    static let WEIGHTS_FOOD_VALUE:Int = 40
     
     static let ORANGE_MEEQO_PRICE = 400
     static let PURPLE_MEEQO_PRICE = 500

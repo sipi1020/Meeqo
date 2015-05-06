@@ -25,15 +25,14 @@ class StatusViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var img = UIImage(named: "blabla")
         
         meeqoRepo = MeeqoManager.meeqoRepo
         var meeqos = meeqoRepo.getMeeqos()
         for meeqo in meeqos {
             if meeqo.objectID == meeqoID {
-                meeqo.food = 30
-                meeqo.entertainment = 80
-                meeqo.sleep = 70
+                meeqo.food = 20
+                meeqo.entertainment = 20
+                meeqo.sleep = 20
                 happinessBar.progress = ((Float(meeqo.entertainment) + Float(meeqo.food) + Float(meeqo.sleep))/3)/100
                 foodBar.progress = Float(meeqo.food)/100
                 sleepBar.progress = Float(meeqo.sleep)/100
@@ -64,6 +63,7 @@ class StatusViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
       
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
