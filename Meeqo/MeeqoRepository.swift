@@ -22,13 +22,10 @@ class MeeqoRepository : IMeeqoRepository {
     }
     private func getMeeqosFromDatabase() -> [Meeqo] {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
-        println("1")
         
         var error: NSError?
         let fetchRequest = NSFetchRequest(entityName:"Meeqo")
-        println("1")
         if let meeqos = moc.executeFetchRequest(fetchRequest, error: &error) as? [Meeqo] {
-            println("1")
             return meeqos
         } else {
             println("Could not fetch \(error)")

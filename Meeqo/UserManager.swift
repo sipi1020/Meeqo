@@ -69,19 +69,24 @@ class UserManager {
     static func updateMeeqoData() {
         let meeqos = meeqoRepo.getMeeqos()
         
+        let spentHours = getSpentHours(NSDate())
         for meeqo in meeqos {
-            meeqo.sleep = Int(meeqo.sleep) - MeeqoConstans.SLEEP_DECREES_PER_HOUR
+            meeqo.sleep = Int(meeqo.sleep) - MeeqoConstans.SLEEP_DECREES_PER_HOUR * spentHours
+            meeqo.food = Int(meeqo.food) - MeeqoConstans.FOOD_DECREES_PER_HOUR * spentHours
+            meeqo.entertainment = Int(meeqo.entertainment) - MeeqoConstans.PLAY_DECREES_PER_HOUR * spentHours
+            if (meeqo.food <= 0 || meeqo.entertainment <= 0 || meeqo.sleep <= 0) {
+                meeqoRepo.remove(meeqo)
+            }
+            meeqo.updateMe()
         }
     }
     private static func getSpentHours(date: NSDate) -> Int {
         let user = userRepo.getUser()
+        
         var spentHours = 0
         
-        return 1
-        
-        /*
-        //TDOD implement method
-        
+        spentHours = Int(date.timeIntervalSinceReferenceDate * 1 / 60) - Int(user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate * 1 / 60)
+        println("\(spentHours)")
         if spentHours <= 0 {
             return 0
         }
@@ -92,7 +97,7 @@ class UserManager {
         user.lastUpdatedMeeqos = date
         userRepo.updateCurrentUser()
         
-        return spentHours */
+        return spentHours
     }
     
     static func getCurrentUser() -> User {
@@ -100,6 +105,31 @@ class UserManager {
     }
     static func addMoneyToCurrentUser(money: Int) {
         userRepo.getUser().coins = Int(userRepo.getUser().coins) + money
+    }
+    static func didCompletedChallengeToday() -> Bool {
+        let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+        let date = NSDate()
+        
+        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+        let components2 = NSCalendar.currentCalendar().components(flags, fromDate: userRepo.getUser().lastDayChallenged)
+        
+        let year = components.year
+        let year2 = components2.year
+        println(year)
+        println(year2)
+        let month = components.month
+        let month2 = components2.month
+        println(month)
+        println(month2)
+        let day = components.day
+        let day2 = components2.day
+        println(day)
+        println(day2)
+        
+        if year == year2 && month == month2 && day == day2 {
+            return true
+        }
+        return false
     }
 
 }

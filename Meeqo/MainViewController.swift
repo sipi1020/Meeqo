@@ -26,7 +26,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         // Do any additional setup after loading the view, typically from a nib.
         //
-        
+        println("Did completed? \(UserManager.didCompletedChallengeToday())")
+        UserManager.updateMeeqoData()
         ItemManager.buyLollipop()
         
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
@@ -85,6 +86,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func loadMeeqosToRoom(roomNum: Int){
+        
+        UserManager.updateMeeqoData()
        var meeqos = meeqoRepo.getMeeqos()
         for meeqo in meeqos{
             if ( meeqo.position.roomNumber == roomNum){
