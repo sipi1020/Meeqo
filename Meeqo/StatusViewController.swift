@@ -30,9 +30,6 @@ class StatusViewController: UITableViewController {
         var meeqos = meeqoRepo.getMeeqos()
         for meeqo in meeqos {
             if meeqo.objectID == meeqoID {
-                meeqo.food = 20
-                meeqo.entertainment = 20
-                meeqo.sleep = 20
                 happinessBar.progress = ((Float(meeqo.entertainment) + Float(meeqo.food) + Float(meeqo.sleep))/3)/100
                 foodBar.progress = Float(meeqo.food)/100
                 sleepBar.progress = Float(meeqo.sleep)/100
