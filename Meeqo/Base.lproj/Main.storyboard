@@ -83,8 +83,8 @@
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="Tce-lE-eOX"/>
-                                            <exclude reference="50Q-ef-S1F"/>
                                             <exclude reference="Lux-s6-KJO"/>
+                                            <exclude reference="50Q-ef-S1F"/>
                                             <exclude reference="P4i-36-2Yh"/>
                                         </mask>
                                     </variation>
@@ -93,9 +93,9 @@
                                             <exclude reference="4F5-b7-549"/>
                                             <include reference="Tce-lE-eOX"/>
                                             <exclude reference="p2e-CE-6lV"/>
-                                            <include reference="50Q-ef-S1F"/>
                                             <include reference="Lux-s6-KJO"/>
                                             <exclude reference="bPT-uv-626"/>
+                                            <include reference="50Q-ef-S1F"/>
                                             <exclude reference="BRx-0x-JRN"/>
                                             <include reference="P4i-36-2Yh"/>
                                         </mask>
