@@ -82,7 +82,12 @@ class ShopViewController: UITableViewController {
         
         return 0
     }
-
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
+            return 100
+        }
+        return 80
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("shopCell", forIndexPath: indexPath) as! UITableViewCell

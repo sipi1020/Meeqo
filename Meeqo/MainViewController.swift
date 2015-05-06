@@ -166,7 +166,12 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         var nav = UINavigationController(rootViewController: popoverContent)
         nav.modalPresentationStyle = UIModalPresentationStyle.Popover
         var popover = nav.popoverPresentationController
+        if view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
         popoverContent.preferredContentSize = CGSizeMake(400,400)
+        }
+        else{
+            popoverContent.preferredContentSize = CGSizeMake(250,200)
+        }
         popover!.delegate = self
         popover!.sourceView = sender.view
         popover!.sourceRect = CGRectMake(0,0,10,10)
