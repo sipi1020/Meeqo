@@ -32,6 +32,8 @@ class MeeqoManager {
     
     static func eatMeeqo(meeqo: Meeqo, foodValue: Int) ->Bool {
         if Int(itemRepo.getInventory().cake) > 0 && foodValue == ItemData.CAKE_FOOD_VALUE{
+            ItemManager.getMeeqoInventory().cake = Int(ItemManager.getMeeqoInventory().cake)-1
+            ItemManager.itemRepo.updateCurrentInventory()
             if (Int(meeqo.food) + foodValue) <= 100 {
             meeqo.food = Int(meeqo.food) + foodValue
             }
@@ -41,6 +43,8 @@ class MeeqoManager {
             return true
         }
         if Int(itemRepo.getInventory().lollipop) > 0 && foodValue == ItemData.LOLLIPOP_FOOD_VALUE{
+            ItemManager.getMeeqoInventory().lollipop = Int(ItemManager.getMeeqoInventory().lollipop)-1
+            ItemManager.itemRepo.updateCurrentInventory()
             if (Int(meeqo.food) + foodValue) <= 100 {
                 meeqo.food = Int(meeqo.food) + foodValue
             }
@@ -50,6 +54,8 @@ class MeeqoManager {
             return true
         }
         if Int(itemRepo.getInventory().icecream) > 0 && foodValue == ItemData.ICECREAM_FOOD_VALUE{
+            ItemManager.getMeeqoInventory().icecream = Int(ItemManager.getMeeqoInventory().icecream)-1
+            ItemManager.itemRepo.updateCurrentInventory()
             if (Int(meeqo.food) + foodValue) <= 100 {
                 meeqo.food = Int(meeqo.food) + foodValue
             }

@@ -163,6 +163,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
+        var foodCountLabel = cell.viewWithTag(3) as! UILabel!
         switch indexPath!.row{
         case 0:
             if !MeeqoManager.eatMeeqo(thisMeeqo, foodValue: ItemData.LOLLIPOP_FOOD_VALUE){
@@ -193,6 +194,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         mainVC.removeMeeqoViews()
         mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
         thisMeeqo.updateMe()
+        self.tableView.reloadData()
     }
     
     func playTap( sender: UIButton){
@@ -203,6 +205,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         case 0:
             if MeeqoManager.playMeeqo(thisMeeqo, playValue: ItemData.BALL_FOOD_VALUE){
                 playedAlert()
+                
             }
             else {
                 noToyAlert()
@@ -275,7 +278,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         }
         mainVC.removeMeeqoViews()
         mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
-
+        self.tableView.reloadData()
         thisMeeqo.updateMe()
         
     }
