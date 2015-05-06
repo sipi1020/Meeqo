@@ -28,11 +28,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         //
         
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
+        createMeeqo("kek")
         
-    
-        
-        meeqoRepo.create("piros")
-        
+       
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
@@ -87,6 +85,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         for meeqo in meeqos{
             if ( meeqo.position.roomNumber == roomNum){
                 createMeeqoViewInPosition(Double(meeqo.position.x), y: Double(meeqo.position.y),color: meeqo.color,happiness: (Float(meeqo.entertainment) + Float(meeqo.food) + Float(meeqo.sleep))/3 ,id: meeqo.objectID)
+                println("loading meeqos")
             }
         }
     }
@@ -112,14 +111,26 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     func createMeeqo(color: String){
         meeqoRepo.create(color)
         var meeqos = meeqoRepo.getMeeqos()
-        //createMeeqoView(color,id:meeqos.last!.objectID)
+        //createMeeqoView(color,id:meeqos.last!.objectID
         meeqos.last?.position.x = self.view.frame.width/2
-        meeqos.last?.position.y = self.view.frame.height/2 + 100
+        meeqos.last?.position.y = self.view.frame.height/2 
+        meeqos.last?.updateMe()
         saveMeeqosPosition()
+        removeMeeqoViews()
+        loadMeeqosToRoom(roomView.currentRoom)
+        
     }
     
     func createMeeqoViewInPosition(x: Double, y: Double, color: String,happiness: Float, id: NSManagedObjectID){
-        var newMeeqo = MeeqoView(frame: CGRect(x: x, y: y, width: 100, height: 100),color: color,happiness:happiness, id: id)
+        var newMeeqo: MeeqoView!
+        if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular  {
+        newMeeqo = MeeqoView(frame: CGRect(x: x, y: y, width: 100, height: 100),color: color,happiness:happiness, id: id)
+            println("regular")
+        }
+        else {
+            newMeeqo = MeeqoView(frame: CGRect(x: x, y: y, width: 50, height: 50),color: color,happiness:happiness, id: id)
+            println("compact")
+        }
         newMeeqo.opaque = false
         self.view.addSubview(newMeeqo)
         var panGestureRecognizer = UIPanGestureRecognizer(target:self, action: "dragMeeqo:")
