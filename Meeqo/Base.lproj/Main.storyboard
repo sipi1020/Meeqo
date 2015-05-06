@@ -425,14 +425,14 @@
                                                 <constraint firstAttribute="height" constant="40" id="mj1-Oq-njg"/>
                                             </constraints>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gJ-yp-ib7">
-                                            <rect key="frame" x="470" y="24" width="25" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1M3-eA-5yv">
+                                            <rect key="frame" x="81" y="24" width="81" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1M3-eA-5yv">
-                                            <rect key="frame" x="81" y="24" width="81" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gJ-yp-ib7">
+                                            <rect key="frame" x="81" y="45" width="25" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -440,15 +440,33 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="9np-9N-S47" secondAttribute="bottom" id="60g-Zh-2IV"/>
-                                        <constraint firstItem="wha-pn-VyY" firstAttribute="leading" secondItem="7gJ-yp-ib7" secondAttribute="trailing" constant="40" id="Ffe-VJ-zrg"/>
+                                        <constraint firstAttribute="centerY" secondItem="7gJ-yp-ib7" secondAttribute="centerY" id="8LF-f9-6WJ"/>
+                                        <constraint firstItem="7gJ-yp-ib7" firstAttribute="top" secondItem="1M3-eA-5yv" secondAttribute="bottom" id="CEb-UN-ia6"/>
+                                        <constraint firstItem="1M3-eA-5yv" firstAttribute="leading" secondItem="7gJ-yp-ib7" secondAttribute="leading" id="F9R-4V-e8j"/>
                                         <constraint firstItem="1M3-eA-5yv" firstAttribute="leading" secondItem="9np-9N-S47" secondAttribute="trailing" constant="20" id="OMf-Sx-KuE"/>
                                         <constraint firstAttribute="centerY" secondItem="1M3-eA-5yv" secondAttribute="centerY" id="RHH-Dp-IYO"/>
-                                        <constraint firstAttribute="centerY" secondItem="7gJ-yp-ib7" secondAttribute="centerY" id="SNn-YC-QMh"/>
                                         <constraint firstAttribute="centerY" secondItem="wha-pn-VyY" secondAttribute="centerY" id="WsP-3W-fdh"/>
+                                        <constraint firstItem="wha-pn-VyY" firstAttribute="leading" secondItem="7gJ-yp-ib7" secondAttribute="trailing" constant="160" id="Wyg-J8-kAM">
+                                            <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                        </constraint>
                                         <constraint firstItem="9np-9N-S47" firstAttribute="top" secondItem="4bo-tN-qOK" secondAttribute="topMargin" id="dAM-rQ-WxH"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wha-pn-VyY" secondAttribute="trailing" constant="17" id="edi-or-eaT"/>
                                         <constraint firstItem="9np-9N-S47" firstAttribute="leading" secondItem="4bo-tN-qOK" secondAttribute="leadingMargin" id="vVf-Cb-7ew"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="8LF-f9-6WJ"/>
+                                            <exclude reference="Wyg-J8-kAM"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=regular">
+                                        <mask key="constraints">
+                                            <exclude reference="F9R-4V-e8j"/>
+                                            <include reference="8LF-f9-6WJ"/>
+                                            <exclude reference="CEb-UN-ia6"/>
+                                            <include reference="Wyg-J8-kAM"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moveCell" rowHeight="100" id="caG-jR-gi4">
