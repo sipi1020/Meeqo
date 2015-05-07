@@ -79,7 +79,7 @@ class ItemManager {
     static func buyRope() -> Bool {
         if !Bool(itemRepo.getInventory().rope) {
             if  userRepo.spendMoney(ItemData.ROPE_PRICE) {
-                itemRepo.getInventory().sleepingBear = NSNumber(bool: true)
+                itemRepo.getInventory().rope = NSNumber(bool: true)
                 itemRepo.updateCurrentInventory()
                 return true
             }

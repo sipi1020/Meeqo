@@ -23,7 +23,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }*/
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    UserManager.getCurrentUser().coins = 5000
         // Do any additional setup after loading the view, typically from a nib.
         //
         println("Did completed? \(UserManager.didCompletedChallengeToday())")

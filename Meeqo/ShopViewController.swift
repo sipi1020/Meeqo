@@ -100,6 +100,8 @@ class ShopViewController: UITableViewController {
 
         switch indexPath.section{
         case 0:
+            button.removeTarget(self, action: "buyToy:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.removeTarget(self, action: "buyMeeqo:", forControlEvents: UIControlEvents.TouchUpInside)
             imageView.image = ItemManager.getFoodIcons()[indexPath.row]
             title.text = ItemManager.getFoodTitles()[indexPath.row]
             info.text = "\(ItemManager.getFoodPrices()[indexPath.row]) coins"
@@ -111,12 +113,16 @@ class ShopViewController: UITableViewController {
             }
             button.addTarget(self, action: "buyFood:", forControlEvents: UIControlEvents.TouchUpInside)
         case 1:
+            button.removeTarget(self, action: "buyFood:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.removeTarget(self, action: "buyMeeqo:", forControlEvents: UIControlEvents.TouchUpInside)
             imageView.image = ItemManager.getToyIcons()[indexPath.row]
             title.text = ItemManager.getToyTitles()[indexPath.row]
             info.text = "\(self.toyStatesString()[indexPath.row])"
             count.text = ""
             button.addTarget(self, action: "buyToy:", forControlEvents: UIControlEvents.TouchUpInside)
         case 2:
+            button.removeTarget(self, action: "buyToy:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.removeTarget(self, action: "buyFood:", forControlEvents: UIControlEvents.TouchUpInside)
             imageView.image = MeeqoManager.getMeeqoIcons()[indexPath.row]
             title.text = MeeqoManager.getMeeqoTitles()[indexPath.row]
             info.text = "\(MeeqoManager.getMeeqoPrices()[indexPath.row]) coins"
@@ -305,56 +311,56 @@ class ShopViewController: UITableViewController {
             switch indexPath!.row {
             case 0:
                 if MeeqoManager.buyMeeqo("narancs"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 1:
                 if MeeqoManager.buyMeeqo("lila"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 2:
                 if MeeqoManager.buyMeeqo("rozsaszin"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 3:
                 if MeeqoManager.buyMeeqo("zold"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 4:
                 if MeeqoManager.buyMeeqo("kek"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 5:
                 if MeeqoManager.buyMeeqo("fekete"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 6:
                 if MeeqoManager.buyMeeqo("piros"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
                 }
             case 7:
                 if MeeqoManager.buyMeeqo("szivarvany"){
-                    purchasedToyAlert()
+                    purchasedMeeqoAlert()
                 }
                 else {
                     notEnoughMoneyAlert()
