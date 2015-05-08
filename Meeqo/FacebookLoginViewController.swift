@@ -12,6 +12,7 @@ class FacebookLoginViewController: UIViewController, FBLoginViewDelegate {
 
     @IBOutlet weak var fbLoginView: FBLoginView!
     
+    @IBOutlet weak var background: UIImageView!
     @IBAction func loginTap(sender: AnyObject) {
         println("Tapped")
         var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -23,6 +24,7 @@ class FacebookLoginViewController: UIViewController, FBLoginViewDelegate {
     override func viewDidLoad() {
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email"]
+        self.view.sendSubviewToBack(background)
         
     }
     func sessionStateChanged(session:FBSession, state:FBSessionState, error:NSError?) {

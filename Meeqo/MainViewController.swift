@@ -26,6 +26,10 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     UserManager.getCurrentUser().coins = 5000
         // Do any additional setup after loading the view, typically from a nib.
         //
+        var challengeButton = UIBarButtonItem(image: UIImage(named:"challenge_icon")!, style: UIBarButtonItemStyle.Plain, target: self, action: "challenegButtonTap:")
+        self.navigationItem.rightBarButtonItems?.append(challengeButton)
+        
+        
         println("Did completed? \(UserManager.didCompletedChallengeToday())")
         UserManager.updateMeeqoData()
         ItemManager.buyLollipop()
@@ -59,13 +63,18 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         */
         
         //createMeeqo("piros")
-        
-        
-        
         removeMeeqoViews()
         loadMeeqosToRoom(roomView.currentRoom)
     }
     
+    func challenegButtonTap(sender: UIBarButtonItem){
+        var destinationVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("challengeVC") as! ChallengeViewController
+        
+        //var segue = UIStoryboardSegue(identifier: "challengeSegue", source: self, destination: destinationVC)
+        //presentViewController(destinationVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    
+    }
     
     override func viewWillDisappear(animated: Bool) {
         saveMeeqosPosition()

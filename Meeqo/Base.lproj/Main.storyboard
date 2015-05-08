@@ -214,12 +214,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Viki's home" id="6je-LN-CZI">
-                        <barButtonItem key="leftBarButtonItem" title="Challenge" id="Pyl-wn-21H">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="73R-IZ-l7e">
                             <connections>
-                                <segue destination="Geu-Ws-fSB" kind="show" id="j1P-eW-TpJ"/>
+                                <segue destination="riz-op-6EH" kind="presentation" id="sn6-FX-OXU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Shopping" id="mqJ-JP-R1E">
+                        <barButtonItem key="rightBarButtonItem" image="shoppingcart_icon" id="mqJ-JP-R1E">
                             <connections>
                                 <segue destination="t8e-5c-63W" kind="show" id="M3P-5F-VUt"/>
                             </connections>
@@ -258,7 +258,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1227" y="310"/>
+            <point key="canvasLocation" x="1265" y="316"/>
         </scene>
         <!--Meeqo's status-->
         <scene sceneID="mnv-eE-zLU">
@@ -578,7 +578,7 @@
         <!--Challenge-->
         <scene sceneID="sXk-uG-UNI">
             <objects>
-                <viewController title="Challenge" id="Geu-Ws-fSB" customClass="ChallengeViewController" customModule="Meeqo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="challengeVC" title="Challenge" id="Geu-Ws-fSB" customClass="ChallengeViewController" customModule="Meeqo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zy5-pD-3QT"/>
                         <viewControllerLayoutGuide type="bottom" id="gtz-9X-bKK"/>
@@ -686,25 +686,38 @@
                                     <constraint firstAttribute="height" constant="80" id="SKm-qo-jRq"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-87-CON">
+                                <rect key="frame" x="0.0" y="0.0" width="584" height="600"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.93285524253019703" green="0.95654037866944619" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="POM-7s-oni" firstAttribute="leading" secondItem="0fm-FF-OdN" secondAttribute="leadingMargin" id="1lt-AL-4lC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Us1-qe-Pcn" secondAttribute="trailing" id="2Gt-Bz-vzi"/>
                             <constraint firstItem="feO-aO-AXo" firstAttribute="leading" secondItem="POM-7s-oni" secondAttribute="trailing" constant="23" id="32a-CH-84W"/>
                             <constraint firstItem="Us1-qe-Pcn" firstAttribute="top" secondItem="9Vs-5J-zgK" secondAttribute="bottom" id="7ML-Jk-39q"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="w1d-87-CON" secondAttribute="bottom" id="9Zc-Wz-zvX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w1d-87-CON" secondAttribute="trailing" id="9Zr-Fc-hlE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="feO-aO-AXo" secondAttribute="trailing" id="C09-6V-Prk"/>
+                            <constraint firstAttribute="trailing" secondItem="w1d-87-CON" secondAttribute="trailing" id="DmB-FA-RCa"/>
                             <constraint firstAttribute="bottomMargin" secondItem="POM-7s-oni" secondAttribute="bottom" constant="10" id="Kwk-Dj-2xa"/>
+                            <constraint firstItem="w1d-87-CON" firstAttribute="leading" secondItem="0fm-FF-OdN" secondAttribute="leading" id="Mf3-lz-W4P"/>
                             <constraint firstItem="Us1-qe-Pcn" firstAttribute="leading" secondItem="POM-7s-oni" secondAttribute="trailing" id="Mno-Td-zct"/>
                             <constraint firstItem="POM-7s-oni" firstAttribute="width" secondItem="0fm-FF-OdN" secondAttribute="width" multiplier="0.3" id="P7m-lR-rdD"/>
                             <constraint firstItem="feO-aO-AXo" firstAttribute="top" secondItem="R0R-VJ-Jer" secondAttribute="bottom" constant="40" id="UW4-By-pHy"/>
+                            <constraint firstItem="w1d-87-CON" firstAttribute="top" secondItem="0fm-FF-OdN" secondAttribute="topMargin" id="eSC-4B-XeB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Vs-5J-zgK" secondAttribute="trailing" id="gcA-Yu-RJB"/>
                             <constraint firstItem="POM-7s-oni" firstAttribute="top" secondItem="R0R-VJ-Jer" secondAttribute="bottom" constant="10" id="lnx-we-df4"/>
                             <constraint firstItem="9Vs-5J-zgK" firstAttribute="leading" secondItem="POM-7s-oni" secondAttribute="trailing" id="nk5-hU-0AS"/>
                             <constraint firstAttribute="centerY" secondItem="9Vs-5J-zgK" secondAttribute="centerY" id="vvz-JU-Vbg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Zr-Fc-hlE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="background" destination="w1d-87-CON" id="8fx-i0-xa4"/>
                         <outlet property="fbLoginView" destination="Us1-qe-Pcn" id="0Rx-Hd-D0U"/>
                     </connections>
                 </viewController>
@@ -755,6 +768,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="800" height="1200"/>
         <image name="bedroomFull" width="400" height="400"/>
         <image name="discoFull" width="400" height="400"/>
         <image name="fitnessroomFull" width="400" height="400"/>
@@ -764,6 +778,7 @@
         <image name="kitchenFull" width="400" height="400"/>
         <image name="play_icon" width="100" height="100"/>
         <image name="playingroomFull" width="400" height="400"/>
+        <image name="shoppingcart_icon" width="44" height="44"/>
         <image name="sleep_icon" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
