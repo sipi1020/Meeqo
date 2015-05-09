@@ -305,6 +305,7 @@ class ShopViewController: UITableViewController {
     }
     override func viewWillDisappear(animated: Bool) {
         mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
+        mainVC.roomView.setNeedsDisplay()
     }
     
     func buyMeeqo(sender: UIButton){
