@@ -85,7 +85,7 @@ class UserManager {
         
         var spentHours = 0
         
-        spentHours = Int(date.timeIntervalSinceReferenceDate * 1 / 60) - Int(user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate * 1 / 60)
+        //spentHours = Int(date.timeIntervalSinceReferenceDate * 1 / 60) - Int(user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate * 1 / 60)
         println("\(spentHours)")
         if spentHours <= 0 {
             return 0

@@ -14,14 +14,16 @@ class Challenge {
     let name:NSString
     let coin:Int
     let description:NSString
-    let level = 1.0
-    let completed = false
+    var level = 1.0
+    var completed = false
     
     init(name: NSString, coin:Int, description: NSString) {
         self.name = name
         self.coin = coin
         self.description = description
     }
+    
+    
     
 }
 

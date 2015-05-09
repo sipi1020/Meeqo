@@ -59,9 +59,12 @@ class ItemData {
 }
 
 class Challenges {
+    static let EASY_CHALLENGE_COIN = 100
+    static let MEDIUM_CHALLENGE_COIN = 200
+    static let HARD_CHALLENGE_COIN = 300
     static let challenges = [
-        Challenge(name: "Running", coin: 22, description: "Run 1 mile today"),
-        Challenge(name: "Pushup", coin: 20, description: "Make 20 pushups!")
+        Challenge(name: "Running", coin: Challenges.EASY_CHALLENGE_COIN, description: "Run 1 mile today"),
+        Challenge(name: "Pushup", coin: Challenges.EASY_CHALLENGE_COIN, description: "Make 20 pushups!")
     ]
 }
 

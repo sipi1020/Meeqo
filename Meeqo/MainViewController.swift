@@ -76,6 +76,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     
     }
     
+    func notAgainAlert(){
+        let alert = UIAlertController(title: "Only one challenge per day", message: "You can only complete one challenge per day. Come back tomorrow!", preferredStyle: UIAlertControllerStyle.Alert)
+        var action = UIAlertAction(title: "Got it", style: UIAlertActionStyle.Default,handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func viewWillDisappear(animated: Bool) {
         saveMeeqosPosition()
     }
