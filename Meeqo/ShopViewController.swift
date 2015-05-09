@@ -10,6 +10,8 @@ import UIKit
 
 class ShopViewController: UITableViewController {
     
+    var mainVC: MainViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var coinButton = UIBarButtonItem(title:"coins" , style: UIBarButtonItemStyle.Plain, target:self , action: "getCoinsAlert")
@@ -301,6 +303,9 @@ class ShopViewController: UITableViewController {
         self.tableView.reloadData()
         refreshMoneyLabel()
     }
+    override func viewWillDisappear(animated: Bool) {
+        mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
+    }
     
     func buyMeeqo(sender: UIButton){
         var cell = sender.superview?.superview as! UITableViewCell
@@ -312,6 +317,9 @@ class ShopViewController: UITableViewController {
             case 0:
                 if MeeqoManager.buyMeeqo("narancs"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -319,6 +327,9 @@ class ShopViewController: UITableViewController {
             case 1:
                 if MeeqoManager.buyMeeqo("lila"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -326,6 +337,9 @@ class ShopViewController: UITableViewController {
             case 2:
                 if MeeqoManager.buyMeeqo("rozsaszin"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -333,6 +347,9 @@ class ShopViewController: UITableViewController {
             case 3:
                 if MeeqoManager.buyMeeqo("zold"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -340,6 +357,9 @@ class ShopViewController: UITableViewController {
             case 4:
                 if MeeqoManager.buyMeeqo("kek"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -347,6 +367,9 @@ class ShopViewController: UITableViewController {
             case 5:
                 if MeeqoManager.buyMeeqo("fekete"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -354,6 +377,9 @@ class ShopViewController: UITableViewController {
             case 6:
                 if MeeqoManager.buyMeeqo("piros"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()
@@ -361,6 +387,9 @@ class ShopViewController: UITableViewController {
             case 7:
                 if MeeqoManager.buyMeeqo("szivarvany"){
                     purchasedMeeqoAlert()
+                    MeeqoManager.getMeeqos().last?.position.x = mainVC.view.frame.width/2
+                    MeeqoManager.getMeeqos().last?.position.y = mainVC.view.frame.height/2
+                    MeeqoManager.getMeeqos().last?.position.roomNumber = mainVC.roomView.currentRoom
                 }
                 else {
                     notEnoughMoneyAlert()

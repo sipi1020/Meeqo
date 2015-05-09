@@ -35,7 +35,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         ItemManager.buyLollipop()
         
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
-        createMeeqo("kek")
+        
         println("Current user: \(UserManager.getCurrentUser().name)")
         
         self.title = "\(UserManager.getCurrentUser().name)'s home"
@@ -200,10 +200,6 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
   
     }
     
-    func prepareForPopoverPresentation(popoverPresentationController: UIPopoverPresentationController){
-        
-        
-    }
     
     func removeMeeqoViews(){
         var subViews = self.view.subviews
@@ -272,7 +268,15 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         loadMeeqosToRoom(4)
     }
     
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "shopSegue"{
+        let destinationVC = segue.destinationViewController as! ShopViewController
+        destinationVC.mainVC = self
+            saveMeeqosPosition()
+        }
+        
+    }
 
 }
 

@@ -11,9 +11,6 @@ import CoreData
 
 class StatusViewController: UITableViewController {
     
-    
-    
-    
     var meeqoID : NSManagedObjectID!
     var mainVC : MainViewController!
     var meeqoRepo : MeeqoRepository!
@@ -29,11 +26,13 @@ class StatusViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
+        if self.mainVC.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
             self.tableView.rowHeight = 60
+            
         }
         else{
             self.tableView.rowHeight = 40
+            
         }
         
         meeqoRepo = MeeqoManager.meeqoRepo
