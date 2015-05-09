@@ -16,12 +16,16 @@ class UserManager {
     
     static var urlSession: NSURLSession!
     
-    static func completedChallengeToday() -> Bool {
-        let user = userRepo.getUser()
-        var completed = false
-        
-        //TODO implement method
-        return completed
+    static func completedChallenge(challenge: Challenge) {
+        if challenge.completed {
+            let user = userRepo.getUser()
+            user.lastDayChallenged = NSDate()
+            
+            user.coins = Int(user.coins) + challenge.coin
+            
+            userRepo.updateCurrentUser()
+            println("Completed chllenge!")
+        }
     }
     static func downloadUserDataToDatabase(facebookId: NSString) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
@@ -85,18 +89,18 @@ class UserManager {
         
         var spentHours = 0
         
-        //spentHours = Int(date.timeIntervalSinceReferenceDate * 1 / 60) - Int(user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate * 1 / 60)
+        spentHours = (Int(date.timeIntervalSinceReferenceDate) - Int(user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate)) / 60
         println("\(spentHours)")
         if spentHours <= 0 {
             return 0
-        }
-        if spentHours > 120 {
-            return 120
         }
         
         user.lastUpdatedMeeqos = date
         userRepo.updateCurrentUser()
         
+        if (spentHours > 120) {
+            return 120
+        }
         return spentHours
     }
     

@@ -20,13 +20,10 @@ class ItemRepository : IItemRepository {
 
     func getInventory() -> MeeqoInventory {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
-        println("2")
         
         var error: NSError?
         let fetchRequest = NSFetchRequest(entityName:"MeeqoInventory")
-        println("1")
         if let invs = moc.executeFetchRequest(fetchRequest, error: &error) as? [MeeqoInventory] {
-            println("1")
             if invs.count > 0 {
                 meeqoInventory = invs[0]
                 return invs[0]
@@ -51,12 +48,9 @@ class ItemRepository : IItemRepository {
     
     func createNewInventory() {
         let moc = AppDelegate.sharedAppDelegate.managedObjectContext!
-        println("2")
         var error: NSError?
         let fetchRequest = NSFetchRequest(entityName:"User")
-        println("1")
         if let users = moc.executeFetchRequest(fetchRequest, error: &error) as? [User] {
-            println("1")
             for u in users {
                 moc.deleteObject(u)
             }

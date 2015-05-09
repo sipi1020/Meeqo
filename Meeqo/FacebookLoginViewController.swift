@@ -41,6 +41,8 @@ class FacebookLoginViewController: UIViewController, FBLoginViewDelegate {
         dbUser.name = user.first_name
         dbUser.facebookID = user.objectID
         
+        //TODO sync data with server (based on facebook id)
+        
         let userRepo = RepositoryFactory.getUserRepository()
         userRepo.setParamsOfUser(user.first_name, facebookId: user.objectID)
         
