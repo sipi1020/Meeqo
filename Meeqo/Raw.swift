@@ -63,7 +63,13 @@ class Challenges {
 
     static let challenges = [
         Challenge(name: "Running", coin: Challenges.CHALLENGE_COIN, description: "Run", description2: "miles today", count:1),
-        Challenge(name: "Pushup", coin: Challenges.CHALLENGE_COIN, description: "Make", description2: "pushups!", count: 20)
+        Challenge(name: "Pushup", coin: Challenges.CHALLENGE_COIN, description: "Do", description2: "pushups!", count: 10),
+        Challenge(name: "Crunch", coin: Challenges.CHALLENGE_COIN, description: "Do", description2: "crunches!", count: 15),
+        Challenge(name: "Squat", coin: Challenges.CHALLENGE_COIN, description: "Do", description2: "squats!", count: 15),
+        Challenge(name: "Sport", coin: Challenges.CHALLENGE_COIN, description: "Do some sport for at least", description2: "minutes today!", count: 20),
+        Challenge(name: "Walking", coin: Challenges.CHALLENGE_COIN, description: "Walk for", description2: "minutes today!", count: 20),
+        Challenge(name: "Fruit", coin: Challenges.CHALLENGE_COIN, description: "Eat at least", description2: "piece of fruit today!", count: 1),
+        Challenge(name: "Help someone", coin: Challenges.CHALLENGE_COIN, description: "Help someone", description2: "at least 1 times today", count: 1),
     ]
 }
 
