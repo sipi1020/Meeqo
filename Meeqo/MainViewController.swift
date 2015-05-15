@@ -25,8 +25,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         super.viewDidLoad()
         
         let challenge = Challenge(name: "Test C", coin: 23456, description: "Desc", description2: "desc2", count: 100)
-        challenge.completed = true
-        UserManager.completedChallenge(challenge)
+        //challenge.completed = true
+        //UserManager.completedChallenge(challenge)
         
         //UserManager.getCurrentUser().coins = 5000
         // Do any additional setup after loading the view, typically from a nib.
@@ -43,8 +43,13 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         println("Current user: \(UserManager.getCurrentUser().name)")
         
+        let m = UserModel(user: UserManager.getCurrentUser(), meeqos: MeeqoManager.getMeeqos(), inventory: ItemManager.getMeeqoInventory())
+        
+        UserModel.jsonToUserModel(m.toJson())
+        
         self.title = "\(UserManager.getCurrentUser().name)'s home"
        
+        println("Did +++ \(UserManager.didCompletedChallengeToday())")
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
