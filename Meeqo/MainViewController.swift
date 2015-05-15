@@ -23,7 +23,12 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }*/
     override func viewDidLoad() {
         super.viewDidLoad()
-    UserManager.getCurrentUser().coins = 5000
+        
+        let challenge = Challenge(name: "Test C", coin: 23456, description: "Desc", description2: "desc2", count: 100)
+        challenge.completed = true
+        UserManager.completedChallenge(challenge)
+        
+        //UserManager.getCurrentUser().coins = 5000
         // Do any additional setup after loading the view, typically from a nib.
         //
         var challengeButton = UIBarButtonItem(image: UIImage(named:"challenge_icon")!, style: UIBarButtonItemStyle.Plain, target: self, action: "challenegButtonTap:")

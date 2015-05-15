@@ -63,8 +63,8 @@ class Challenges {
     static let MEDIUM_CHALLENGE_COIN = 200
     static let HARD_CHALLENGE_COIN = 300
     static let challenges = [
-        Challenge(name: "Running", coin: Challenges.EASY_CHALLENGE_COIN, description: "Run 1 mile today"),
-        Challenge(name: "Pushup", coin: Challenges.EASY_CHALLENGE_COIN, description: "Make 20 pushups!")
+        Challenge(name: "Running", coin: Challenges.EASY_CHALLENGE_COIN, description: "Run", description2: "mile today", count:1),
+        Challenge(name: "Pushup", coin: Challenges.EASY_CHALLENGE_COIN, description: "Make", description2: "pushups!", count: 20)
     ]
 }
 
