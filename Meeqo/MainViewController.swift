@@ -28,10 +28,9 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         //challenge.completed = true
         //UserManager.completedChallenge(challenge)
         
-        //UserManager.getCurrentUser().coins = 5000
-        // Do any additional setup after loading the view, typically from a nib.
-        //
+    
         var challengeButton = UIBarButtonItem(image: UIImage(named:"challenge_icon")!, style: UIBarButtonItemStyle.Plain, target: self, action: "challenegButtonTap:")
+
         self.navigationItem.rightBarButtonItems?.append(challengeButton)
         
         
@@ -284,6 +283,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         let destinationVC = segue.destinationViewController as! ShopViewController
         destinationVC.mainVC = self
             saveMeeqosPosition()
+        }
+        
+        if segue.identifier == "logoutSegue"{
+            saveMeeqosPosition()
+            
         }
         
     }

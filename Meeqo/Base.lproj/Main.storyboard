@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="riz-op-6EH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="riz-op-6EH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -222,7 +222,7 @@
                     <navigationItem key="navigationItem" title="Viki's home" id="6je-LN-CZI">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="73R-IZ-l7e">
                             <connections>
-                                <segue destination="riz-op-6EH" kind="presentation" id="sn6-FX-OXU"/>
+                                <segue destination="riz-op-6EH" kind="presentation" identifier="logoutSegue" id="sn6-FX-OXU"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="shoppingcart_icon" id="mqJ-JP-R1E">
@@ -264,7 +264,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1197" y="386"/>
+            <point key="canvasLocation" x="1187" y="388"/>
         </scene>
         <!--Meeqo's status-->
         <scene sceneID="mnv-eE-zLU">
@@ -623,8 +623,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-E2-HCa">
-                                <rect key="frame" x="0.0" y="1" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-E2-HCa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YJL-Vf-6tc">
                                 <rect key="frame" x="205" y="40" width="191" height="29"/>
@@ -633,34 +633,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Hard"/>
                                 </segments>
-                                <connections>
-                                    <action selector="difficulityChanged:" destination="Geu-Ws-fSB" eventType="valueChanged" id="SvV-ee-my7"/>
-                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-q6-15f">
-                                <rect key="frame" x="180" y="141" width="241" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Give me my daily challenge">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="368" y="211" width="264" height="39"/>
-                                </variation>
-                                <connections>
-                                    <action selector="giveChallengeButtonTap:" destination="Geu-Ws-fSB" eventType="touchUpInside" id="YD1-kt-Sac"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-xg-XQ9">
-                                <rect key="frame" x="56" y="206" width="488" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="dgX-KY-FLo"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb3-Nk-fNG">
-                                <rect key="frame" x="234" y="541" width="132" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="747" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb3-Nk-fNG">
+                                <rect key="frame" x="234" y="543" width="132" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Complete">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -669,25 +644,55 @@
                                     <action selector="completedButtonTap:" destination="Geu-Ws-fSB" eventType="touchUpInside" id="SJV-Tx-FCG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2R-CX-D8B">
-                                <rect key="frame" x="205" y="78" width="191" height="23"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="comeon" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-Sx-xtQ">
-                                <rect key="frame" x="0.0" y="30" width="164" height="164"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="comeon" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-Sx-xtQ">
+                                <rect key="frame" x="0.0" y="30" width="152" height="152"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bbm-Sx-xtQ" secondAttribute="height" multiplier="1:1" id="Nnw-Xk-z7i"/>
                                 </constraints>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="0.0" y="30" width="352" height="352"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="30" width="251" height="251"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-q6-15f">
+                                <rect key="frame" x="168" y="76" width="264" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Give me my daily challenge">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="giveChallengeButtonTap:" destination="Geu-Ws-fSB" eventType="touchUpInside" id="YD1-kt-Sac"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-xg-XQ9">
+                                <rect key="frame" x="36" y="260" width="528" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="dgX-KY-FLo"/>
+                                    <constraint firstAttribute="height" constant="289" id="fiG-0J-0Es">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="160" id="x26-qO-F34"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dgX-KY-FLo"/>
+                                        <exclude reference="fiG-0J-0Es"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="fiG-0J-0Es"/>
+                                        <exclude reference="x26-qO-F34"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="top" secondItem="hlu-q6-15f" secondAttribute="bottom" constant="26" id="4B3-FH-KOM"/>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="top" secondItem="Gdf-E2-HCa" secondAttribute="bottom" constant="-380" id="2eM-nL-6Fb"/>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="top" secondItem="hlu-q6-15f" secondAttribute="bottom" constant="50" id="4B3-FH-KOM"/>
+                            <constraint firstAttribute="centerY" secondItem="yxf-xg-XQ9" secondAttribute="centerY" constant="-40" id="6Co-mc-Vce"/>
                             <constraint firstItem="Bbm-Sx-xtQ" firstAttribute="top" secondItem="zy5-pD-3QT" secondAttribute="bottom" constant="10" id="7vR-G8-Rb8"/>
                             <constraint firstAttribute="centerX" secondItem="YJL-Vf-6tc" secondAttribute="centerX" id="93t-Xt-FeV">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
@@ -696,62 +701,75 @@
                             <constraint firstItem="gtz-9X-bKK" firstAttribute="top" secondItem="tb3-Nk-fNG" secondAttribute="bottom" constant="370" id="AaQ-1p-fd2">
                                 <variation key="heightClass=regular-widthClass=regular" constant="160"/>
                             </constraint>
+                            <constraint firstAttribute="centerY" secondItem="yxf-xg-XQ9" secondAttribute="centerY" id="GWX-KX-0tI"/>
                             <constraint firstAttribute="centerX" secondItem="tb3-Nk-fNG" secondAttribute="centerX" id="Hva-Fy-RZJ"/>
                             <constraint firstItem="Gdf-E2-HCa" firstAttribute="top" secondItem="eBq-ru-qqN" secondAttribute="top" id="I1S-Yn-eLb"/>
                             <constraint firstAttribute="centerY" secondItem="yxf-xg-XQ9" secondAttribute="centerY" id="Iaw-0J-K0S"/>
                             <constraint firstItem="tb3-Nk-fNG" firstAttribute="top" secondItem="yxf-xg-XQ9" secondAttribute="bottom" constant="36" id="T8d-vL-J1R"/>
-                            <constraint firstItem="gtz-9X-bKK" firstAttribute="top" secondItem="tb3-Nk-fNG" secondAttribute="bottom" constant="10" id="TZ8-0I-BUs"/>
-                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="leading" secondItem="eBq-ru-qqN" secondAttribute="leadingMargin" constant="40" id="Xck-V6-5mk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yxf-xg-XQ9" secondAttribute="trailing" constant="40" id="Ze2-sL-gva"/>
-                            <constraint firstAttribute="trailing" secondItem="Gdf-E2-HCa" secondAttribute="trailing" id="bTm-rQ-aE5"/>
-                            <constraint firstItem="hlu-q6-15f" firstAttribute="top" secondItem="W2R-CX-D8B" secondAttribute="bottom" constant="40" id="eBJ-rN-Hyg">
+                            <constraint firstItem="gtz-9X-bKK" firstAttribute="top" secondItem="tb3-Nk-fNG" secondAttribute="bottom" constant="10" id="TZ8-0I-BUs">
+                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                            </constraint>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="leading" secondItem="eBq-ru-qqN" secondAttribute="leadingMargin" constant="20" id="Xck-V6-5mk"/>
+                            <constraint firstItem="tb3-Nk-fNG" firstAttribute="top" secondItem="yxf-xg-XQ9" secondAttribute="bottom" constant="10" id="Yk2-ja-aA6"/>
+                            <constraint firstItem="hlu-q6-15f" firstAttribute="top" secondItem="YJL-Vf-6tc" secondAttribute="bottom" constant="10" id="ZEA-S2-855">
                                 <variation key="heightClass=regular-widthClass=regular" constant="70"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="yxf-xg-XQ9" secondAttribute="trailing" constant="20" id="Ze2-sL-gva"/>
+                            <constraint firstAttribute="trailing" secondItem="Gdf-E2-HCa" secondAttribute="trailing" id="bTm-rQ-aE5"/>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="bottom" secondItem="tb3-Nk-fNG" secondAttribute="top" constant="-161" id="d9q-dP-fCo"/>
+                            <constraint firstItem="yxf-xg-XQ9" firstAttribute="top" secondItem="Bbm-Sx-xtQ" secondAttribute="bottom" constant="38" id="emU-1n-Cww">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                             </constraint>
                             <constraint firstAttribute="bottom" secondItem="Gdf-E2-HCa" secondAttribute="bottom" id="foT-8A-Rp2"/>
                             <constraint firstAttribute="centerX" secondItem="hlu-q6-15f" secondAttribute="centerX" id="jBF-HL-ZnQ">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
                             </constraint>
                             <constraint firstItem="Bbm-Sx-xtQ" firstAttribute="leading" secondItem="eBq-ru-qqN" secondAttribute="leading" id="kpL-5k-Gfp"/>
-                            <constraint firstItem="W2R-CX-D8B" firstAttribute="width" secondItem="YJL-Vf-6tc" secondAttribute="width" id="lg7-SD-kx3"/>
-                            <constraint firstItem="W2R-CX-D8B" firstAttribute="top" secondItem="YJL-Vf-6tc" secondAttribute="bottom" constant="10" id="o3h-iR-kqt">
-                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                            </constraint>
                             <constraint firstItem="Gdf-E2-HCa" firstAttribute="leading" secondItem="eBq-ru-qqN" secondAttribute="leading" id="sSp-AC-G9L"/>
-                            <constraint firstAttribute="centerX" secondItem="W2R-CX-D8B" secondAttribute="centerX" id="yny-ZY-E35">
-                                <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
-                            </constraint>
+                            <constraint firstItem="gtz-9X-bKK" firstAttribute="top" secondItem="yxf-xg-XQ9" secondAttribute="bottom" constant="220" id="twH-4w-yZD"/>
                             <constraint firstItem="YJL-Vf-6tc" firstAttribute="top" secondItem="zy5-pD-3QT" secondAttribute="bottom" constant="20" id="z0d-A9-2mS">
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="9rl-v1-OiF"/>
+                                <exclude reference="2eM-nL-6Fb"/>
+                                <exclude reference="4B3-FH-KOM"/>
+                                <exclude reference="GWX-KX-0tI"/>
                                 <exclude reference="Iaw-0J-K0S"/>
-                                <exclude reference="T8d-vL-J1R"/>
+                                <exclude reference="d9q-dP-fCo"/>
+                                <exclude reference="emU-1n-Cww"/>
                                 <exclude reference="AaQ-1p-fd2"/>
+                                <exclude reference="twH-4w-yZD"/>
+                                <exclude reference="T8d-vL-J1R"/>
+                                <exclude reference="Yk2-ja-aA6"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
                                 <exclude reference="4B3-FH-KOM"/>
-                                <include reference="Iaw-0J-K0S"/>
+                                <include reference="GWX-KX-0tI"/>
+                                <exclude reference="Iaw-0J-K0S"/>
+                                <include reference="emU-1n-Cww"/>
+                                <exclude reference="AaQ-1p-fd2"/>
+                                <exclude reference="twH-4w-yZD"/>
                                 <exclude reference="T8d-vL-J1R"/>
-                                <include reference="AaQ-1p-fd2"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="background" destination="Gdf-E2-HCa" id="qSV-JT-QFh"/>
+                        <outlet property="challengeButton" destination="hlu-q6-15f" id="1MQ-yN-wIV"/>
                         <outlet property="challengeTextLabel" destination="yxf-xg-XQ9" id="18m-sl-nXQ"/>
                         <outlet property="completedButton" destination="tb3-Nk-fNG" id="aYh-l5-SdC"/>
                         <outlet property="difficulityChooser" destination="YJL-Vf-6tc" id="1uo-if-tVf"/>
                         <outlet property="meeqoImage" destination="Bbm-Sx-xtQ" id="DqE-9W-MIx"/>
-                        <outlet property="rewardLabel" destination="W2R-CX-D8B" id="SdV-NN-SMd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVR-Nd-8Pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="-436"/>
+            <point key="canvasLocation" x="1275" y="-436.5"/>
         </scene>
         <!--Facebook Login View Controller-->
         <scene sceneID="Qsj-Ru-hx9">
@@ -836,7 +854,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="537" y="-430"/>
+            <point key="canvasLocation" x="509" y="-473"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMq-zw-BI7">

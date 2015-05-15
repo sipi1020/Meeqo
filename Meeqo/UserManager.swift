@@ -21,7 +21,7 @@ class UserManager {
             let user = userRepo.getUser()
             user.lastDayChallenged = NSDate()
             
-            user.coins = Int(user.coins) + challenge.coin
+            user.coins = Int(user.coins) + Int(Double(challenge.coin) * challenge.level)
             
             userRepo.updateCurrentUser()
             println("Completed chllenge!")
