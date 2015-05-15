@@ -287,7 +287,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         if segue.identifier == "logoutSegue"{
             saveMeeqosPosition()
-            
+            FBSession.activeSession().closeAndClearTokenInformation()
         }
         
     }
