@@ -24,6 +24,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
             self.title = "\(UserManager.getCurrentUser().name)'s home"
         }
@@ -45,16 +46,15 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
 
         self.navigationItem.rightBarButtonItems?.append(challengeButton)
         
-        
+     
         println("Did completed? \(UserManager.didCompletedChallengeToday())")
         UserManager.updateMeeqoData()
-        ItemManager.buyLollipop()
-        
+       
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         
         println("Current user: \(UserManager.getCurrentUser().name)")
-        
-        UserManager.getCurrentUser().coins = 10000
+       
+        //UserManager.getCurrentUser().coins = 10000
        
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
