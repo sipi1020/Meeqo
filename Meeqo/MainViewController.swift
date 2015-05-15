@@ -54,7 +54,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         println("Current user: \(UserManager.getCurrentUser().name)")
         
-        
+        UserManager.getCurrentUser().coins = 10000
        
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
@@ -290,6 +290,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         let destinationVC = segue.destinationViewController as! ShopViewController
         destinationVC.mainVC = self
             saveMeeqosPosition()
+        }
+        
+        if segue.identifier == "logoutSegue"{
+            saveMeeqosPosition()
+            
         }
         
     }

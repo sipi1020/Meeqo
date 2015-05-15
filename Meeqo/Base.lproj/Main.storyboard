@@ -222,7 +222,7 @@
                     <navigationItem key="navigationItem" title="Viki's home" id="6je-LN-CZI">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="73R-IZ-l7e">
                             <connections>
-                                <segue destination="riz-op-6EH" kind="presentation" id="sn6-FX-OXU"/>
+                                <segue destination="riz-op-6EH" kind="presentation" identifier="logoutSegue" id="sn6-FX-OXU"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="shoppingcart_icon" id="mqJ-JP-R1E">
@@ -264,7 +264,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1197" y="386"/>
+            <point key="canvasLocation" x="1187" y="388"/>
         </scene>
         <!--Meeqo's status-->
         <scene sceneID="mnv-eE-zLU">
@@ -854,7 +854,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="537" y="-430"/>
+            <point key="canvasLocation" x="509" y="-473"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMq-zw-BI7">
