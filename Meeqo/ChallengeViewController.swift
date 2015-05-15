@@ -12,20 +12,17 @@ class ChallengeViewController: UIViewController {
     var challenge : Challenge?
 
     @IBOutlet weak var background: UIImageView!
-    
-    @IBOutlet weak var rewardLabel: UILabel!
     @IBOutlet weak var meeqoImage: UIImageView!
-    
     @IBOutlet weak var difficulityChooser: UISegmentedControl!
     @IBOutlet weak var challengeTextLabel: UITextView!
     @IBOutlet weak var completedButton: UIButton!
-    
+    @IBOutlet weak var challengeButton: UIButton!
+
     
     override func viewDidLoad() {
         self.view.sendSubviewToBack(background)
         completedButton.enabled = false
         difficulityChooser.enabled = true
-        rewardLabel.text = "Reward: " + String(Challenges.EASY_CHALLENGE_COIN)
         if self.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular {
             meeqoImage.hidden = false
         }
@@ -33,38 +30,31 @@ class ChallengeViewController: UIViewController {
             meeqoImage.hidden = true
             challengeTextLabel.font = UIFont(name: challengeTextLabel.font.fontName, size: 16)
         }
-
-        
+        challengeTextLabel.textAlignment = .Center
     }
     @IBAction func giveChallengeButtonTap(sender: UIButton) {
+        if UserManager.didCompletedChallengeToday(){
+            noMoreChallengeAlert()
+        }
+        else{
+        
         completedButton.enabled = true
         challenge = ChallengeManager.getRandomChallenge()
         difficulityChooser.enabled = false
         if let c = challenge {
-            challengeTextLabel.text = c.description as! String
             c.level = Double(difficulityChooser.selectedSegmentIndex) + 1
+            let labelCount = Int(Double(c.count)*c.level)
+            challengeTextLabel.text =  "\(c.description as! String) \(labelCount) \(c.description2 as! String)"
         }
-        var button = sender as UIButton
-        button.titleLabel?.text = "You can get only one challenge per day"
-        button.enabled = false
         
+        }
     }
     
     @IBAction func completedButtonTap(sender: AnyObject) {
         meeqoImage.image = UIImage(named: "congrats")
+        challenge!.completed = true
+        UserManager.completedChallenge(challenge!)
         completedAlert()
-    }
-    
-    
-    @IBAction func difficulityChanged(sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex{
-        case 0: rewardLabel.text = "Reward: " + String(Challenges.EASY_CHALLENGE_COIN)
-        case 1: rewardLabel.text = "Reward: " + String(Challenges.MEDIUM_CHALLENGE_COIN)
-        case 2: rewardLabel.text = "Reward: " + String(Challenges.HARD_CHALLENGE_COIN)
-        
-        default:
-            break
-        }
     }
     
     func completedAlert(){
@@ -73,6 +63,13 @@ class ChallengeViewController: UIViewController {
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
 }
+    
+    func noMoreChallengeAlert(){
+        let alert = UIAlertController(title: "Try again tomorrow!", message: "You can only receive one challenge per day", preferredStyle: UIAlertControllerStyle.Alert)
+        var action = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default,handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
     
    
 }
