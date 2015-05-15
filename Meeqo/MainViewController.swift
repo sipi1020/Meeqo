@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let challenge = Challenge(name: "Test C", coin: 23456, description: "Desc")
+        let challenge = Challenge(name: "Test C", coin: 23456, description: "Desc", description2: "desc2", count: 100)
         challenge.completed = true
         UserManager.completedChallenge(challenge)
         

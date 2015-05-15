@@ -24,4 +24,5 @@ class UserModel {
         var json = "{}"
         return json
     }
+    
 }

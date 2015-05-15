@@ -89,15 +89,21 @@ class UserManager {
         
         var spentHours = 0
         
-        spentHours = (Int(date.timeIntervalSinceReferenceDate) - Int(user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate)) / 60
+        var last = user.lastUpdatedMeeqos.timeIntervalSinceReferenceDate
+        
+        if last.isNaN || last.isInfinite {
+            last = 0
+        }
+        
+        spentHours = Int((Int(date.timeIntervalSinceReferenceDate) - Int(last)) / 60)
         println("\(spentHours)")
+
         if spentHours <= 0 {
             return 0
         }
-        
         user.lastUpdatedMeeqos = date
         userRepo.updateCurrentUser()
-        
+
         if (spentHours > 120) {
             return 120
         }
