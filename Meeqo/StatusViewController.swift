@@ -23,6 +23,21 @@ class StatusViewController: UITableViewController {
     
     @IBOutlet weak var sleepBar: UIProgressView!
     
+    override func viewWillAppear(animated: Bool) {
+        meeqoRepo = MeeqoManager.meeqoRepo
+        var meeqos = meeqoRepo.getMeeqos()
+        for meeqo in meeqos {
+            if meeqo.objectID == meeqoID {
+                happinessBar.progress = ((Float(meeqo.entertainment) + Float(meeqo.food) + Float(meeqo.sleep))/3)/100
+                foodBar.progress = Float(meeqo.food)/100
+                sleepBar.progress = Float(meeqo.sleep)/100
+                entertainmentBar.progress = Float(meeqo.entertainment)/100
+            }
+            
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -151,18 +166,22 @@ class StatusViewController: UITableViewController {
         if segue.identifier == "foodSegue" {
             desinationVC.tag = 0
             desinationVC.mainVC = self.mainVC
+           desinationVC.statusVC = self
         }
         if segue.identifier == "playSegue" {
             desinationVC.tag = 1
             desinationVC.mainVC = self.mainVC
+            desinationVC.statusVC = self
         }
         if segue.identifier == "sleepSegue" {
             desinationVC.tag = 2
             desinationVC.mainVC = self.mainVC
+            desinationVC.statusVC = self
         }
         if segue.identifier == "moveSegue" {
             desinationVC.tag = 3
             desinationVC.mainVC = self.mainVC
+            desinationVC.statusVC = self
         
         }
         

@@ -23,7 +23,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }*/
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
         if view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
             self.title = "\(UserManager.getCurrentUser().name)'s home"
@@ -53,10 +53,15 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         
         println("Current user: \(UserManager.getCurrentUser().name)")
+        
+        let m = UserModel(user: UserManager.getCurrentUser(), meeqos: MeeqoManager.getMeeqos(), inventory: ItemManager.getMeeqoInventory())
+        
+        UserModel.jsonToUserModel(m.toJson())
+        
+        self.title = "\(UserManager.getCurrentUser().name)'s home"
        
         //UserManager.getCurrentUser().coins = 10000
        
-        println("Did +++ \(UserManager.didCompletedChallengeToday())")
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
