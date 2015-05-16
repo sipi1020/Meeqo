@@ -56,6 +56,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
        
         //UserManager.getCurrentUser().coins = 10000
        
+        println("Did +++ \(UserManager.didCompletedChallengeToday())")
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()
@@ -294,7 +295,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         if segue.identifier == "logoutSegue"{
             saveMeeqosPosition()
-            
+            FBSession.activeSession().closeAndClearTokenInformation()
         }
         
     }
