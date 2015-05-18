@@ -25,6 +25,12 @@ class FacebookLoginViewController: UIViewController, FBLoginViewDelegate {
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email"]
         self.view.sendSubviewToBack(background)
+        if FBSession.activeSession().isOpen {
+            var storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            var VC = storyboard.instantiateViewControllerWithIdentifier("mainVC") as! MainViewController
+            var navVC = UINavigationController(rootViewController: VC)
+            self.presentViewController(navVC, animated: true, completion: nil)
+        }
         
     }
     func sessionStateChanged(session:FBSession, state:FBSessionState, error:NSError?) {
