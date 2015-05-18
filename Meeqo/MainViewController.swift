@@ -23,21 +23,33 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }*/
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        let challenge = Challenge(name: "Test C", coin: 23456, description: "Desc", description2: "desc2", count: 100)
-        //challenge.completed = true
-        //UserManager.completedChallenge(challenge)
+        if view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
+            self.title = "\(UserManager.getCurrentUser().name)'s home"
+        }
+        else{
+            var label = UILabel(frame: CGRect(x: 0, y: 0, width: 480, height: 44))
+            label.backgroundColor = UIColor.clearColor()
+            label.numberOfLines = 2
+            label.textAlignment = .Center
+            label.textColor = UIColor.blackColor()
+            label.text = "\(UserManager.getCurrentUser().name)'s \n home"
+            label.font = UIFont.boldSystemFontOfSize(17.0)
+            self.navigationItem.titleView = label
+            
+            
+        }
         
     
         var challengeButton = UIBarButtonItem(image: UIImage(named:"challenge_icon")!, style: UIBarButtonItemStyle.Plain, target: self, action: "challenegButtonTap:")
 
         self.navigationItem.rightBarButtonItems?.append(challengeButton)
         
-        
+     
         println("Did completed? \(UserManager.didCompletedChallengeToday())")
         UserManager.updateMeeqoData()
-        ItemManager.buyLollipop()
-        
+       
         meeqoRepo = RepositoryFactory.getMeeqoRepository()
         
         println("Current user: \(UserManager.getCurrentUser().name)")
@@ -48,7 +60,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         self.title = "\(UserManager.getCurrentUser().name)'s home"
        
-        println("Did +++ \(UserManager.didCompletedChallengeToday())")
+        //UserManager.getCurrentUser().coins = 10000
+       
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
         m.updateMe()

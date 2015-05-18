@@ -24,6 +24,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
     var meeqoID : NSManagedObjectID!
     var mainVC : MainViewController!
     var thisMeeqo : Meeqo!
+    var statusVC: StatusViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +161,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
     
     
     func eatTap( sender: UIButton){
+        refreshBars()
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
@@ -200,6 +202,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
     }
     
     func playTap( sender: UIButton){
+        refreshBars()
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
@@ -285,6 +288,7 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         
     }
     func sleepTap( sender: UIButton){
+        refreshBars()
         var cell = sender.superview?.superview as! UITableViewCell
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
@@ -383,5 +387,12 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func refreshBars(){
+        statusVC.foodBar.setNeedsDisplay()
+        statusVC.sleepBar.setNeedsDisplay()
+        statusVC.entertainmentBar.setNeedsDisplay()
+        statusVC.happinessBar.setNeedsDisplay()
+    }
 
 }
