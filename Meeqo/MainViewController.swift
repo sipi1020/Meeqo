@@ -59,8 +59,11 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         UserModel.jsonToUserModel(m.toJson())
         
         self.title = "\(UserManager.getCurrentUser().name)'s home"
+        
+        
        
-        //UserManager.getCurrentUser().coins = 10000
+       
+        //UserManager.getCurrentUser().coins = 50000
        
         /*var m = repo.getMeeqos()[0]
         m.position.x = 150
