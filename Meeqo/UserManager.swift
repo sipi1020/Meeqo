@@ -46,7 +46,7 @@ class UserManager {
         urlSession = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
         var userModel = UserModel(user: getCurrentUser(), meeqos: meeqoRepo.getMeeqos(), inventory: itemRepo.getInventory())
         
-        println("\(userModel.toJson())")
+       // println("\(userModel.toJson())")
         
         //let jsonData = NSJSONSerialization.dataWithJSONObject(message, options: nil, error: nil)
         

@@ -17,10 +17,10 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     @IBOutlet var rooms: [UIImageView]!
     @IBOutlet weak var roomView: RoomView!
     
-    /*override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         removeMeeqoViews()
         loadMeeqosToRoom(roomView.currentRoom)
-    }*/
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,7 +56,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
         
         let m = UserModel(user: UserManager.getCurrentUser(), meeqos: MeeqoManager.getMeeqos(), inventory: ItemManager.getMeeqoInventory())
         
-        UserModel.jsonToUserModel(m.toJson())
+        //UserModel.jsonToUserModel(m.toJson())
         
         self.title = "\(UserManager.getCurrentUser().name)'s home"
         
@@ -203,6 +203,7 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func selectMeeqo(sender: UITapGestureRecognizer){
+        UserManager.updateMeeqoData()
         var popoverContent = self.storyboard?.instantiateViewControllerWithIdentifier("StatusViewController") as! StatusViewController
         var meeqoView = sender.view as! MeeqoView
         popoverContent.meeqoID = meeqoView.meeqoID
@@ -236,8 +237,8 @@ class MainViewController: UIViewController, UIPopoverPresentationControllerDeleg
     }
     
     func dragMeeqo(sender: UIPanGestureRecognizer){
+        UserManager.updateMeeqoData()
         self.view.bringSubviewToFront(sender.view!)
-        
         
         var translation = sender.translationInView(self.roomView)
         if sender.view!.center.y + translation.y >= roomView.frame.origin.y + sender.view!.frame.width/2 {

@@ -41,6 +41,8 @@ class StatusViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mainVC.saveMeeqosPosition()
+        
         if self.mainVC.view.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular{
             self.tableView.rowHeight = 60
             

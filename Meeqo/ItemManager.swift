@@ -168,7 +168,7 @@ class ItemManager {
     
     static func getToyState () ->[Bool]{
         let meeqoInventory = ItemManager.getMeeqoInventory()
-        var toys = [meeqoInventory.ball as Bool, meeqoInventory.rope as Bool,meeqoInventory.weights as Bool,meeqoInventory.bear as Bool,meeqoInventory.sleepingBear as Bool,meeqoInventory.trambulin as Bool,meeqoInventory.soundSystem as Bool,meeqoInventory.danceFloor as Bool,meeqoInventory.treadmill as Bool,meeqoInventory.videoGame as Bool]
+        var toys = [meeqoInventory.ball as Bool, meeqoInventory.rope as Bool,meeqoInventory.weights as Bool,meeqoInventory.bear as Bool,meeqoInventory.sleepingBear as Bool,meeqoInventory.trambulin as Bool,meeqoInventory.soundSystem as Bool,meeqoInventory.treadmill as Bool,meeqoInventory.danceFloor as Bool,meeqoInventory.videoGame as Bool]
         return toys
     }
     

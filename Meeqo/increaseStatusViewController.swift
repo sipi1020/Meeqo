@@ -166,6 +166,8 @@ class increaseStatusViewController: UITableViewController,UITableViewDelegate {
         var table = cell.superview?.superview as! UITableView
         var indexPath = table.indexPathForCell(cell)
         var foodCountLabel = cell.viewWithTag(3) as! UILabel!
+        mainVC.roomView.setNeedsDisplay()
+        
         switch indexPath!.row{
         case 0:
             if !MeeqoManager.eatMeeqo(thisMeeqo, foodValue: ItemData.LOLLIPOP_FOOD_VALUE){

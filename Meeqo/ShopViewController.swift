@@ -304,6 +304,7 @@ class ShopViewController: UITableViewController {
         refreshMoneyLabel()
     }
     override func viewWillDisappear(animated: Bool) {
+        mainVC.removeMeeqoViews()
         mainVC.loadMeeqosToRoom(mainVC.roomView.currentRoom)
         mainVC.roomView.setNeedsDisplay()
     }
